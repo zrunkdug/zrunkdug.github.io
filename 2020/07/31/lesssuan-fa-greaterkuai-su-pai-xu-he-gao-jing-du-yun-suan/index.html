@@ -22,17 +22,16 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="快速排序原理快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，小于基准的，基准，大于基准的，然后对于小于和大于基准的做同样的操作（递归）。">
+  <meta name="description" content="最近新学的两个算法，快速排序和高精度运算，快速排序的整体思想还是非常高级的，然后写写高精度运算来深入地理解一下乘除法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&lt;算法&gt;快速排序和高精度运算">
 <meta property="og:url" content="http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="快速排序原理快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，小于基准的，基准，大于基准的，然后对于小于和大于基准的做同样的操作（递归）。">
+<meta property="og:description" content="最近新学的两个算法，快速排序和高精度运算，快速排序的整体思想还是非常高级的，然后写写高精度运算来深入地理解一下乘除法">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-31T08:39:02.000Z">
-<meta property="article:modified_time" content="2020-08-08T11:35:34.700Z">
+<meta property="article:modified_time" content="2020-08-08T14:59:57.600Z">
 <meta property="article:author" content="Zhujie">
-<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 
 
@@ -192,10 +191,6 @@
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
   </nav>
 </div>
 
@@ -263,7 +258,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-08 19:35:34" itemprop="dateModified" datetime="2020-08-08T19:35:34+08:00">2020-08-08</time>
+                <time title="Modified: 2020-08-08 22:59:57" itemprop="dateModified" datetime="2020-08-08T22:59:57+08:00">2020-08-08</time>
               </span>
 
           
@@ -275,7 +270,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，<strong>小于基准的，基准，大于基准的</strong>，然后对于小于和大于基准的做同样的操作（递归）。<br><a id="more"></a></p>
+        <p>最近新学的两个算法，快速排序和高精度运算，快速排序的整体思想还是非常高级的，然后写写高精度运算来深入地理解一下乘除法<br><a id="more"></a></p>
+<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，<strong>小于基准的，基准，大于基准的</strong>，然后对于小于和大于基准的做同样的操作（递归）。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int qsort(int a[],int l,int r)&#123;</span><br><span class="line">    int key&#x3D;a[(l+r)&#x2F;2],i&#x3D;l,j&#x3D;r;&#x2F;&#x2F;key为基准</span><br><span class="line">    while(i&lt;&#x3D;j)&#123;</span><br><span class="line">        while(a[i]&lt;key)&#123;&#x2F;&#x2F;找基准左边比key大的数</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        while(a[j]&gt;key)&#123;&#x2F;&#x2F;找基准右边比key小的数</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i&lt;&#x3D;j)&#123;</span><br><span class="line">            swap(a[i],a[j]);&#x2F;&#x2F;交换之前找到的两个数</span><br><span class="line">            i++;j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(l&lt;j)&#123;</span><br><span class="line">        qsort(a,l,j);&#x2F;&#x2F;基准左边递归</span><br><span class="line">    &#125;</span><br><span class="line">    if(i&lt;r)&#123;</span><br><span class="line">        qsort(a,i,r);&#x2F;&#x2F;基准右边递归</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h1><h2 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h2><p>先用字符串储存两个高精度数，转化为int类型的数组，然后个位+个位，十位+十位……，大于10则进位</p>
 <h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    char sa[65536],sb[65536];</span><br><span class="line">    int a[65536],b[65536],c[65536];</span><br><span class="line">    memset(a,0,sizeof(a));</span><br><span class="line">    memset(b,0,sizeof(b));</span><br><span class="line">    memset(c,0,sizeof(c));</span><br><span class="line">    cin&gt;&gt;sa&gt;&gt;sb;</span><br><span class="line">    int la&#x3D;strlen(sa),lb&#x3D;strlen(sb);</span><br><span class="line">    for(int i&#x3D;0;i&lt;la;i++)&#123;</span><br><span class="line">        a[la-i-1]&#x3D;sa[i]-&#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;lb;i++)&#123;</span><br><span class="line">        b[lb-i-1]&#x3D;sb[i]-&#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    int lc&#x3D;max(la,lb);</span><br><span class="line">    for(int i&#x3D;0;i&lt;lc;i++)&#123;</span><br><span class="line">        c[i]+&#x3D;a[i]+b[i];</span><br><span class="line">        if(c[i]&gt;&#x3D;10)&#123;</span><br><span class="line">            c[i+1]+&#x3D;c[i]&#x2F;10;</span><br><span class="line">            c[i]%&#x3D;10;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(c[lc]&gt;0)&#123;</span><br><span class="line">        lc++;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;lc-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">        cout&lt;&lt;c[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -288,9 +284,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
-          </div>
 
         
 

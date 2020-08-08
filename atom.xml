@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-08T11:28:17.174Z</updated>
+  <updated>2020-08-08T14:53:17.730Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,11 @@
     <link href="http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/"/>
     <id>http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/</id>
     <published>2020-08-07T11:20:36.000Z</published>
-    <updated>2020-08-08T11:28:17.174Z</updated>
+    <updated>2020-08-08T14:53:17.730Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;整数的阶&quot;&gt;&lt;a href=&quot;#整数的阶&quot; class=&quot;headerlink&quot; title=&quot;整数的阶&quot;&gt;&lt;/a&gt;整数的阶&lt;/h1&gt;&lt;h2 id=&quot;欧拉定理&quot;&gt;&lt;a href=&quot;#欧拉定理&quot; class=&quot;headerlink&quot; title=&quot;欧拉定理&quot;&gt;&lt;/a&gt;欧拉定理&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;设 $m$ 是一个正整数，$a$ 是一个整数且 $(a,m)=1$，那么 $a^{\phi(m)}\equiv 1\pmod m$
+      &lt;p&gt;先写一下之前没写的欧拉定理，然后讲讲阶和原根，说实话这一章我学的真的挺懵的，后面会涉及原根的存在性问题和素性判断&lt;br&gt;
     
     </summary>
     
@@ -39,7 +38,7 @@
     <link href="http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/"/>
     <id>http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/</id>
     <published>2020-08-05T11:38:28.000Z</published>
-    <updated>2020-08-08T11:35:18.576Z</updated>
+    <updated>2020-08-08T14:49:51.535Z</updated>
     
     <summary type="html">
     
@@ -49,8 +48,6 @@
     
     
     
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
-    
   </entry>
   
   <entry>
@@ -58,19 +55,15 @@
     <link href="http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/"/>
     <id>http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/</id>
     <published>2020-08-04T07:45:03.000Z</published>
-    <updated>2020-08-08T11:35:30.737Z</updated>
+    <updated>2020-08-08T14:58:35.292Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;因子数和因子和函数&quot;&gt;&lt;a href=&quot;#因子数和因子和函数&quot; class=&quot;headerlink&quot; title=&quot;因子数和因子和函数&quot;&gt;&lt;/a&gt;因子数和因子和函数&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;因子和函数&lt;br&gt;定义为整数n的所有正因子之和，记为 $\sigma(n)$&lt;/li&gt;
-&lt;li&gt;因子个数函数&lt;br&gt;定义为正整数n的所有正因子个数，记为 $\tau(n)$
+      &lt;p&gt;由之前学的积性函数，开始学习另外的两个积性函数，然后讲讲梅森素数，是一个非常有趣的方向&lt;br&gt;
     
     </summary>
     
     
-    
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
@@ -79,19 +72,15 @@
     <link href="http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/"/>
     <id>http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/</id>
     <published>2020-08-03T09:06:04.000Z</published>
-    <updated>2020-08-08T11:35:01.574Z</updated>
+    <updated>2020-08-08T14:54:21.045Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;积性函数&quot;&gt;&lt;a href=&quot;#积性函数&quot; class=&quot;headerlink&quot; title=&quot;积性函数&quot;&gt;&lt;/a&gt;积性函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;先看定义：对于所有定义在正整数上的函数称为&lt;strong&gt;算术函数&lt;/strong&gt;，对于所有满足 $f(mn)=f(m)(n)$ 的函数称为&lt;strong&gt;积性函数&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;积性函数有一个性质，就是对于任意一个正整数的幂分解 $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$，&lt;br&gt;都有 $f(n)=f(p_1^{a_1})f(p_2^{a_2})\cdots f(p_k^{a_k})$ （可以用数学归纳法证明）
+      &lt;p&gt;这一章开始学习数论函数，从欧拉函数到因子、因子数函数，我觉得这一章还是比较好理解的&lt;br&gt;
     
     </summary>
     
     
-    
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
@@ -100,7 +89,7 @@
     <link href="http://yoursite.com/2020/08/02/sui-bi-20207/"/>
     <id>http://yoursite.com/2020/08/02/sui-bi-20207/</id>
     <published>2020-08-02T14:47:36.000Z</published>
-    <updated>2020-08-08T11:35:55.038Z</updated>
+    <updated>2020-08-08T14:49:18.310Z</updated>
     
     <summary type="html">
     
@@ -110,8 +99,6 @@
     
     
     
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
   </entry>
   
   <entry>
@@ -119,7 +106,7 @@
     <link href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/"/>
     <id>http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/</id>
     <published>2020-07-31T11:40:54.000Z</published>
-    <updated>2020-08-08T11:34:55.894Z</updated>
+    <updated>2020-08-08T14:50:08.066Z</updated>
     
     <summary type="html">
     
@@ -129,8 +116,6 @@
     
     
     
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
-    
   </entry>
   
   <entry>
@@ -138,17 +123,15 @@
     <link href="http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/"/>
     <id>http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/</id>
     <published>2020-07-31T08:39:02.000Z</published>
-    <updated>2020-08-08T11:35:34.700Z</updated>
+    <updated>2020-08-08T14:59:57.600Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot; title=&quot;快速排序&quot;&gt;&lt;/a&gt;快速排序&lt;/h1&gt;&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，&lt;strong&gt;小于基准的，基准，大于基准的&lt;/strong&gt;，然后对于小于和大于基准的做同样的操作（递归）。&lt;br&gt;
+      &lt;p&gt;最近新学的两个算法，快速排序和高精度运算，快速排序的整体思想还是非常高级的，然后写写高精度运算来深入地理解一下乘除法&lt;br&gt;
     
     </summary>
     
     
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -157,7 +140,7 @@
     <link href="http://yoursite.com/2020/07/30/luo-gu-p1011-che-zhan/"/>
     <id>http://yoursite.com/2020/07/30/luo-gu-p1011-che-zhan/</id>
     <published>2020-07-30T11:55:10.000Z</published>
-    <updated>2020-08-08T11:35:39.015Z</updated>
+    <updated>2020-08-08T14:49:34.645Z</updated>
     
     <summary type="html">
     
@@ -167,8 +150,6 @@
     
     
     
-      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
   </entry>
   
   <entry>
@@ -176,7 +157,7 @@
     <link href="http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/"/>
     <id>http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/</id>
     <published>2020-07-29T10:00:03.000Z</published>
-    <updated>2020-08-08T11:35:51.203Z</updated>
+    <updated>2020-08-08T14:49:23.393Z</updated>
     
     <summary type="html">
     
@@ -186,8 +167,6 @@
     
     
     
-      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
   </entry>
   
   <entry>
@@ -195,17 +174,15 @@
     <link href="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/"/>
     <id>http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/</id>
     <published>2020-07-27T10:33:15.000Z</published>
-    <updated>2020-08-08T11:35:27.026Z</updated>
+    <updated>2020-08-08T14:57:15.420Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;同余定义&quot;&gt;&lt;a href=&quot;#同余定义&quot; class=&quot;headerlink&quot; title=&quot;同余定义&quot;&gt;&lt;/a&gt;同余定义&lt;/h1&gt;&lt;p&gt;设$a,b,m$为整数，若 $m|(a-b)$，即 $a=km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余&lt;br&gt;记作 $a\equiv b\pmod m$&lt;br&gt;
+      &lt;p&gt;开始学到数论中一个相当重要的理论了，整个同余理论在数论中的出现还是非常多的。讲讲什么是同余和同余的一些性质&lt;br&gt;
     
     </summary>
     
     
-    
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
@@ -214,7 +191,7 @@
     <link href="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/"/>
     <id>http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/</id>
     <published>2020-07-26T13:50:59.000Z</published>
-    <updated>2020-08-08T11:35:47.352Z</updated>
+    <updated>2020-08-08T14:49:27.591Z</updated>
     
     <summary type="html">
     
@@ -224,8 +201,6 @@
     
     
     
-      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
   </entry>
   
   <entry>
@@ -233,7 +208,7 @@
     <link href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/"/>
     <id>http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/</id>
     <published>2020-07-25T09:25:14.000Z</published>
-    <updated>2020-08-08T11:35:06.329Z</updated>
+    <updated>2020-08-08T14:50:01.410Z</updated>
     
     <summary type="html">
     
@@ -243,8 +218,6 @@
     
     
     
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
-    
   </entry>
   
   <entry>
@@ -252,7 +225,7 @@
     <link href="http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/"/>
     <id>http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/</id>
     <published>2020-07-24T14:09:15.000Z</published>
-    <updated>2020-08-08T11:34:52.006Z</updated>
+    <updated>2020-08-08T14:50:14.142Z</updated>
     
     <summary type="html">
     
@@ -269,18 +242,15 @@
     <link href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/"/>
     <id>http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/</id>
     <published>2020-07-24T10:43:27.000Z</published>
-    <updated>2020-08-08T11:35:23.103Z</updated>
+    <updated>2020-08-08T14:55:50.079Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;算术基本定理&quot;&gt;&lt;a href=&quot;#算术基本定理&quot; class=&quot;headerlink&quot; title=&quot;算术基本定理&quot;&gt;&lt;/a&gt;算术基本定理&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）
+      &lt;p&gt;数论中相当重要的一个定理：算术基本定理。然后讲一个因子分解的技巧：费马因子分解&lt;br&gt;
     
     </summary>
     
     
-    
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
@@ -289,7 +259,7 @@
     <link href="http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/"/>
     <id>http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/</id>
     <published>2020-07-23T14:06:44.000Z</published>
-    <updated>2020-08-08T11:35:11.887Z</updated>
+    <updated>2020-08-08T14:49:58.240Z</updated>
     
     <summary type="html">
     
@@ -299,8 +269,6 @@
     
     
     
-      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
-    
   </entry>
   
   <entry>
@@ -308,7 +276,7 @@
     <link href="http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/"/>
     <id>http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/</id>
     <published>2020-07-23T10:47:01.000Z</published>
-    <updated>2020-08-08T11:35:43.388Z</updated>
+    <updated>2020-08-08T14:49:31.135Z</updated>
     
     <summary type="html">
     
@@ -317,8 +285,6 @@
     </summary>
     
     
-    
-      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
   </entry>
   
