@@ -267,7 +267,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:37:16" itemprop="dateModified" datetime="2020-07-31T21:37:16+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:47" itemprop="dateModified" datetime="2020-08-08T19:35:47+08:00">2020-08-08</time>
               </span>
 
           
@@ -279,15 +279,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。</p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>第一行两个正整数N和M<br>第二行N-1个正整数$A_i$<br>第三行N个正整数$R_i$，为红灯时间（分钟）<br>第四行N个整数$G_i$，为绿灯时间（分钟）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">2 4 3 2</span><br><span class="line">3 4 3 4 3</span><br><span class="line">2 3 2 3 1</span><br></pre></td></tr></table></figure></p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><p>共N行，每行一个正整数，为这辆车通过每个十字路口的最早时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">7</span><br><span class="line">11</span><br><span class="line">14</span><br><span class="line">16</span><br></pre></td></tr></table></figure></p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ul>
-<li>一开始想用一分钟一分钟来模拟，但是由于数据量大，会TLE，而且这样写的代码也很复杂，所以这题依然需要用到数学推导。</li>
-<li>注意到这题红绿灯是一直在跳动的，但是如果我们知道了从开始到现在经过了多少分钟的话，我们可以通过计算算出此时是红灯还是绿灯，所以可以设置一个变量x表示从汽车行驶开始经过了多少分钟，从一个路口到另一个路口只需要x加上两个路口之间的距离即可，当汽车到达红绿灯后，我们把这个路口绿灯和红灯的时间之和设为一个周期t，如果经过了一个周期，由于绿灯优先，所以此时刚好跳到绿灯，所以是可以通过的，对于更加一般的情况，可以想到这里需要通过让x对t取余数，即&ensp;$x\pmod t$，如果算出的结果大于绿灯的时间，那么说明这时是红灯，需要等待直到这个周期结束，如果需要等待的话，只需要让x加上等待的时间即可（周期减去余数）</li>
-<li>这里的x是对于整个过程的变量，比如到达第一个路口花了3分钟，等了2分钟，又行驶了5分钟到达第二个路口，此时x是10分钟，这里的x可以看做是从开始行驶了10分钟到达了这个路口，所以对于每一个循环，只需要对x进行处理，然后算出此时是红灯还是绿灯的状态即可<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    int road[100000];</span><br><span class="line">    int red[100000];</span><br><span class="line">    int green[100000];</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    road[0]&#x3D;m;</span><br><span class="line">    for(int i&#x3D;1;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;road[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;red[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;green[i];</span><br><span class="line">    &#125;</span><br><span class="line">    int x&#x3D;0,y,time&#x3D;0;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        time+&#x3D;road[i];</span><br><span class="line">        x&#x3D;time%(green[i]+red[i]);</span><br><span class="line">        if(x&gt;green[i])&#123;</span><br><span class="line">            time+&#x3D;(red[i]+green[i]-x);</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;time&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i<N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/26/luo-gu-p2077-hong-lu-deng/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -340,7 +340,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:35:48" itemprop="dateModified" datetime="2020-07-31T21:35:48+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:06" itemprop="dateModified" datetime="2020-08-08T19:35:06+08:00">2020-08-08</time>
               </span>
 
           
@@ -352,26 +352,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="什么是丢番图方程"><a href="#什么是丢番图方程" class="headerlink" title="什么是丢番图方程"></a>什么是丢番图方程</h1><p>丢番图方程主要是解决形如$ax+by=c$（a,b,c均为整数）的整数解的问题，比如$2x+3y=7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题</p>
-<h1 id="丢番图方程"><a href="#丢番图方程" class="headerlink" title="丢番图方程"></a>丢番图方程</h1><p>对于形如$ax+by=c$的方程，设$d=(a,b)$，如果$d|c$，那么方程有无数多组解，反之无解<br>其中$x=x_0+\frac{b}{d}\times n$，$y=y_0-\frac{a}{d}\times n$（其中n为整数，$x_0,y_0$为方程的特解）</p>
-<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>这里的证明需要几个定理</p>
-<ol>
-<li>若$d=(a,b)$，那么$(a/d,b/d)=1$</li>
-<li>若$c|ab$，$(c,a)=1$，那么$c|b$</li>
-</ol>
-<ul>
-<li>先证明整数解的存在问题，如果原方程有整数解使得$ax+by=c$，由于$d=(a,b)$，那么$d|a,d|b$，由整除的性质，$d|ax+by$，即$d|c$，所以当$d|c$的时候，原方程一定有整数解，反之，当d无法整除c的时候，原方程无整数解</li>
-<li>然后证明解的结构，现在假设原方程有整数解，那么$ax+by=c$，且$d|c$，所以$d=ce$，由于$d|a,d|b$，所以存在整数s,t使得$as+bt=d$，两边乘以e，得$a(se)+b(te)=de=c$，所以方程的特解为$x_0=se$，$y_0=te$，然后求方程的通解，令$ax+by-ax_0-by_0=a(x-x_0)+b(y-y_0)=0$，两边除以d然后移下位置，得到$\frac{a}{d}(x-x_0)=\frac{b}{d}(y_0-y)$，由$(a/d,b/d)=1$，且$\frac{a}{d}|\frac{b}{d}(y_0-y)$，通过定理1和2，推出$\frac{a}{d}|(y_0-y)$，所以$y=y_0-\frac{a}{d}\times n$，同理可以解得$x=x_0+\frac{b}{d}\times n$<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1></li>
-</ul>
-<ol>
-<li>求$15x+9y=7$的整数解<br>由于$(15,9)=3$，且3不能整除7，所以原方程无解</li>
-<li>求$21x+14y=70$的整数解<br>由于$(21,14)=7$，且$7|70$，所以原方程有整数解。由欧几里得算法可知，$21\times 1+(-1)\times 14=7$，所以$21\times 10+(-10)\times 14=70$，所以特解为$x_0=10$，$y_0=-10$，由丢番图方程的通解的公式，解得$x=10+\frac{14}{7} \times n=10+2n$，$y=-10-\frac{21}{7}\times n=-10-3n$<h1 id="丢番图方程的推广"><a href="#丢番图方程的推广" class="headerlink" title="丢番图方程的推广"></a>丢番图方程的推广</h1></li>
-</ol>
-<ul>
-<li>对于$a_0x_0+a_1x_1+\cdots +a_nx_n=c$的整数解的问题，$d=(a_0,a_1,\cdots ,a_n)$，当且仅当$d|c$，且原方程存在一个解的时候，原方程有无数多组解</li>
-<li>对于丢番图方程组的问题，一般采取对方程组消元的方法求解</li>
-</ul>
-
+          <h1 id="什么是丢番图方程"><a href="#什么是丢番图方程" class="headerlink" title="什么是丢番图方程"></a>什么是丢番图方程</h1><p>丢番图方程主要是解决形如$ax+by=c$（a,b,c均为整数）的整数解的问题，比如$2x+3y=7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -424,7 +413,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-01 11:59:38" itemprop="dateModified" datetime="2020-08-01T11:59:38+08:00">2020-08-01</time>
+                <time title="修改时间：2020-08-08 19:34:52" itemprop="dateModified" datetime="2020-08-08T19:34:52+08:00">2020-08-08</time>
               </span>
 
           
@@ -436,15 +425,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>基本把类、继承、多态过了一遍，现在重新从类开始做一遍整理<br>这章整理一下类的声明，公有和私有，命名空间定义函数以及几个要点</p>
-<h1 id="类的实现"><a href="#类的实现" class="headerlink" title="类的实现"></a>类的实现</h1><p>不想打字了，于是写了个student类，基本把要点都写进去了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">class student&#123;</span><br><span class="line">    &#x2F;&#x2F;共有成员（接口）</span><br><span class="line">    public:</span><br><span class="line">    int setage(const int&amp; n)&#123;</span><br><span class="line">        age&#x3D;n;</span><br><span class="line">    &#125;</span><br><span class="line">    int setname(const char* n)&#123;</span><br><span class="line">        name&#x3D;n;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;这里用到了函数的重载</span><br><span class="line">    int setname(const string&amp; n)&#123;</span><br><span class="line">        name&#x3D;n;</span><br><span class="line">    &#125;</span><br><span class="line">    void dump();&#x2F;&#x2F;这是一个函数声明</span><br><span class="line">    &#x2F;&#x2F;私有成员（用户不可以访问）</span><br><span class="line">    private:</span><br><span class="line">    int age;</span><br><span class="line">    string name;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F;在类外通过命名空间定义函数</span><br><span class="line">void student::dump()&#123;</span><br><span class="line">    cout&lt;&lt;name&lt;&lt;&quot; &quot;&lt;&lt;age&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    int age;</span><br><span class="line">    string name;</span><br><span class="line">    student a[100];&#x2F;&#x2F;定义一个student类</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;name&gt;&gt;age;</span><br><span class="line">        a[i].setname(name);&#x2F;&#x2F;用.访问成员函数或数据类型，用-&gt;访问指针</span><br><span class="line">        a[i].setage(age);</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        a[i].dump();</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="几个要点"><a href="#几个要点" class="headerlink" title="几个要点"></a>几个要点</h1><ul>
-<li>可以看到在类中定义函数用到了const和引用，一般来说将形参设为const表明传入的实参是不允许改变的，如果对于某个函数你传入的参数不需要改变时，比如student中setage不需要改变n的值，那么一般将n设为const，同时在某些编译环境下可以降低编译时间。</li>
-<li>引用的作用是避免拷贝操作和浪费内存，这里举个例子：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void swap(int a,int b)&#123;</span><br><span class="line">    int temp&#x3D;a;</span><br><span class="line">    a&#x3D;b;</span><br><span class="line">    b&#x3D;temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>这个例子中如果在main函数中使用x=1,y=2,swap(x,y)，再输出x和y得到的仍然是1和2，因为在调用这个swap函数的过程中，会创建两个形参a和b，然后把1和2分别赋值给a和b，所以实际交换的是a和b的值，如果想要改变x和y的值，就需要用到引用：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void swap(int&amp; a,int&amp; b)&#123;</span><br><span class="line">    int temp&#x3D;a;</span><br><span class="line">    a&#x3D;b;</span><br><span class="line">    b&#x3D;temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>这里对形参采用了引用的方式，在函数调用的时候，先执行int&amp; a=x，即a是x的一个引用，所以接下来对a和b的交换就是对x和y的交换，这样就实现了x和y的交换，同时省去了拷贝的过程<h1 id="用类实现一个简陋的栈"><a href="#用类实现一个简陋的栈" class="headerlink" title="用类实现一个简陋的栈"></a>用类实现一个简陋的栈</h1>挖个坑明天再写</li>
-</ul>
-
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>基本把类、继承、多态过了一遍，现在重新从类开始做一遍整理<br>这章整理一下类的声明，公有和私有，命名空间定义函数以及几个要点<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -497,7 +486,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:36:06" itemprop="dateModified" datetime="2020-07-31T21:36:06+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:23" itemprop="dateModified" datetime="2020-08-08T19:35:23+08:00">2020-08-08</time>
               </span>
 
           
@@ -510,29 +499,15 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h1><ul>
-<li>每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2>由于唯一性的证明需要两个引理，这里就用反证法证明一下存在性。</li>
-<li>假设不是所有的正整数可以被写成素数的乘积，我们不能写为素数乘积的数组成的集合设为$T$，由最小自然数原理可知，集合$T$内存在一个最小的正整数n，现在n有两种情况：<ul>
-<li>第一种n是素数，那么$n=n$，即可以写成素数的乘积，矛盾，所以假设不成立</li>
-<li>第二种n是合数，那么$n=ab,(1&lt;a&lt;n,1&lt;b&lt;n)$，由于a,b小于n，所以a,b不在集合$T$内，即a,b可以表示为素数的乘积，即$a=p_1p_2\cdots p_n$，$b=q_1q_2\cdots q_n$（其中p,q为素数），那么$n=p_1p_2\cdots p_n\times q_1q_2\cdots q_n$，n就表示为了素数的乘积，矛盾，所以假设不成立</li>
-</ul>
-</li>
-<li>综上，每一个大于1的正整数都可以被写成素数的乘积（忽略排序）</li>
-<li>唯一性的证明见书<h1 id="试除法和费马因子分解"><a href="#试除法和费马因子分解" class="headerlink" title="试除法和费马因子分解"></a>试除法和费马因子分解</h1>既然对于任意一个大于1的正整数可以写成素数的乘积，现在比较关心的问题就是每一个数如何写成这样乘积的形式，目前有两种效率比较低的办法是我能看得懂的<h2 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h2></li>
-<li>我们知道对于任意一个合数n，一定存在一个素因子$p\leq \sqrt{n}$，那么我们可以从2开始用所有的素数去试除这个n，下面举个例子：<ul>
-<li>设n=310，现在从2开始试除，由于$2|310$，所以$310=2\times 155$，然后对155从2开始试除，显然2无法整除155，然后用$3,5,\cdots$试除，显然$5|155$，所以$310=2\times 5\times 31$，然后继续从5开始找素数试除（这里有个问题，为什么从5开始试除而不是从2开始，因为前面155无法被2整除，就意味着310不存在大小为2的因子了，所以是从恰好能够整除的素数开始继续试除），继续找$5,7\cdots$由于$7&gt;\sqrt{31}$，说明31不存在小于$\sqrt{n}$的素因子，所以31为素数，所以$310=2\times 5\times 31$<h2 id="费马因子分解"><a href="#费马因子分解" class="headerlink" title="费马因子分解"></a>费马因子分解</h2></li>
-</ul>
-</li>
-<li>先看一个引理：如果n是正奇数，那么n可以分解为两个正整数的积和两个平方数的差是一一对应的</li>
-<li>简单说下什么意思：就是对于一个正奇数n，可以写成$n=ab=s^2-t^2$，正过来看，$s=\frac{a+b}{2},t=\frac{a-b}{2}$，反过来看，$a=s+t,b=s-t$</li>
-<li>既然对于所有的正奇数都可以写成两数的乘积，那么就可以进行因子分解，我们寻找一个数s，其中$s^2=t^2-n$，由于$t\geq \sqrt{n}$，所以从大于$\sqrt{n}$的正整数$t,t+1,t+2\cdots$开始找t，使得$t^2-n$是一个完全平方数，然后n就可以写成$n=(s+t)(s-t)$，注意到寻找t的过程一定是有限的，因为$n=1\times n$是一定存在的，此时$t=\frac{n+1}{2}$，而这也说明n是素数</li>
-<li>同样的举个例子：<ul>
-<li>设n=6077，由于$77&lt;\sqrt{6077}&lt;78$，所以从$t^2-6077$，其中$t=78,79,80\cdots$，经过计算发现$81^2-6077=484=22^2$，所以$n=(81+22)\times (81-22)=103\times 59$</li>
-</ul>
-</li>
-<li>费马因子分解也是一个效率比较低的算法，比较适合两个因子比较接近的情况下的分解，同时费马因子分解的结果并非一定是素因数<h1 id="费马数"><a href="#费马数" class="headerlink" title="费马数"></a>费马数</h1></li>
-<li>了解一下吧，写不动了，而且我暂时没看出这玩意儿有什么用</li>
-</ul>
-
+<li>每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -585,7 +560,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:36:28" itemprop="dateModified" datetime="2020-07-31T21:36:28+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:11" itemprop="dateModified" datetime="2020-08-08T19:35:11+08:00">2020-08-08</time>
               </span>
 
           
@@ -597,13 +572,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>埃拉托色尼筛法是一种素数筛选法，能够快速地筛选N以内的的素数，在C++中，相比较用常规的创建判断素数的函数然后对每个素数进行素数判断，埃拉托色尼筛法更为高效。</p>
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>埃拉托色尼筛法的原理是下面的这个定理：</p>
-<ul>
-<li>对于任意合数$x&gt;1$，一定存在$x$的素因数$p\leq \sqrt{x}$<h2 id="定理证明"><a href="#定理证明" class="headerlink" title="定理证明"></a>定理证明</h2>书上的证明更加完整，这里我简要的写一下证明过程（教材参考《初等数论及其应用》，这本书比二潘的《初等数论》友善多了）<br>证明这个定理的过程中我们需要运用另一个定理m：对于任意的正整数$n&gt;1$，一定存在素数$p|n$（p整除n）<br>现在我们设x为合数，那么x一定可以写成$x=ab$，其中a,b为正整数，不妨设$1&lt;a\leq b&lt;n$，可以推导出$a\leq \sqrt{x}$，由定理m可知，a一定存在一个素因子p，同时a的因子一定是x的因子，所以$p\leq \sqrt{x}$<h1 id="定理应用"><a href="#定理应用" class="headerlink" title="定理应用"></a>定理应用</h1>由该定理可知，对于任意的N以内的合数，都存在一个素因子$p\leq \sqrt{x}$，那么我们可以先找出$1$~$\sqrt{N}$以内的素数，组成集合$T$，因为合数的素因子一定在集合$T$内，所以N以内的每个合数都是集合$T$内某一元素的倍数，当我们筛去这些倍数之后，留下来的就是素数。<h1 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h1>先建立一个数组，令所有数组的状态为true，对于$1$~$\sqrt{N}$的数，由于1不是素数，所以设为false，再从2开始筛去所有2的倍数，然后筛去3的倍数，4由于是2的倍数，已经被筛去，所以不执行循环，接下来筛去5的倍数……<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    bool number[65536];</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        number[i]&#x3D;true;</span><br><span class="line">    &#125;</span><br><span class="line">    number[1]&#x3D;false;</span><br><span class="line">    for(int i&#x3D;2;i*i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        if(number[i]&#x3D;&#x3D;true)&#123;</span><br><span class="line">            for(int j&#x3D;i*2;j&lt;&#x3D;n;j+&#x3D;i)&#123;</span><br><span class="line">                number[j]&#x3D;false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        if(number[i]&#x3D;&#x3D;true)&#123;</span><br><span class="line">            cout&lt;&lt;i&lt;&lt;&quot; &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>埃拉托色尼筛法是一种素数筛选法，能够快速地筛选N以内的的素数，在C++中，相比较用常规的创建判断素数的函数然后对每个素数进行素数判断，埃拉托色尼筛法更为高效。<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -656,7 +633,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:37:05" itemprop="dateModified" datetime="2020-07-31T21:37:05+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:43" itemprop="dateModified" datetime="2020-08-08T19:35:43+08:00">2020-08-08</time>
               </span>
 
           
@@ -668,30 +645,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>设有一个$N\times M$方格的棋盘$(1\leq N\leq 100, 1\leq M\leq 100)$<br>求出该棋盘中包含多少个正方形、多少个长方形（不包括正方形）<br>输入N，M，输出正方形的个数和长方形的个数<br>例如：当$N=2,M=3$时，通过图像可以看出包含8个正方形和10个长方形（此图不标准，每格长度默认相同）<br><img src="https://zrunkdug.github.io/post-images/1595502127805.png" alt=""></p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br></pre></td></tr></table></figure>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8 10</span><br></pre></td></tr></table></figure>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这是一个简单的矩形个数问题，可以用坐标枚举，但是需要四次循环，这里采取直接推导数学公式的方法。这里我们需要两个公式，一个求棋盘内所有矩形（包括长方形和正方形）的个数的公式，一个是求棋盘内所有正方形的公式，推导过程如下：</p>
-<ol>
-<li>矩形个数的推导：</li>
-</ol>
-<ul>
-<li>首先考虑最简单的情况，即宽为1的矩形的个数，长度从1~M的矩形都满足条件，所以对于长为1的矩形，有M个矩形满足条件，同理对长为i的矩形，有M-i+1个矩形满足条件，所以对于宽为1的矩形，有1+2+……+M个矩形满足条件（设为一组）。</li>
-<li>现在考虑更为一般的情况，即宽为j的矩形的个数，同样的长度为1~M的矩形都满足条件，而宽为j的矩形有N-j+1个，所以对于宽为j的矩形，有$(N-j+1)\times (1+2+……+M)$个矩形满足条件。<br>所以对于全部的矩形个数，其公式为$(1+2+……+N)\times (1+2+……+M)$<br>根据等差数列和的公式，原式化简为$\frac{(1+N)N}{2}\times \frac{(1+M)M}{2}$</li>
-</ul>
-<ol>
-<li>正方形个数的推导：</li>
-</ol>
-<ul>
-<li>正方形事实上是矩形个数推导的特殊情况，同样从最简单的情况，即宽为1的正方形个数开始，显然只有长为1的矩形满足条件，所以有M个矩形满足条件，总个数为$N\times M$。</li>
-<li>现在考虑更加一般的情况，对于宽为i的正方形，显然只有长也是i的矩形满足条件，所以有M-i个矩形满足条件，总个数为$( N-i+1)\times (M-i+1)$。</li>
-<li>这里需要注意到对于每一个正方形，其边长的大小取决于min(N,M)<br>所以所有正方形的个数是：$( N-i+1)\times (M-i+1)$&emsp;$(1\leq i\leq min(N,M))$<br>这里可以使用循环来实现。</li>
-</ul>
-<ol>
-<li>长方形个数：<br>用矩形的个数减去正方形的个数就是长方形的个数</li>
-</ol>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int m,n;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    int ans1&#x3D;0,ans2&#x3D;0;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;min(n,m);i++)&#123;</span><br><span class="line">        ans1+&#x3D;(n-i+1)*(m-i+1);</span><br><span class="line">    &#125;</span><br><span class="line">    ans2&#x3D;(m*n*(m+1)*(n+1))&#x2F;4-ans1;</span><br><span class="line">    cout&lt;&lt;ans1&lt;&lt;&quot; &quot;&lt;&lt;ans2;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>设有一个$N\times M$方格的棋盘$(1\leq N\leq 100, 1\leq M\leq 100)$<br>求出该棋盘中包含多少个正方形、多少个长方形（不包括正方形）<br>输入N，M，输出正方形的个数和长方形的个数<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -796,6 +758,57 @@
   
 
   
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

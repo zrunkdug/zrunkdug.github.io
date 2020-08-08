@@ -267,7 +267,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-08 19:01:06" itemprop="dateModified" datetime="2020-08-08T19:01:06+08:00">2020-08-08</time>
+                <time title="修改时间：2020-08-08 19:28:17" itemprop="dateModified" datetime="2020-08-08T19:28:17+08:00">2020-08-08</time>
               </span>
 
           
@@ -280,19 +280,15 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="整数的阶"><a href="#整数的阶" class="headerlink" title="整数的阶"></a>整数的阶</h1><h2 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h2><ul>
-<li>设 $m$ 是一个正整数，$a$ 是一个整数且 $(a,m)=1$，那么 $a^{\phi(m)}\equiv 1\pmod m$<h2 id="阶"><a href="#阶" class="headerlink" title="阶"></a>阶</h2></li>
-<li><p>由欧拉定理可知一定存在一个整数 $d$ 使得 $a^{d}\equiv 1\pmod n$，同时由最小自然数原理可知一定存在一个最小的这样的 $d_0$，我们把 $d_0$ 称为 $a$ 模 $n$ 的阶，记为 $ord_na$</p>
-</li>
-<li><p>如果$a$和$n$是互素的整数且 $n&gt;0$，那么正整数$x$是同余式 $a^{x}\equiv 1\pmod n$ 的一个解当且仅当 $ord_na|x$<br><em>（这个定理告诉我们如果找到该同余式的所有解，同时也可以看出该同余式的所有解为其阶的倍数。）</em></p>
-</li>
-<li><p>如果$a$和$n$是互素的整数且 $n&gt;0$，那么 $ord_na|\phi(n)$<br><em>（这个定理告诉我们如果快速地找到阶，从这个定理可以看出阶一定是 $\phi(n)$ 的因子，所以在找阶的时候用所有的因子依次尝试即可。）</em></p>
-</li>
-<li><p>如果$a$和$n$是互素的整数且 $n&gt;0$，那么 $a^i\equiv a^j\pmod n$，当且仅当 $i\equiv j\pmod{ord_na}$，其中 $i,j$ 是非负整数。<br><em>(这个定理和后续的证明有关系)</em></p>
-<h2 id="原根"><a href="#原根" class="headerlink" title="原根"></a>原根</h2></li>
-<li>之前讲到了整数的阶，我们知道整数的阶一定是其欧拉函数的因子，现在我们关心那些阶恰好就是其欧拉函数的同余式。</li>
-<li>定义：如果$n$和$r$是互素的整数且 $n&gt;0$，那么当 $ord_nr=\phi(n)$ 时，称 $r$ 是模 $n$ 的原根，也可以简写为 $r$ 是 $n$ 的原根<br>通常我们说 $n$ 的原根是 $a$ 的时候，可以得到同余式的阶为 $\phi(n)$，然后就是 $a^{\phi(n)}\equiv 1\pmod n$</li>
-</ul>
-
+<li>设 $m$ 是一个正整数，$a$ 是一个整数且 $(a,m)=1$，那么 $a^{\phi(m)}\equiv 1\pmod m$
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -337,10 +333,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-05 19:38:28 / 修改时间：23:38:01" itemprop="dateCreated datePublished" datetime="2020-08-05T19:38:28+08:00">2020-08-05</time>
+              <time title="创建时间：2020-08-05 19:38:28" itemprop="dateCreated datePublished" datetime="2020-08-05T19:38:28+08:00">2020-08-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-08 19:35:18" itemprop="dateModified" datetime="2020-08-08T19:35:18+08:00">2020-08-08</time>
+              </span>
 
           
 
@@ -351,28 +353,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在之前学积性函数的时候会看到诸如$F(n)=\sum_{d|n}{f(d)}$的式子，其中 $f$ 是积性函数，这个式子是知道 $f(n)$ 推导其和函数，那么我们能不能知道和函数 $F(n)$ 反推 $f$ 呢？利用莫比乌斯反演可以实现这一过程</p>
-<h1 id="莫比乌斯函数"><a href="#莫比乌斯函数" class="headerlink" title="莫比乌斯函数"></a>莫比乌斯函数</h1><p>定义：</p>
-<script type="math/tex; mode=display">\mu(n)=
-\begin{cases}
-1,&\text{如果$n=1$;}\\
-(-1)^r,&\text{如果$n=p_ap_b\cdots p_n$，其中$p_i$为不同的素数}\\
-0,&\text{其他情况}
-\end{cases}</script><h2 id="莫比乌斯函数的性质"><a href="#莫比乌斯函数的性质" class="headerlink" title="莫比乌斯函数的性质"></a>莫比乌斯函数的性质</h2><ul>
-<li>$\mu(p^a)=0$，其中 $p$ 是素数，$a\geq 2$</li>
-<li>$\mu(p)=-1$，其中 $p$ 是素数</li>
-<li>$\mu(n)$ 是积性函数</li>
-<li>$\mu(n)$的和函数满足：<script type="math/tex; mode=display">F(n)=
-\begin{cases}
-1,&\text{$n=1$}\\
-0,&\text{$n>1$}
-\end{cases}</script><h1 id="莫比乌斯反演公式"><a href="#莫比乌斯反演公式" class="headerlink" title="莫比乌斯反演公式"></a>莫比乌斯反演公式</h1></li>
-<li>设 $F(n)$ 是 $f$ 的和函数，那么 $f(n)=\sum_{d|n}{\mu(d)F(n/d)}$</li>
-<li>利用莫比乌斯反演公式，我们可以很容易的得到<br>$f(1)=F(1)$<br>$f(7)=F(7)-F(1)$<br>$f(8)=F(8)-F(4)$<h1 id="莫比乌斯反演的应用"><a href="#莫比乌斯反演的应用" class="headerlink" title="莫比乌斯反演的应用"></a>莫比乌斯反演的应用</h1></li>
-<li>回顾之前学过的 $\sigma(n)$ 和 $\tau(n)$，他们分别是 $f(n)=n$ 和 $f(n)=1$ 的和函数，所以可以得到：<br>$n=\sum<em>{d|n}{\mu(n/d)\sigma(d)}$<br>$1=\sum</em>{d|n}{\mu(n/d)\tau(d)}$</li>
-</ul>
-<p>（事实上 $d$ 和 $n/d$ 之间的互换是没有影响的，因为一定是遍历的）</p>
-
+          <p>在之前学积性函数的时候会看到诸如$F(n)=\sum_{d|n}{f(d)}$的式子，其中 $f$ 是积性函数，这个式子是知道 $f(n)$ 推导其和函数，那么我们能不能知道和函数 $F(n)$ 反推 $f$ 呢？利用莫比乌斯反演可以实现这一过程<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -417,10 +406,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-04 15:45:03 / 修改时间：21:31:36" itemprop="dateCreated datePublished" datetime="2020-08-04T15:45:03+08:00">2020-08-04</time>
+              <time title="创建时间：2020-08-04 15:45:03" itemprop="dateCreated datePublished" datetime="2020-08-04T15:45:03+08:00">2020-08-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-08 19:35:30" itemprop="dateModified" datetime="2020-08-08T19:35:30+08:00">2020-08-08</time>
+              </span>
 
           
 
@@ -433,29 +428,15 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="因子数和因子和函数"><a href="#因子数和因子和函数" class="headerlink" title="因子数和因子和函数"></a>因子数和因子和函数</h1><ol>
 <li>因子和函数<br>定义为整数n的所有正因子之和，记为 $\sigma(n)$</li>
-<li>因子个数函数<br>定义为正整数n的所有正因子个数，记为 $\tau(n)$</li>
-</ol>
-<ul>
-<li>$\sigma(n)$和 $\tau(n)$都是积性函数<h2 id="sigma-n-和-tau-n-函数的性质"><a href="#sigma-n-和-tau-n-函数的性质" class="headerlink" title="$\sigma(n)$和 $\tau(n)$ 函数的性质"></a>$\sigma(n)$和 $\tau(n)$ 函数的性质</h2></li>
-</ul>
-<ol>
-<li>$\sigma(p^a)=1+p+p^2+\cdots+p^a=\frac{p^{a+1}-1}{p-1}$</li>
-<li>$\tau(p^a)=a+1$</li>
-<li><p>设正整数n有素因子分解$n=p<em>1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$，则有<br>$\sigma(n)=\sigma(p_1^{a_1})\sigma(p_2^{a_2})\cdots\sigma(p_k^{a_k})=\prod</em>{j=1}^{k}{\frac{p_j^{a_j+1}-1}{p_j-1}}$</p>
-<p>  $\tau(n)=\tau(p<em>1^{a_1})\tau(p_2^{a_2})\cdots\tau(p_k^{a_k})=\prod</em>{j=1}^{k}{a_j+1}$</p>
-<h1 id="完全数"><a href="#完全数" class="headerlink" title="完全数"></a>完全数</h1></li>
-<li>所有与真因子之和相等的正整数称为<strong>完全数</strong>（真因子即除去自身外的因子）</li>
-<li>定义：如果n是正整数且n满足$\sigma(n)=2n$（解释下为什么是2n，由于是真因子，所以是不带n的，两边加上n就得到了2n）<h2 id="偶完全数的判定条件"><a href="#偶完全数的判定条件" class="headerlink" title="偶完全数的判定条件"></a>偶完全数的判定条件</h2></li>
-</ol>
-<ul>
-<li>正整数n是一个偶完全数当且仅当 $n=2^{m-1}(2^m-1)$，其中 $m\geq 2$是使得 $2^m-1$ 为素数的整数</li>
-<li>如果 $m$ 是一个正整数且 $2^m-1$ 是素数，则 $m$ 是素数<h1 id="梅森素数"><a href="#梅森素数" class="headerlink" title="梅森素数"></a>梅森素数</h1></li>
-</ul>
-<ol>
-<li>定义：如果 $m$ 是一个正整数，那么 $M_m=2^m-1$ 称作第 $m$ 个<strong>梅森数</strong>，如果 $M_m$ 是素数，则称其为<strong>梅森素数</strong>（这里可知如果一个梅森数是梅森素数，那么 $m$ 一定为素数）<h2 id="梅森素数的判定"><a href="#梅森素数的判定" class="headerlink" title="梅森素数的判定"></a>梅森素数的判定</h2></li>
-<li>Lucas-Lehmer判定法<br>设p是素数，设第p个梅森数为$M<em>p=2^p-1$，定义$r_1=4$，<br>对$k\geq 2$，利用$r_k\equiv r</em>{k-1}^2-2\pmod {M<em>p}$，可以得到一系列递归式，<br>那么$M_p$是梅森素数当且仅当 $r</em>{p-1}\equiv 0\pmod {M_p}$</li>
-</ol>
-
+<li>因子个数函数<br>定义为正整数n的所有正因子个数，记为 $\tau(n)$
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -508,7 +489,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-04 21:32:44" itemprop="dateModified" datetime="2020-08-04T21:32:44+08:00">2020-08-04</time>
+                <time title="修改时间：2020-08-08 19:35:01" itemprop="dateModified" datetime="2020-08-08T19:35:01+08:00">2020-08-08</time>
               </span>
 
           
@@ -522,38 +503,15 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="积性函数"><a href="#积性函数" class="headerlink" title="积性函数"></a>积性函数</h1><ul>
 <li>先看定义：对于所有定义在正整数上的函数称为<strong>算术函数</strong>，对于所有满足 $f(mn)=f(m)(n)$ 的函数称为<strong>积性函数</strong></li>
-<li>积性函数有一个性质，就是对于任意一个正整数的幂分解 $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$，<br>都有 $f(n)=f(p_1^{a_1})f(p_2^{a_2})\cdots f(p_k^{a_k})$ （可以用数学归纳法证明）<h1 id="欧拉-phi-函数"><a href="#欧拉-phi-函数" class="headerlink" title="欧拉$\phi$函数"></a>欧拉$\phi$函数</h1></li>
-<li>对于欧拉函数 $\phi (n)$，简单的说就是所有小于等于 $n$ 且与 $n$ 互素的数的个数，比如 $\phi (4)=2$，这里要注意 $\phi (1)=1$<h2 id="欧拉-phi-函数的一些性质"><a href="#欧拉-phi-函数的一些性质" class="headerlink" title="欧拉$\phi$函数的一些性质"></a>欧拉$\phi$函数的一些性质</h2></li>
-</ul>
-<ol>
-<li><p>如果 $p$ 是素数，那么 $\phi (p)=p-1$，反之，如果 $p$ 是正整数且满足 $\phi (p)=p-1$，那么 $p$ 是素数</p>
-</li>
-<li><p>设 $p$ 是素数，$a$ 是一个正整数，那么 $\phi (p^a)=p^a-p^{a-1}$</p>
-</li>
-</ol>
-<ul>
-<li>证明：因为p是素数，所以对于 $p^a$ ，所有 $p$ 的倍数都不和$p^a$互素，设这些数为 $kp$，$1\leq k\leq p^{a-1}$，所以有 $p^{a-1}$ 个这样的数，所以 $\phi (p^a)=p^a-p^{a-1}$</li>
-</ul>
-<ol>
-<li><p>欧拉$\phi$函数是一个积性函数，即 $\phi(mn)=\phi(m)\phi(n)$</p>
-</li>
-<li><p>设 $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$ 是正整数 $n$ 的幂分解，那么有 $\phi(n)=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\cdots(1-\frac{1}{p_k})$</p>
-</li>
-</ol>
-<ul>
-<li>证明：已知 $\phi (p_r^{a_r})=p_r^{a_r}-p_r^{a_r-1}=p_r^{a_r}(1-\frac{1}{p_r})$，所以 $\phi(n)=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}(1-\frac{1}{p_1})(1-\frac{1}{p_2})\cdots(1-\frac{1}{p_k})=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\cdots(1-\frac{1}{p_k})$</li>
-</ul>
-<ol>
-<li><p>设 $n$ 是一个大于2的正整数，那么 $\phi(n)$ 是偶数</p>
-</li>
-<li><p>设 $f$ 是一个算术函数，那么称 $F(n)=\sum<em>{d|n}{f(d)}$ 为 $f$ 的和函数，即所有因子在  $f$ 下的和，对于欧拉$\phi$函数，我们有 $F(n)=\sum</em>{d|n}{\phi(d)}=n$</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2></li>
-<li>求 100 以内的所有与 100 互素的正整数的个数，即求 $\phi(100)$</li>
-</ol>
-<ul>
-<li>由性质 4 和 $100=2^25^2$ 可知，$\phi(100)=100\times (1-\frac{1}{2})\times (1-\frac{1}{5})=40$</li>
-</ul>
-
+<li>积性函数有一个性质，就是对于任意一个正整数的幂分解 $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$，<br>都有 $f(n)=f(p_1^{a_1})f(p_2^{a_2})\cdots f(p_k^{a_k})$ （可以用数学归纳法证明）
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -598,10 +556,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-02 22:47:36 / 修改时间：23:56:23" itemprop="dateCreated datePublished" datetime="2020-08-02T22:47:36+08:00">2020-08-02</time>
+              <time title="创建时间：2020-08-02 22:47:36" itemprop="dateCreated datePublished" datetime="2020-08-02T22:47:36+08:00">2020-08-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-08 19:35:55" itemprop="dateModified" datetime="2020-08-08T19:35:55+08:00">2020-08-08</time>
+              </span>
 
           
 
@@ -612,8 +576,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>&emsp;&emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。<br>&emsp;&emsp;<strong>关于为什么要写博客</strong>：<br>&emsp;&emsp;目前阶段写博客主要是给自己看的，毕竟实力有限，把每天学的和做的一些比较好的题写下来，一方面增加记忆，一方面写的时候加强理解（毕竟你得理解了才能把东西写出来是吧）。尤其是写数论的时候，写之前基本都是要把证明理解了，然后再用自己的话写下来，这样的话我以后回看的时候也好理解。然后写博客的时候我尽量做到不要硬抄书上的东西，这样做和高中那种抄概念式的做笔记没什么区别，除了好看整洁一无是处，写下来的东西一定是带有自己的理解的。所以我写博客的主要目的就是像记笔记一样，方便以后自己的回看和复习，顺便整理思路，增加记忆。<br>&emsp;&emsp;<strong>最近学的东西</strong>：<br>&emsp;&emsp;数学：正好一直对数论比较感兴趣，所以买了本二潘的《初等数论》，看了这本书我才知道我是真的毫无数学天赋（还好我没报数学系），看的实在心态炸裂所以换了《初等数论及其应用》，外国人写的书确实门槛低而且好理解，看到现在也以及看了一半了，整体来说收获还是很大的，不过我还是没有到能把大部分课后题都独立完成的程度。<br>&emsp;&emsp;面向对象：目前是类，继承，多态学完了，本来想看完这些直接学数据结构的，结果发现数据结构上来就是模板，没有办法只能继续学面向对象，现在还差操作符重载、模板和输入输出流<br>&emsp;&emsp;算法：还是每天做几道题，然后学点新的，现在也就会了秦九韶公式还有高精度运算，另外还有几个依赖数论的算法，比如埃拉托色尼筛法（学数论的好处就是这些算法都很好理解）。<br>&emsp;&emsp;<strong>接下来想干嘛</strong><br>&emsp;&emsp;7月份算法方面学的实在太乱了，《算导》看了前几页直接劝退，学贪心、深搜、宽搜的时候也非常的累，感觉以及超出我现在的水平了。我觉得学的还是不成体系，我翻了翻《算导》的目录感觉这些算法也依赖树和图这些离散和数据结构的内容。所以8月份想先把面向对象结束，应该能在8月中旬的时候弄完，数论估计要学到开学了，然后上离散或者数据结构，那几个算法先放一放，毕竟我还是太菜了。到时候看情况可以先学点数字逻辑，否则真的干不过分流的那些绩点怪了。数学方面想学的实在太多了，不过实在能力有限，以后应该会深入学点线代、概率论。</p>
-
+          <p>&emsp;&emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/02/sui-bi-20207/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -666,7 +637,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-01 11:43:31" itemprop="dateModified" datetime="2020-08-01T11:43:31+08:00">2020-08-01</time>
+                <time title="修改时间：2020-08-08 19:34:55" itemprop="dateModified" datetime="2020-08-08T19:34:55+08:00">2020-08-08</time>
               </span>
 
           
@@ -678,27 +649,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="线性同余方程"><a href="#线性同余方程" class="headerlink" title="线性同余方程"></a>线性同余方程</h1><p>对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程</p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
-<li>对于一元线性同余方程 $ax\equiv b\pmod m$，设 $(a,m)=d$，如果 $d|b$，则存在$d$个不同余的解，设$x_0$为原方程的特解，则$x=x_0+\frac{m}{d}t$，反之则无解，注意对于任意一个特解，其所有同余解都是原方程的解</li>
-<li>特别的，当$a$和$m$互素的时候，原方程有唯一解</li>
-<li>将同余式化为一般的方程式然后利用丢番图方程的解法可以证明上述结论<h2 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h2></li>
-<li>我们将 $ax\equiv 1\pmod m$ 的解称为 $a$ 模 $m$ 的逆（反之也成立）</li>
-<li>逆有一个重要的性质，即对于方程$ax\equiv b\pmod m$，两边乘以 $a$ 模 $m$ 的逆 $c$，得到 $acx\equiv x\equiv bc\pmod m$<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2></li>
-</ul>
-<ol>
-<li>求 $9x\equiv 12\pmod {15}$<br>$d=(9,15)=3$，且 $3|12$，所以原方程有3个不同余的解<br>通过丢番图方程可以解得原方程有一个特解 $x_0=8$，所以 $x=8+(15/3)t=8+5t$<br>所以原方程的解分别为：<br>$x\equiv 8\pmod {15}$，$x\equiv 13\pmod {15}$，$x\equiv 3\pmod {15}$</li>
-<li>求 $7x\equiv 22\pmod {31}$<br>通过计算可知 9 是 7 模 31 的逆，所以 $x\equiv 22\times 7\equiv 12\pmod {31}$<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1></li>
-</ol>
-<ul>
-<li>设$m_1,m_2,\cdots,m_n$是两两互素的的正整数，则同余方程组<script type="math/tex; mode=display">x\equiv a_1\pmod {m_1}</script><script type="math/tex; mode=display">x\equiv a_2\pmod {m_2}</script><script type="math/tex; mode=display">\cdots</script><script type="math/tex; mode=display">x\equiv a_n\pmod {m_n}</script></li>
-<li>有模 $M=m_1m_2\cdots m_n$ 的唯一解，设 $M_1=m_2m_3\cdots m_n$，$y_n$ 为 $M_1$ 模 $m_1$ 的逆</li>
-<li>则解为 $x\equiv (a_1y_1M_1+a_1y_1M_1+\cdots+a_ny_nM_n)\pmod M$<h2 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h2></li>
-</ul>
-<ol>
-<li>求下列同余方程组的解<script type="math/tex; mode=display">x\equiv 1\pmod 3</script><script type="math/tex; mode=display">x\equiv 2\pmod 5</script><script type="math/tex; mode=display">x\equiv 3\pmod 7</script>$M=3\times 5\times 7=105$，$M_1=5\times 7=35$，同理 $M_2=21$，$M_3=15$<br>由 $35y_1\equiv 1\pmod 3$，解得 $y_1\equiv 2\pmod 3$，同理解得 $y_2\equiv 1\pmod 5$，$y_3\equiv 1\pmod 7$<br>所以$x\equiv 1\times 2\times 35+2\times 1\times 21+3\times 1\times 15=157\equiv 52\pmod {105}$</li>
-</ol>
-
+          <h1 id="线性同余方程"><a href="#线性同余方程" class="headerlink" title="线性同余方程"></a>线性同余方程</h1><p>对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -743,10 +702,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-07-31 16:39:02 / 修改时间：21:38:18" itemprop="dateCreated datePublished" datetime="2020-07-31T16:39:02+08:00">2020-07-31</time>
+              <time title="创建时间：2020-07-31 16:39:02" itemprop="dateCreated datePublished" datetime="2020-07-31T16:39:02+08:00">2020-07-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-08 19:35:34" itemprop="dateModified" datetime="2020-08-08T19:35:34+08:00">2020-08-08</time>
+              </span>
 
           
 
@@ -757,12 +722,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，<strong>小于基准的，基准，大于基准的</strong>，然后对于小于和大于基准的做同样的操作（递归）。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int qsort(int a[],int l,int r)&#123;</span><br><span class="line">    int key&#x3D;a[(l+r)&#x2F;2],i&#x3D;l,j&#x3D;r;&#x2F;&#x2F;key为基准</span><br><span class="line">    while(i&lt;&#x3D;j)&#123;</span><br><span class="line">        while(a[i]&lt;key)&#123;&#x2F;&#x2F;找基准左边比key大的数</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        while(a[j]&gt;key)&#123;&#x2F;&#x2F;找基准右边比key小的数</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i&lt;&#x3D;j)&#123;</span><br><span class="line">            swap(a[i],a[j]);&#x2F;&#x2F;交换之前找到的两个数</span><br><span class="line">            i++;j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(l&lt;j)&#123;</span><br><span class="line">        qsort(a,l,j);&#x2F;&#x2F;基准左边递归</span><br><span class="line">    &#125;</span><br><span class="line">    if(i&lt;r)&#123;</span><br><span class="line">        qsort(a,i,r);&#x2F;&#x2F;基准右边递归</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h1><h2 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h2><p>先用字符串储存两个高精度数，转化为int类型的数组，然后个位+个位，十位+十位……，大于10则进位</p>
-<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    char sa[65536],sb[65536];</span><br><span class="line">    int a[65536],b[65536],c[65536];</span><br><span class="line">    memset(a,0,sizeof(a));</span><br><span class="line">    memset(b,0,sizeof(b));</span><br><span class="line">    memset(c,0,sizeof(c));</span><br><span class="line">    cin&gt;&gt;sa&gt;&gt;sb;</span><br><span class="line">    int la&#x3D;strlen(sa),lb&#x3D;strlen(sb);</span><br><span class="line">    for(int i&#x3D;0;i&lt;la;i++)&#123;</span><br><span class="line">        a[la-i-1]&#x3D;sa[i]-&#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;lb;i++)&#123;</span><br><span class="line">        b[lb-i-1]&#x3D;sb[i]-&#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    int lc&#x3D;max(la,lb);</span><br><span class="line">    for(int i&#x3D;0;i&lt;lc;i++)&#123;</span><br><span class="line">        c[i]+&#x3D;a[i]+b[i];</span><br><span class="line">        if(c[i]&gt;&#x3D;10)&#123;</span><br><span class="line">            c[i+1]+&#x3D;c[i]&#x2F;10;</span><br><span class="line">            c[i]%&#x3D;10;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(c[lc]&gt;0)&#123;</span><br><span class="line">        lc++;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;lc-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">        cout&lt;&lt;c[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="高精度乘法"><a href="#高精度乘法" class="headerlink" title="高精度乘法"></a>高精度乘法</h1><h2 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h2><p>对于a,b两数，用a乘以b的每一位，然后用加法的原理运算即可</p>
-<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    char sa[65536],sb[65536];</span><br><span class="line">    int a[65536],b[65536],c[65536];</span><br><span class="line">    memset(a,0,sizeof(a));</span><br><span class="line">    memset(b,0,sizeof(b));</span><br><span class="line">    memset(c,0,sizeof(c));</span><br><span class="line">    cin&gt;&gt;sa&gt;&gt;sb;</span><br><span class="line">    int la&#x3D;strlen(sa),lb&#x3D;strlen(sb);</span><br><span class="line">    for(int i&#x3D;0;i&lt;la;i++)&#123;</span><br><span class="line">        a[la-i-1]&#x3D;sa[i]-&#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;lb;i++)&#123;</span><br><span class="line">        b[lb-i-1]&#x3D;sb[i]-&#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    int f,jw,w;</span><br><span class="line">    for(int i&#x3D;0;i&lt;la;i++)&#123;</span><br><span class="line">        for(int j&#x3D;0;j&lt;lb;j++)&#123;</span><br><span class="line">            f&#x3D;a[i]*b[j];jw&#x3D;f&#x2F;10;f%&#x3D;10;</span><br><span class="line">            w&#x3D;i+j;</span><br><span class="line">            c[w]+&#x3D;f;</span><br><span class="line">            c[w+1]+&#x3D;jw+c[w]&#x2F;10;</span><br><span class="line">            c[w]%&#x3D;10;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int lc&#x3D;la+lb;</span><br><span class="line">    while(c[lc]&#x3D;&#x3D;0)&#123;</span><br><span class="line">        lc--;</span><br><span class="line">    &#125;</span><br><span class="line">    if(lc&lt;0)&#123;</span><br><span class="line">        cout&lt;&lt;0&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        for(int i&#x3D;lc;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">            cout&lt;&lt;c[i];</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，<strong>小于基准的，基准，大于基准的</strong>，然后对于小于和大于基准的做同样的操作（递归）。<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -815,7 +783,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:38:49" itemprop="dateModified" datetime="2020-07-31T21:38:49+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:39" itemprop="dateModified" datetime="2020-08-08T19:35:39+08:00">2020-08-08</time>
               </span>
 
           
@@ -827,11 +795,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>火车从始发站（称为第$1$站）开出，在始发站上车的人数为$a$，然后到达第$2$站，在第$2$站有人上、下车，但上、下车的人数相同，因此在第$2$站开出时（即在到达第3站之前）车上的人数保持为$a$人。从第$3$站起（包括第$3$站）上、下车的人数有一定规律：上车的人数都是前两站上车人数之和，而下车人数等于上一站上车人数，一直到终点站的前一站（第$(n-1)$站），都满足此规律。现给出的条件是：共有$n$个车站，始发站上车的人数为$b$，最后一站下车的人数是$m$（全部下车）。试问$x$站开出时车上的人数是多少？</p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>输入只有一行四个整数，分别表示始发站上车人数$a$，车站数$n$，终点站下车人数$m$和所求的站点编号$x$。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 7 32 4</span><br></pre></td></tr></table></figure></p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><p>输出一行一个整数表示答案：从$x$站开出时车上的人数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13</span><br></pre></td></tr></table></figure></p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>可以自己列个表看看每一站上下车的人数，显然是<strong>斐波那契数列</strong>，因此可以用循环计算出每个车站的上下车人数，由于这里存在一个未知量，即第2站上车的人数$k$，<strong>所以需要用一个二维数组去储存$a$和$k$的系数</strong>（其实a的系数不需要去存，因为a是已知量，但是为了看得清楚点所以还是写了），最后列出和$m$的方程即可解出$k$，然后代入第$x$个车站即可</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int aa[100][2],ab[100][2];</span><br><span class="line">    aa[1][0]&#x3D;1;aa[1][1]&#x3D;0;aa[2][0]&#x3D;0;aa[2][1]&#x3D;1;</span><br><span class="line">    ab[1][0]&#x3D;1;ab[1][1]&#x3D;0;ab[2][0]&#x3D;1;ab[2][1]&#x3D;0;</span><br><span class="line">    int a,n,m,x;cin&gt;&gt;a&gt;&gt;n&gt;&gt;m&gt;&gt;x;</span><br><span class="line">    for(int i&#x3D;3;i&lt;&#x3D;n-1;i++)&#123;</span><br><span class="line">        aa[i][0]&#x3D;aa[i-1][0]+aa[i-2][0];</span><br><span class="line">        aa[i][1]&#x3D;aa[i-1][1]+aa[i-2][1];</span><br><span class="line">        ab[i][0]&#x3D;ab[i-1][0]+aa[i][0]-aa[i-1][0];</span><br><span class="line">        ab[i][1]&#x3D;ab[i-1][1]+aa[i][1]-aa[i-1][1];</span><br><span class="line">    &#125;</span><br><span class="line">    int k&#x3D;(m-ab[n-1][0]*a)&#x2F;ab[n-1][1];</span><br><span class="line">    cout&lt;&lt;ab[x][0]*a+ab[x][1]*k&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>火车从始发站（称为第$1$站）开出，在始发站上车的人数为$a$，然后到达第$2$站，在第$2$站有人上、下车，但上、下车的人数相同，因此在第$2$站开出时（即在到达第3站之前）车上的人数保持为$a$人。从第$3$站起（包括第$3$站）上、下车的人数有一定规律：上车的人数都是前两站上车人数之和，而下车人数等于上一站上车人数，一直到终点站的前一站（第$(n-1)$站），都满足此规律。现给出的条件是：共有$n$个车站，始发站上车的人数为$b$，最后一站下车的人数是$m$（全部下车）。试问$x$站开出时车上的人数是多少？<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/30/luo-gu-p1011-che-zhan/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -884,7 +856,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:37:30" itemprop="dateModified" datetime="2020-07-31T21:37:30+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:51" itemprop="dateModified" datetime="2020-08-08T19:35:51+08:00">2020-08-08</time>
               </span>
 
           
@@ -896,14 +868,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。</p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>第一行1个正整数t，表示测试数据组数，$1\leq t \leq 10$<br>接下来的t组数据，每组数据的第一行包含一个整数n，$1\leq n \leq 1000$<br>第二行包含三个整数x,y和d，表示小林的初始位置和一开始跑的方向。<br>其中d=0表示东；d=1表示南；d=2表示西；d=3表示北<br>第三行与第二行格式相同，但描述的是小华。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">2</span><br><span class="line">0 0 0</span><br><span class="line">0 1 2</span><br><span class="line">4</span><br><span class="line">0 1 0</span><br><span class="line">3 2 0</span><br></pre></td></tr></table></figure></p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><p>输出t行，若遭遇，输出遭遇位置，否则输出-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure></p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ul>
-<li>显然需要用到暴力模拟，设置两个数组分别记录小林和小华的路径，,分别用不同的数标记走过的路径、边界和没有走过的路，两人各走一次为一次循环，每次循环开始前判断两人的坐标是否一致。如果有人无路可走，用一个flag标记为false，然后此人的坐标就不再改变，直到另一个走到这个坐标或者也无路可走为止。</li>
-<li>走路方向的问题用dx,dy分别设定，关于边界的设定这里采用了整个矩阵向右下角移一格的方法。<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int a[1010][1010],b[1010][1010];</span><br><span class="line">int dx1[4]&#x3D;&#123;1,0,-1,0&#125;,dx2[4]&#x3D;&#123;-1,0,1,0&#125;;</span><br><span class="line">int dy1[4]&#x3D;&#123;0,-1,0,1&#125;,dy2[4]&#x3D;&#123;0,-1,0,1&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    int x1,y1,x2,y2,d1,d2;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        bool flag1&#x3D;true,flag2&#x3D;true;</span><br><span class="line">        int x;cin&gt;&gt;x;</span><br><span class="line">        int ii&#x3D;0;</span><br><span class="line">        for(int i&#x3D;0;i&lt;&#x3D;x+1;i++)&#123;</span><br><span class="line">            for(int j&#x3D;0;j&lt;&#x3D;x+1;j++)&#123;</span><br><span class="line">                a[i][j]&#x3D;-1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;x;i++)&#123;</span><br><span class="line">            for(int j&#x3D;1;j&lt;&#x3D;x;j++)&#123;</span><br><span class="line">                a[i][j]&#x3D;0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;&#x3D;x+1;i++)&#123;</span><br><span class="line">            for(int j&#x3D;0;j&lt;&#x3D;x+1;j++)&#123;</span><br><span class="line">                b[i][j]&#x3D;-1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;x;i++)&#123;</span><br><span class="line">            for(int j&#x3D;1;j&lt;&#x3D;x;j++)&#123;</span><br><span class="line">                b[i][j]&#x3D;0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cin&gt;&gt;x1&gt;&gt;y1&gt;&gt;d1;</span><br><span class="line">        x1++;y1++;</span><br><span class="line">        cin&gt;&gt;x2&gt;&gt;y2&gt;&gt;d2;</span><br><span class="line">        x2++;y2++;</span><br><span class="line">        a[x1][y1]&#x3D;1;</span><br><span class="line">        b[x2][y2]&#x3D;2;</span><br><span class="line">        int k1&#x3D;(d1+3)%4,k2&#x3D;3-d2;</span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;&#x2F; ii++;</span><br><span class="line">            &#x2F;&#x2F; if(ii&#x3D;&#x3D;20)&#123;</span><br><span class="line">            &#x2F;&#x2F;     break;</span><br><span class="line">            &#x2F;&#x2F; &#125;</span><br><span class="line">            if(x1&#x3D;&#x3D;x2&amp;&amp;y1&#x3D;&#x3D;y2)&#123;</span><br><span class="line">                cout&lt;&lt;x1-1&lt;&lt;&quot; &quot;&lt;&lt;y1-1&lt;&lt;endl;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            if(flag1)&#123;</span><br><span class="line">                if(a[x1+dx1[k1]][y1+dy1[k1]]&#x3D;&#x3D;-1||a[x1+dx1[k1]][y1+dy1[k1]]&#x3D;&#x3D;1)&#123;</span><br><span class="line">                    k1++;</span><br><span class="line">                    k1%&#x3D;4;</span><br><span class="line">                &#125;</span><br><span class="line">                if(a[x1+dx1[k1]][y1+dy1[k1]]!&#x3D;1)&#123;</span><br><span class="line">                    x1+&#x3D;dx1[k1];</span><br><span class="line">                    y1+&#x3D;dy1[k1];</span><br><span class="line">                    a[x1][y1]&#x3D;1;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;1:&quot;&lt;&lt;x1-1&lt;&lt;&quot; &quot;&lt;&lt;y1-1&lt;&lt;endl;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;**&quot;&lt;&lt;dx1[k1]&lt;&lt;&quot; &quot;&lt;&lt;dy1[k1]&lt;&lt;endl;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    flag1&#x3D;false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(flag2)&#123;</span><br><span class="line">                if(b[x2+dx2[k2]][y2+dy2[k2]]&#x3D;&#x3D;-1||b[x2+dx2[k2]][y2+dy2[k2]]&#x3D;&#x3D;2)&#123;</span><br><span class="line">                    k2++;</span><br><span class="line">                    k2%&#x3D;4;</span><br><span class="line">                &#125;</span><br><span class="line">                if(b[x2+dx2[k2]][y2+dy2[k2]]!&#x3D;2)&#123;</span><br><span class="line">                    x2+&#x3D;dx2[k2];</span><br><span class="line">                    y2+&#x3D;dy2[k2];</span><br><span class="line">                    b[x2][y2]&#x3D;2;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;2:&quot;&lt;&lt;x2-1&lt;&lt;&quot; &quot;&lt;&lt;y2-1&lt;&lt;endl;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;**&quot;&lt;&lt;dx2[k2]&lt;&lt;&quot; &quot;&lt;&lt;dy2[k2]&lt;&lt;endl;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    flag2&#x3D;false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(!flag1&amp;&amp;!flag2)&#123;</span><br><span class="line">                cout&lt;&lt;-1&lt;&lt;endl;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+          <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/29/noip-mo-ni-zao-yu-zhan/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -956,7 +929,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 21:35:22" itemprop="dateModified" datetime="2020-07-31T21:35:22+08:00">2020-07-31</time>
+                <time title="修改时间：2020-08-08 19:35:27" itemprop="dateModified" datetime="2020-08-08T19:35:27+08:00">2020-08-08</time>
               </span>
 
           
@@ -968,24 +941,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="同余定义"><a href="#同余定义" class="headerlink" title="同余定义"></a>同余定义</h1><p>设$a,b,m$为整数，若 $m|(a-b)$，即 $a=km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余<br>记作 $a\equiv b\pmod m$</p>
-<ul>
-<li>刚学看这个符号比较累，讲下我的理解，可以用计算机语言mod来理解一下，模m就是mod m的意思，如果上述等式成立，那么说明a和b是同余的（a模m和b模m的余数相等），也可以说明a mod m的值是b<h1 id="同余的几个性质"><a href="#同余的几个性质" class="headerlink" title="同余的几个性质"></a>同余的几个性质</h1></li>
-</ul>
-<ol>
-<li>自反性：$a\equiv a\pmod m$</li>
-<li>对称性：若 $a\equiv b\pmod m$，则 $b\equiv a\pmod m$</li>
-<li>传递性：若 $a\equiv b\pmod m$，$b\equiv c\pmod m$，则 $a\equiv c\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，则 $a+c\equiv b+c\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，则 $ac\equiv bc\pmod m$（同除c不一定成立）</li>
-<li>若 $ac\equiv bc\pmod m$，且 $d=(c,m)$，那么 $a\equiv b\pmod{\frac{m}{d}}$<br>特别的，当 $(c,m)=1$时，即 $c$ 和 $m$ 互素时，$a\equiv b\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，$c\equiv d\pmod m$，则<br>$a+c\equiv b+d\pmod m$<br>$ac\equiv bd\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，则 $a^k\equiv b^k\pmod m$</li>
-</ol>
-<ul>
-<li>证明用定义就可以了，没什么难度<h1 id="模指数运算"><a href="#模指数运算" class="headerlink" title="模指数运算"></a>模指数运算</h1>例：求$2^{644}$对模645的最小正剩余<br>由自反性，我们有$2\equiv 2\pmod 645$，<br>由性质8，我们有<br>$2^2\equiv 4\pmod {645}$<br>$2^4\equiv 16\pmod {645}$<br>$2^8\equiv 256\pmod {645}$<br>$2^{16}\equiv 256^2\equiv 391\pmod {645}$<br>$\cdots$<br>$2^{512}\equiv 256\pmod {645}$<br>所以$2^{644}=2^{512+128+4}\equiv 256\times 391\times 16=1601536\equiv 1\pmod{645}$</li>
-</ul>
-
+          <h1 id="同余定义"><a href="#同余定义" class="headerlink" title="同余定义"></a>同余定义</h1><p>设$a,b,m$为整数，若 $m|(a-b)$，即 $a=km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余<br>记作 $a\equiv b\pmod m$<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

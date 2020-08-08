@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-08T11:01:06.839Z</updated>
+  <updated>2020-08-08T11:28:17.174Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/"/>
     <id>http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/</id>
     <published>2020-08-07T11:20:36.000Z</published>
-    <updated>2020-08-08T11:01:06.839Z</updated>
+    <updated>2020-08-08T11:28:17.174Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;整数的阶&quot;&gt;&lt;a href=&quot;#整数的阶&quot; class=&quot;headerlink&quot; title=&quot;整数的阶&quot;&gt;&lt;/a&gt;整数的阶&lt;/h1&gt;&lt;h2 id=&quot;欧拉定理&quot;&gt;&lt;a href=&quot;#欧拉定理&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;整数的阶&quot;&gt;&lt;a href=&quot;#整数的阶&quot; class=&quot;headerlink&quot; title=&quot;整数的阶&quot;&gt;&lt;/a&gt;整数的阶&lt;/h1&gt;&lt;h2 id=&quot;欧拉定理&quot;&gt;&lt;a href=&quot;#欧拉定理&quot; class=&quot;headerlink&quot; title=&quot;欧拉定理&quot;&gt;&lt;/a&gt;欧拉定理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;设 $m$ 是一个正整数，$a$ 是一个整数且 $(a,m)=1$，那么 $a^{\phi(m)}\equiv 1\pmod m$
     
     </summary>
     
@@ -44,18 +39,11 @@
     <link href="http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/"/>
     <id>http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/</id>
     <published>2020-08-05T11:38:28.000Z</published>
-    <updated>2020-08-05T15:38:01.805Z</updated>
+    <updated>2020-08-08T11:35:18.576Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;在之前学积性函数的时候会看到诸如$F(n)=\sum_{d|n}{f(d)}$的式子，其中 $f$ 是积性函数，这个式子是知道 $f(n)$ 推导其和函数，那么我们能不能知道和函数 $F(n)$ 反推 $f$ 呢？利用莫比乌斯反演可以实现这一过程&lt;/p&gt;
-&lt;h1
-        
-      
+      &lt;p&gt;在之前学积性函数的时候会看到诸如$F(n)=\sum_{d|n}{f(d)}$的式子，其中 $f$ 是积性函数，这个式子是知道 $f(n)$ 推导其和函数，那么我们能不能知道和函数 $F(n)$ 反推 $f$ 呢？利用莫比乌斯反演可以实现这一过程&lt;br&gt;
     
     </summary>
     
@@ -70,18 +58,13 @@
     <link href="http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/"/>
     <id>http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/</id>
     <published>2020-08-04T07:45:03.000Z</published>
-    <updated>2020-08-04T13:31:36.805Z</updated>
+    <updated>2020-08-08T11:35:30.737Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;因子数和因子和函数&quot;&gt;&lt;a href=&quot;#因子数和因子和函数&quot; class=&quot;headerlink&quot; title=&quot;因子数和因子和函数&quot;&gt;&lt;/a&gt;因子数和因子和函数&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;因子和函数&lt;br&gt;定义为整数n的所有正因子之和，记为
-        
-      
+      &lt;h1 id=&quot;因子数和因子和函数&quot;&gt;&lt;a href=&quot;#因子数和因子和函数&quot; class=&quot;headerlink&quot; title=&quot;因子数和因子和函数&quot;&gt;&lt;/a&gt;因子数和因子和函数&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;因子和函数&lt;br&gt;定义为整数n的所有正因子之和，记为 $\sigma(n)$&lt;/li&gt;
+&lt;li&gt;因子个数函数&lt;br&gt;定义为正整数n的所有正因子个数，记为 $\tau(n)$
     
     </summary>
     
@@ -96,18 +79,13 @@
     <link href="http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/"/>
     <id>http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/</id>
     <published>2020-08-03T09:06:04.000Z</published>
-    <updated>2020-08-04T13:32:44.051Z</updated>
+    <updated>2020-08-08T11:35:01.574Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;积性函数&quot;&gt;&lt;a href=&quot;#积性函数&quot; class=&quot;headerlink&quot; title=&quot;积性函数&quot;&gt;&lt;/a&gt;积性函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;先看定义：对于所有定义在正整数上的函数称为&lt;strong&gt;算术函数&lt;/strong&gt;，对于所有满足
-        
-      
+      &lt;h1 id=&quot;积性函数&quot;&gt;&lt;a href=&quot;#积性函数&quot; class=&quot;headerlink&quot; title=&quot;积性函数&quot;&gt;&lt;/a&gt;积性函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;先看定义：对于所有定义在正整数上的函数称为&lt;strong&gt;算术函数&lt;/strong&gt;，对于所有满足 $f(mn)=f(m)(n)$ 的函数称为&lt;strong&gt;积性函数&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;积性函数有一个性质，就是对于任意一个正整数的幂分解 $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$，&lt;br&gt;都有 $f(n)=f(p_1^{a_1})f(p_2^{a_2})\cdots f(p_k^{a_k})$ （可以用数学归纳法证明）
     
     </summary>
     
@@ -122,17 +100,11 @@
     <link href="http://yoursite.com/2020/08/02/sui-bi-20207/"/>
     <id>http://yoursite.com/2020/08/02/sui-bi-20207/</id>
     <published>2020-08-02T14:47:36.000Z</published>
-    <updated>2020-08-02T15:56:23.041Z</updated>
+    <updated>2020-08-08T11:35:55.038Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&amp;emsp;&amp;emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。&lt;br&gt;&amp;emsp;&amp;emsp;&lt;strong&gt;关于为什么要写博客&lt;/stron
-        
-      
+      &lt;p&gt;&amp;emsp;&amp;emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。&lt;br&gt;
     
     </summary>
     
@@ -147,18 +119,11 @@
     <link href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/"/>
     <id>http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/</id>
     <published>2020-07-31T11:40:54.000Z</published>
-    <updated>2020-08-01T03:43:31.285Z</updated>
+    <updated>2020-08-08T11:34:55.894Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;线性同余方程&quot;&gt;&lt;a href=&quot;#线性同余方程&quot; class=&quot;headerlink&quot; title=&quot;线性同余方程&quot;&gt;&lt;/a&gt;线性同余方程&lt;/h1&gt;&lt;p&gt;对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程&lt;/p&gt;
-&lt;h2
-        
-      
+      &lt;h1 id=&quot;线性同余方程&quot;&gt;&lt;a href=&quot;#线性同余方程&quot; class=&quot;headerlink&quot; title=&quot;线性同余方程&quot;&gt;&lt;/a&gt;线性同余方程&lt;/h1&gt;&lt;p&gt;对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程&lt;br&gt;
     
     </summary>
     
@@ -173,17 +138,11 @@
     <link href="http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/"/>
     <id>http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/</id>
     <published>2020-07-31T08:39:02.000Z</published>
-    <updated>2020-07-31T13:38:18.933Z</updated>
+    <updated>2020-08-08T11:35:34.700Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot; title=&quot;快速排序&quot;&gt;&lt;/a&gt;快速排序&lt;/h1&gt;&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot; title=&quot;快速排序&quot;&gt;&lt;/a&gt;快速排序&lt;/h1&gt;&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;快速排序是分治和递归的思想，首先任意在数组中取一个数，比如取中间的数作为基准，然后用交换和循环把整个数组分为三块，&lt;strong&gt;小于基准的，基准，大于基准的&lt;/strong&gt;，然后对于小于和大于基准的做同样的操作（递归）。&lt;br&gt;
     
     </summary>
     
@@ -198,17 +157,11 @@
     <link href="http://yoursite.com/2020/07/30/luo-gu-p1011-che-zhan/"/>
     <id>http://yoursite.com/2020/07/30/luo-gu-p1011-che-zhan/</id>
     <published>2020-07-30T11:55:10.000Z</published>
-    <updated>2020-07-31T13:38:49.375Z</updated>
+    <updated>2020-08-08T11:35:39.015Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;火车从始发站（称为第$1$站）开出，在始发站上车的人数为$a$，然后到达第$2$站，在第$2$站有人上、下车，但上、下车的人数相同，因此在第$2$站开出时（即在到达第3站之前）车上的人数保持为$a$人。从第$3$站起（包括第$3$站）上、下车的人数有一定规律：上车的人数都是前两站上车人数之和，而下车人数等于上一站上车人数，一直到终点站的前一站（第$(n-1)$站），都满足此规律。现给出的条件是：共有$n$个车站，始发站上车的人数为$b$，最后一站下车的人数是$m$（全部下车）。试问$x$站开出时车上的人数是多少？&lt;br&gt;
     
     </summary>
     
@@ -223,17 +176,11 @@
     <link href="http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/"/>
     <id>http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/</id>
     <published>2020-07-29T10:00:03.000Z</published>
-    <updated>2020-07-31T13:37:30.174Z</updated>
+    <updated>2020-08-08T11:35:51.203Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;小林和小华在一个$n\times
-        
-      
+      &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。&lt;br&gt;
     
     </summary>
     
@@ -248,17 +195,11 @@
     <link href="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/"/>
     <id>http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/</id>
     <published>2020-07-27T10:33:15.000Z</published>
-    <updated>2020-07-31T13:35:22.414Z</updated>
+    <updated>2020-08-08T11:35:27.026Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;同余定义&quot;&gt;&lt;a href=&quot;#同余定义&quot; class=&quot;headerlink&quot; title=&quot;同余定义&quot;&gt;&lt;/a&gt;同余定义&lt;/h1&gt;&lt;p&gt;设$a,b,m$为整数，若 $m|(a-b)$，即
-        
-      
+      &lt;h1 id=&quot;同余定义&quot;&gt;&lt;a href=&quot;#同余定义&quot; class=&quot;headerlink&quot; title=&quot;同余定义&quot;&gt;&lt;/a&gt;同余定义&lt;/h1&gt;&lt;p&gt;设$a,b,m$为整数，若 $m|(a-b)$，即 $a=km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余&lt;br&gt;记作 $a\equiv b\pmod m$&lt;br&gt;
     
     </summary>
     
@@ -273,17 +214,11 @@
     <link href="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/"/>
     <id>http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/</id>
     <published>2020-07-26T13:50:59.000Z</published>
-    <updated>2020-07-31T13:37:16.750Z</updated>
+    <updated>2020-08-08T11:35:47.352Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。
     
     </summary>
     
@@ -298,17 +233,11 @@
     <link href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/"/>
     <id>http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/</id>
     <published>2020-07-25T09:25:14.000Z</published>
-    <updated>2020-07-31T13:35:48.091Z</updated>
+    <updated>2020-08-08T11:35:06.329Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;什么是丢番图方程&quot;&gt;&lt;a href=&quot;#什么是丢番图方程&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;什么是丢番图方程&quot;&gt;&lt;a href=&quot;#什么是丢番图方程&quot; class=&quot;headerlink&quot; title=&quot;什么是丢番图方程&quot;&gt;&lt;/a&gt;什么是丢番图方程&lt;/h1&gt;&lt;p&gt;丢番图方程主要是解决形如$ax+by=c$（a,b,c均为整数）的整数解的问题，比如$2x+3y=7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题&lt;br&gt;
     
     </summary>
     
@@ -323,17 +252,11 @@
     <link href="http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/"/>
     <id>http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/</id>
     <published>2020-07-24T14:09:15.000Z</published>
-    <updated>2020-08-01T03:59:38.984Z</updated>
+    <updated>2020-08-08T11:34:52.006Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;基本把类、继承、多态过了一遍，现在重新从类开始做一遍整理&lt;br&gt;这章整理一下类的声明，公有和私有，命名空间定义函数以及几个要点&lt;br&gt;
     
     </summary>
     
@@ -346,18 +269,12 @@
     <link href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/"/>
     <id>http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/</id>
     <published>2020-07-24T10:43:27.000Z</published>
-    <updated>2020-07-31T13:36:06.230Z</updated>
+    <updated>2020-08-08T11:35:23.103Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;算术基本定理&quot;&gt;&lt;a href=&quot;#算术基本定理&quot; class=&quot;headerlink&quot; title=&quot;算术基本定理&quot;&gt;&lt;/a&gt;算术基本定理&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）&lt;h2 id=&quot;证明&quot;&gt;&lt;a
-        
-      
+      &lt;h1 id=&quot;算术基本定理&quot;&gt;&lt;a href=&quot;#算术基本定理&quot; class=&quot;headerlink&quot; title=&quot;算术基本定理&quot;&gt;&lt;/a&gt;算术基本定理&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）
     
     </summary>
     
@@ -372,17 +289,11 @@
     <link href="http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/"/>
     <id>http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/</id>
     <published>2020-07-23T14:06:44.000Z</published>
-    <updated>2020-07-31T13:36:28.041Z</updated>
+    <updated>2020-08-08T11:35:11.887Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;埃拉托色尼筛法是一种素数筛选法，能够快速地筛选N以内的的素数，在C++中，相比较用常规的创建判断素数的函数然后对每个素数进行素数判断，埃拉托色尼筛法更为高效。&lt;br&gt;
     
     </summary>
     
@@ -397,17 +308,11 @@
     <link href="http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/"/>
     <id>http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/</id>
     <published>2020-07-23T10:47:01.000Z</published>
-    <updated>2020-07-31T13:37:05.737Z</updated>
+    <updated>2020-08-08T11:35:43.388Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;设有一个$N\times M$方格的棋盘$(1\leq N\leq 100, 1\leq M\leq
-        
-      
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;设有一个$N\times M$方格的棋盘$(1\leq N\leq 100, 1\leq M\leq 100)$&lt;br&gt;求出该棋盘中包含多少个正方形、多少个长方形（不包括正方形）&lt;br&gt;输入N，M，输出正方形的个数和长方形的个数&lt;br&gt;
     
     </summary>
     
