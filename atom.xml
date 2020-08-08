@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-08T14:53:17.730Z</updated>
+  <updated>2020-08-08T15:12:08.463Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/"/>
     <id>http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/</id>
     <published>2020-08-07T11:20:36.000Z</published>
-    <updated>2020-08-08T14:53:17.730Z</updated>
+    <updated>2020-08-08T15:12:08.463Z</updated>
     
     <summary type="html">
     
@@ -38,7 +38,7 @@
     <link href="http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/"/>
     <id>http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/</id>
     <published>2020-08-05T11:38:28.000Z</published>
-    <updated>2020-08-08T14:49:51.535Z</updated>
+    <updated>2020-08-08T15:06:40.083Z</updated>
     
     <summary type="html">
     
@@ -55,7 +55,7 @@
     <link href="http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/"/>
     <id>http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/</id>
     <published>2020-08-04T07:45:03.000Z</published>
-    <updated>2020-08-08T14:58:35.292Z</updated>
+    <updated>2020-08-08T15:08:52.928Z</updated>
     
     <summary type="html">
     
@@ -72,7 +72,7 @@
     <link href="http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/"/>
     <id>http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/</id>
     <published>2020-08-03T09:06:04.000Z</published>
-    <updated>2020-08-08T14:54:21.045Z</updated>
+    <updated>2020-08-08T15:15:19.923Z</updated>
     
     <summary type="html">
     
@@ -106,7 +106,7 @@
     <link href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/"/>
     <id>http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/</id>
     <published>2020-07-31T11:40:54.000Z</published>
-    <updated>2020-08-08T14:50:08.066Z</updated>
+    <updated>2020-08-08T15:20:35.468Z</updated>
     
     <summary type="html">
     
@@ -191,11 +191,11 @@
     <link href="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/"/>
     <id>http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/</id>
     <published>2020-07-26T13:50:59.000Z</published>
-    <updated>2020-08-08T14:49:27.591Z</updated>
+    <updated>2020-08-08T15:22:37.246Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R\_i$，绿灯时间为$G\_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。
     
     </summary>
     
@@ -208,7 +208,7 @@
     <link href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/"/>
     <id>http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/</id>
     <published>2020-07-25T09:25:14.000Z</published>
-    <updated>2020-08-08T14:50:01.410Z</updated>
+    <updated>2020-08-08T15:13:10.185Z</updated>
     
     <summary type="html">
     
@@ -242,7 +242,7 @@
     <link href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/"/>
     <id>http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/</id>
     <published>2020-07-24T10:43:27.000Z</published>
-    <updated>2020-08-08T14:55:50.079Z</updated>
+    <updated>2020-08-08T15:11:29.931Z</updated>
     
     <summary type="html">
     
