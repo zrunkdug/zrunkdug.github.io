@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>洛谷 P2077 红绿灯 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="题目描述在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。 输">
+<meta property="og:type" content="article">
+<meta property="og:title" content="洛谷 P2077 红绿灯">
+<meta property="og:url" content="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="题目描述在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。 输">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-26T13:50:59.000Z">
+<meta property="article:modified_time" content="2020-07-31T13:37:16.750Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法题">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-luo-gu-p2077-hong-lu-deng" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/26/luo-gu-p2077-hong-lu-deng/" class="article-date">
+  <time datetime="2020-07-26T13:50:59.000Z" itemprop="datePublished">2020-07-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      洛谷 P2077 红绿灯
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R_i$，绿灯时间为$G_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。</p>
+<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>第一行两个正整数N和M<br>第二行N-1个正整数$A_i$<br>第三行N个正整数$R_i$，为红灯时间（分钟）<br>第四行N个整数$G_i$，为绿灯时间（分钟）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">2 4 3 2</span><br><span class="line">3 4 3 4 3</span><br><span class="line">2 3 2 3 1</span><br></pre></td></tr></table></figure>
+<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><p>共N行，每行一个正整数，为这辆车通过每个十字路口的最早时间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">7</span><br><span class="line">11</span><br><span class="line">14</span><br><span class="line">16</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ul>
+<li>一开始想用一分钟一分钟来模拟，但是由于数据量大，会TLE，而且这样写的代码也很复杂，所以这题依然需要用到数学推导。</li>
+<li>注意到这题红绿灯是一直在跳动的，但是如果我们知道了从开始到现在经过了多少分钟的话，我们可以通过计算算出此时是红灯还是绿灯，所以可以设置一个变量x表示从汽车行驶开始经过了多少分钟，从一个路口到另一个路口只需要x加上两个路口之间的距离即可，当汽车到达红绿灯后，我们把这个路口绿灯和红灯的时间之和设为一个周期t，如果经过了一个周期，由于绿灯优先，所以此时刚好跳到绿灯，所以是可以通过的，对于更加一般的情况，可以想到这里需要通过让x对t取余数，即&ensp;$x\pmod t$，如果算出的结果大于绿灯的时间，那么说明这时是红灯，需要等待直到这个周期结束，如果需要等待的话，只需要让x加上等待的时间即可（周期减去余数）</li>
+<li>这里的x是对于整个过程的变量，比如到达第一个路口花了3分钟，等了2分钟，又行驶了5分钟到达第二个路口，此时x是10分钟，这里的x可以看做是从开始行驶了10分钟到达了这个路口，所以对于每一个循环，只需要对x进行处理，然后算出此时是红灯还是绿灯的状态即可<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    int road[100000];</span><br><span class="line">    int red[100000];</span><br><span class="line">    int green[100000];</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    road[0]&#x3D;m;</span><br><span class="line">    for(int i&#x3D;1;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;road[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;red[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;green[i];</span><br><span class="line">    &#125;</span><br><span class="line">    int x&#x3D;0,y,time&#x3D;0;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        time+&#x3D;road[i];</span><br><span class="line">        x&#x3D;time%(green[i]+red[i]);</span><br><span class="line">        if(x&gt;green[i])&#123;</span><br><span class="line">            time+&#x3D;(red[i]+green[i]-x);</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;time&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/" data-id="ckdlf8llk000pkkuhd5ul459k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">算法题</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          &lt;数论&gt;同余和模指数运算
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&lt;数论&gt;丢番图方程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">算法题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 20px;">数论</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 15px;">算法题</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/">&lt;数论&gt;阶和原根</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/">&lt;数论&gt;莫比乌斯反演</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/">&lt;数论&gt;完全数和梅森素数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/">&lt;数论&gt;积性函数</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>&lt;数论&gt;算术基本定理和费马因子分解 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="算术基本定理 每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）证明由于唯一性的证明需要两个引理，这里就用反证法证明一下存在性。 假设不是所有的正整数可以被写成素数的乘积，我们不能写为素数乘积的数组成的集合设为$T$，由最小自然数原理可知，集合$T$内存在一个最小的正整数n，现在n有两种情况： 第一种n是素数，那么$n&#x3D;n$，即可以写成素数的乘积，矛盾，所以假设不成立 第二种n是合数，那">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&lt;数论&gt;算术基本定理和费马因子分解">
+<meta property="og:url" content="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="算术基本定理 每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）证明由于唯一性的证明需要两个引理，这里就用反证法证明一下存在性。 假设不是所有的正整数可以被写成素数的乘积，我们不能写为素数乘积的数组成的集合设为$T$，由最小自然数原理可知，集合$T$内存在一个最小的正整数n，现在n有两种情况： 第一种n是素数，那么$n&#x3D;n$，即可以写成素数的乘积，矛盾，所以假设不成立 第二种n是合数，那">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-24T10:43:27.000Z">
+<meta property="article:modified_time" content="2020-07-31T13:36:06.230Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数论">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/" class="article-date">
+  <time datetime="2020-07-24T10:43:27.000Z" itemprop="datePublished">2020-07-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &lt;数论&gt;算术基本定理和费马因子分解
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h1><ul>
+<li>每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2>由于唯一性的证明需要两个引理，这里就用反证法证明一下存在性。</li>
+<li>假设不是所有的正整数可以被写成素数的乘积，我们不能写为素数乘积的数组成的集合设为$T$，由最小自然数原理可知，集合$T$内存在一个最小的正整数n，现在n有两种情况：<ul>
+<li>第一种n是素数，那么$n=n$，即可以写成素数的乘积，矛盾，所以假设不成立</li>
+<li>第二种n是合数，那么$n=ab,(1&lt;a&lt;n,1&lt;b&lt;n)$，由于a,b小于n，所以a,b不在集合$T$内，即a,b可以表示为素数的乘积，即$a=p_1p_2\cdots p_n$，$b=q_1q_2\cdots q_n$（其中p,q为素数），那么$n=p_1p_2\cdots p_n\times q_1q_2\cdots q_n$，n就表示为了素数的乘积，矛盾，所以假设不成立</li>
+</ul>
+</li>
+<li>综上，每一个大于1的正整数都可以被写成素数的乘积（忽略排序）</li>
+<li>唯一性的证明见书<h1 id="试除法和费马因子分解"><a href="#试除法和费马因子分解" class="headerlink" title="试除法和费马因子分解"></a>试除法和费马因子分解</h1>既然对于任意一个大于1的正整数可以写成素数的乘积，现在比较关心的问题就是每一个数如何写成这样乘积的形式，目前有两种效率比较低的办法是我能看得懂的<h2 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h2></li>
+<li>我们知道对于任意一个合数n，一定存在一个素因子$p\leq \sqrt{n}$，那么我们可以从2开始用所有的素数去试除这个n，下面举个例子：<ul>
+<li>设n=310，现在从2开始试除，由于$2|310$，所以$310=2\times 155$，然后对155从2开始试除，显然2无法整除155，然后用$3,5,\cdots$试除，显然$5|155$，所以$310=2\times 5\times 31$，然后继续从5开始找素数试除（这里有个问题，为什么从5开始试除而不是从2开始，因为前面155无法被2整除，就意味着310不存在大小为2的因子了，所以是从恰好能够整除的素数开始继续试除），继续找$5,7\cdots$由于$7&gt;\sqrt{31}$，说明31不存在小于$\sqrt{n}$的素因子，所以31为素数，所以$310=2\times 5\times 31$<h2 id="费马因子分解"><a href="#费马因子分解" class="headerlink" title="费马因子分解"></a>费马因子分解</h2></li>
+</ul>
+</li>
+<li>先看一个引理：如果n是正奇数，那么n可以分解为两个正整数的积和两个平方数的差是一一对应的</li>
+<li>简单说下什么意思：就是对于一个正奇数n，可以写成$n=ab=s^2-t^2$，正过来看，$s=\frac{a+b}{2},t=\frac{a-b}{2}$，反过来看，$a=s+t,b=s-t$</li>
+<li>既然对于所有的正奇数都可以写成两数的乘积，那么就可以进行因子分解，我们寻找一个数s，其中$s^2=t^2-n$，由于$t\geq \sqrt{n}$，所以从大于$\sqrt{n}$的正整数$t,t+1,t+2\cdots$开始找t，使得$t^2-n$是一个完全平方数，然后n就可以写成$n=(s+t)(s-t)$，注意到寻找t的过程一定是有限的，因为$n=1\times n$是一定存在的，此时$t=\frac{n+1}{2}$，而这也说明n是素数</li>
+<li>同样的举个例子：<ul>
+<li>设n=6077，由于$77&lt;\sqrt{6077}&lt;78$，所以从$t^2-6077$，其中$t=78,79,80\cdots$，经过计算发现$81^2-6077=484=22^2$，所以$n=(81+22)\times (81-22)=103\times 59$</li>
+</ul>
+</li>
+<li>费马因子分解也是一个效率比较低的算法，比较适合两个因子比较接近的情况下的分解，同时费马因子分解的结果并非一定是素因数<h1 id="费马数"><a href="#费马数" class="headerlink" title="费马数"></a>费马数</h1></li>
+<li>了解一下吧，写不动了，而且我暂时没看出这玩意儿有什么用</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/" data-id="ckdlf8llf000bkkuhdrb463p3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          &lt;C++面向对象&gt;类1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&lt;数论&gt;Eratosthenes（埃拉托色尼）筛法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">算法题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 20px;">数论</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 15px;">算法题</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/">&lt;数论&gt;阶和原根</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/">&lt;数论&gt;莫比乌斯反演</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/">&lt;数论&gt;完全数和梅森素数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/">&lt;数论&gt;积性函数</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>&lt;数论&gt;Eratosthenes（埃拉托色尼）筛法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言埃拉托色尼筛法是一种素数筛选法，能够快速地筛选N以内的的素数，在C++中，相比较用常规的创建判断素数的函数然后对每个素数进行素数判断，埃拉托色尼筛法更为高效。 原理埃拉托色尼筛法的原理是下面的这个定理：  对于任意合数$x&gt;1$，一定存在$x$的素因数$p\leq \sqrt{x}$定理证明书上的证明更加完整，这里我简要的写一下证明过程（教材参考《初等数论及其应用》，这本书比二潘的《初等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&lt;数论&gt;Eratosthenes（埃拉托色尼）筛法">
+<meta property="og:url" content="http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言埃拉托色尼筛法是一种素数筛选法，能够快速地筛选N以内的的素数，在C++中，相比较用常规的创建判断素数的函数然后对每个素数进行素数判断，埃拉托色尼筛法更为高效。 原理埃拉托色尼筛法的原理是下面的这个定理：  对于任意合数$x&gt;1$，一定存在$x$的素因数$p\leq \sqrt{x}$定理证明书上的证明更加完整，这里我简要的写一下证明过程（教材参考《初等数论及其应用》，这本书比二潘的《初等">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-23T14:06:44.000Z">
+<meta property="article:modified_time" content="2020-07-31T13:36:28.041Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数论">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/" class="article-date">
+  <time datetime="2020-07-23T14:06:44.000Z" itemprop="datePublished">2020-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &lt;数论&gt;Eratosthenes（埃拉托色尼）筛法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>埃拉托色尼筛法是一种素数筛选法，能够快速地筛选N以内的的素数，在C++中，相比较用常规的创建判断素数的函数然后对每个素数进行素数判断，埃拉托色尼筛法更为高效。</p>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>埃拉托色尼筛法的原理是下面的这个定理：</p>
+<ul>
+<li>对于任意合数$x&gt;1$，一定存在$x$的素因数$p\leq \sqrt{x}$<h2 id="定理证明"><a href="#定理证明" class="headerlink" title="定理证明"></a>定理证明</h2>书上的证明更加完整，这里我简要的写一下证明过程（教材参考《初等数论及其应用》，这本书比二潘的《初等数论》友善多了）<br>证明这个定理的过程中我们需要运用另一个定理m：对于任意的正整数$n&gt;1$，一定存在素数$p|n$（p整除n）<br>现在我们设x为合数，那么x一定可以写成$x=ab$，其中a,b为正整数，不妨设$1&lt;a\leq b&lt;n$，可以推导出$a\leq \sqrt{x}$，由定理m可知，a一定存在一个素因子p，同时a的因子一定是x的因子，所以$p\leq \sqrt{x}$<h1 id="定理应用"><a href="#定理应用" class="headerlink" title="定理应用"></a>定理应用</h1>由该定理可知，对于任意的N以内的合数，都存在一个素因子$p\leq \sqrt{x}$，那么我们可以先找出$1$~$\sqrt{N}$以内的素数，组成集合$T$，因为合数的素因子一定在集合$T$内，所以N以内的每个合数都是集合$T$内某一元素的倍数，当我们筛去这些倍数之后，留下来的就是素数。<h1 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h1>先建立一个数组，令所有数组的状态为true，对于$1$~$\sqrt{N}$的数，由于1不是素数，所以设为false，再从2开始筛去所有2的倍数，然后筛去3的倍数，4由于是2的倍数，已经被筛去，所以不执行循环，接下来筛去5的倍数……<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    bool number[65536];</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        number[i]&#x3D;true;</span><br><span class="line">    &#125;</span><br><span class="line">    number[1]&#x3D;false;</span><br><span class="line">    for(int i&#x3D;2;i*i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        if(number[i]&#x3D;&#x3D;true)&#123;</span><br><span class="line">            for(int j&#x3D;i*2;j&lt;&#x3D;n;j+&#x3D;i)&#123;</span><br><span class="line">                number[j]&#x3D;false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        if(number[i]&#x3D;&#x3D;true)&#123;</span><br><span class="line">            cout&lt;&lt;i&lt;&lt;&quot; &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/" data-id="ckdlf8llb0005kkuh5erncwge" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          &lt;数论&gt;算术基本定理和费马因子分解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">洛谷 P1548 棋盘问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">算法题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 20px;">数论</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 15px;">算法题</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/">&lt;数论&gt;阶和原根</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/">&lt;数论&gt;莫比乌斯反演</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/">&lt;数论&gt;完全数和梅森素数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/">&lt;数论&gt;积性函数</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

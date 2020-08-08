@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>NOIP模拟  遭遇战 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="问题描述小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。 输入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NOIP模拟  遭遇战">
+<meta property="og:url" content="http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="问题描述小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。 输入">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-29T10:00:03.000Z">
+<meta property="article:modified_time" content="2020-07-31T13:37:30.174Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法题">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-noip-mo-ni-zao-yu-zhan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/29/noip-mo-ni-zao-yu-zhan/" class="article-date">
+  <time datetime="2020-07-29T10:00:03.000Z" itemprop="datePublished">2020-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NOIP模拟  遭遇战
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。</p>
+<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>第一行1个正整数t，表示测试数据组数，$1\leq t \leq 10$<br>接下来的t组数据，每组数据的第一行包含一个整数n，$1\leq n \leq 1000$<br>第二行包含三个整数x,y和d，表示小林的初始位置和一开始跑的方向。<br>其中d=0表示东；d=1表示南；d=2表示西；d=3表示北<br>第三行与第二行格式相同，但描述的是小华。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">2</span><br><span class="line">0 0 0</span><br><span class="line">0 1 2</span><br><span class="line">4</span><br><span class="line">0 1 0</span><br><span class="line">3 2 0</span><br></pre></td></tr></table></figure>
+<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><p>输出t行，若遭遇，输出遭遇位置，否则输出-1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ul>
+<li>显然需要用到暴力模拟，设置两个数组分别记录小林和小华的路径，,分别用不同的数标记走过的路径、边界和没有走过的路，两人各走一次为一次循环，每次循环开始前判断两人的坐标是否一致。如果有人无路可走，用一个flag标记为false，然后此人的坐标就不再改变，直到另一个走到这个坐标或者也无路可走为止。</li>
+<li>走路方向的问题用dx,dy分别设定，关于边界的设定这里采用了整个矩阵向右下角移一格的方法。<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int a[1010][1010],b[1010][1010];</span><br><span class="line">int dx1[4]&#x3D;&#123;1,0,-1,0&#125;,dx2[4]&#x3D;&#123;-1,0,1,0&#125;;</span><br><span class="line">int dy1[4]&#x3D;&#123;0,-1,0,1&#125;,dy2[4]&#x3D;&#123;0,-1,0,1&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    int x1,y1,x2,y2,d1,d2;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        bool flag1&#x3D;true,flag2&#x3D;true;</span><br><span class="line">        int x;cin&gt;&gt;x;</span><br><span class="line">        int ii&#x3D;0;</span><br><span class="line">        for(int i&#x3D;0;i&lt;&#x3D;x+1;i++)&#123;</span><br><span class="line">            for(int j&#x3D;0;j&lt;&#x3D;x+1;j++)&#123;</span><br><span class="line">                a[i][j]&#x3D;-1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;x;i++)&#123;</span><br><span class="line">            for(int j&#x3D;1;j&lt;&#x3D;x;j++)&#123;</span><br><span class="line">                a[i][j]&#x3D;0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;&#x3D;x+1;i++)&#123;</span><br><span class="line">            for(int j&#x3D;0;j&lt;&#x3D;x+1;j++)&#123;</span><br><span class="line">                b[i][j]&#x3D;-1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;x;i++)&#123;</span><br><span class="line">            for(int j&#x3D;1;j&lt;&#x3D;x;j++)&#123;</span><br><span class="line">                b[i][j]&#x3D;0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cin&gt;&gt;x1&gt;&gt;y1&gt;&gt;d1;</span><br><span class="line">        x1++;y1++;</span><br><span class="line">        cin&gt;&gt;x2&gt;&gt;y2&gt;&gt;d2;</span><br><span class="line">        x2++;y2++;</span><br><span class="line">        a[x1][y1]&#x3D;1;</span><br><span class="line">        b[x2][y2]&#x3D;2;</span><br><span class="line">        int k1&#x3D;(d1+3)%4,k2&#x3D;3-d2;</span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;&#x2F; ii++;</span><br><span class="line">            &#x2F;&#x2F; if(ii&#x3D;&#x3D;20)&#123;</span><br><span class="line">            &#x2F;&#x2F;     break;</span><br><span class="line">            &#x2F;&#x2F; &#125;</span><br><span class="line">            if(x1&#x3D;&#x3D;x2&amp;&amp;y1&#x3D;&#x3D;y2)&#123;</span><br><span class="line">                cout&lt;&lt;x1-1&lt;&lt;&quot; &quot;&lt;&lt;y1-1&lt;&lt;endl;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            if(flag1)&#123;</span><br><span class="line">                if(a[x1+dx1[k1]][y1+dy1[k1]]&#x3D;&#x3D;-1||a[x1+dx1[k1]][y1+dy1[k1]]&#x3D;&#x3D;1)&#123;</span><br><span class="line">                    k1++;</span><br><span class="line">                    k1%&#x3D;4;</span><br><span class="line">                &#125;</span><br><span class="line">                if(a[x1+dx1[k1]][y1+dy1[k1]]!&#x3D;1)&#123;</span><br><span class="line">                    x1+&#x3D;dx1[k1];</span><br><span class="line">                    y1+&#x3D;dy1[k1];</span><br><span class="line">                    a[x1][y1]&#x3D;1;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;1:&quot;&lt;&lt;x1-1&lt;&lt;&quot; &quot;&lt;&lt;y1-1&lt;&lt;endl;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;**&quot;&lt;&lt;dx1[k1]&lt;&lt;&quot; &quot;&lt;&lt;dy1[k1]&lt;&lt;endl;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    flag1&#x3D;false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(flag2)&#123;</span><br><span class="line">                if(b[x2+dx2[k2]][y2+dy2[k2]]&#x3D;&#x3D;-1||b[x2+dx2[k2]][y2+dy2[k2]]&#x3D;&#x3D;2)&#123;</span><br><span class="line">                    k2++;</span><br><span class="line">                    k2%&#x3D;4;</span><br><span class="line">                &#125;</span><br><span class="line">                if(b[x2+dx2[k2]][y2+dy2[k2]]!&#x3D;2)&#123;</span><br><span class="line">                    x2+&#x3D;dx2[k2];</span><br><span class="line">                    y2+&#x3D;dy2[k2];</span><br><span class="line">                    b[x2][y2]&#x3D;2;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;2:&quot;&lt;&lt;x2-1&lt;&lt;&quot; &quot;&lt;&lt;y2-1&lt;&lt;endl;</span><br><span class="line">                    &#x2F;&#x2F; cout&lt;&lt;&quot;**&quot;&lt;&lt;dx2[k2]&lt;&lt;&quot; &quot;&lt;&lt;dy2[k2]&lt;&lt;endl;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    flag2&#x3D;false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(!flag1&amp;&amp;!flag2)&#123;</span><br><span class="line">                cout&lt;&lt;-1&lt;&lt;endl;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/" data-id="ckdlf8lll000tkkuhcujl9llr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">算法题</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/30/luo-gu-p1011-che-zhan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          洛谷 P1011 车站
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&lt;数论&gt;同余和模指数运算</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">算法题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 20px;">数论</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 15px;">算法题</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/">&lt;数论&gt;阶和原根</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/">&lt;数论&gt;莫比乌斯反演</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/">&lt;数论&gt;完全数和梅森素数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/">&lt;数论&gt;积性函数</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

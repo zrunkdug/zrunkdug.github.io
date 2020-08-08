@@ -5,14 +5,19 @@
   
 
   
-  <title>Archives: 2020/8 | Hexo</title>
+  <title>&lt;数论&gt;同余和模指数运算 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/08/index.html">
+  <meta name="description" content="同余定义设$a,b,m$为整数，若 $m|(a-b)$，即 $a&#x3D;km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余记作 $a\equiv b\pmod m$  刚学看这个符号比较累，讲下我的理解，可以用计算机语言mod来理解一下，模m就是mod m的意思，如果上述等式成立，那么说明a和b是同余的（a模m和b模m的余数相等），也可以说明a mod m的值是b同余的几个性质   自反性：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&lt;数论&gt;同余和模指数运算">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="同余定义设$a,b,m$为整数，若 $m|(a-b)$，即 $a&#x3D;km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余记作 $a\equiv b\pmod m$  刚学看这个符号比较累，讲下我的理解，可以用计算机语言mod来理解一下，模m就是mod m的意思，如果上述等式成立，那么说明a和b是同余的（a模m和b模m的余数相等），也可以说明a mod m的值是b同余的几个性质   自反性：">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-27T10:33:15.000Z">
+<meta property="article:modified_time" content="2020-07-31T13:35:22.414Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数论">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -62,135 +67,79 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/08/hello-world/" class="archive-article-date">
-  <time datetime="2020-08-08T08:40:42.638Z" itemprop="datePublished">Aug 8</time>
+        <section id="main"><article id="post-lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/" class="article-date">
+  <time datetime="2020-07-27T10:33:15.000Z" itemprop="datePublished">2020-07-27</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/08/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      &lt;数论&gt;同余和模指数运算
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/" class="archive-article-date">
-  <time datetime="2020-08-07T11:20:36.000Z" itemprop="datePublished">Aug 7</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/">&lt;数论&gt;阶和原根</a>
-    </h1>
-  
+        <h1 id="同余定义"><a href="#同余定义" class="headerlink" title="同余定义"></a>同余定义</h1><p>设$a,b,m$为整数，若 $m|(a-b)$，即 $a=km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余<br>记作 $a\equiv b\pmod m$</p>
+<ul>
+<li>刚学看这个符号比较累，讲下我的理解，可以用计算机语言mod来理解一下，模m就是mod m的意思，如果上述等式成立，那么说明a和b是同余的（a模m和b模m的余数相等），也可以说明a mod m的值是b<h1 id="同余的几个性质"><a href="#同余的几个性质" class="headerlink" title="同余的几个性质"></a>同余的几个性质</h1></li>
+</ul>
+<ol>
+<li>自反性：$a\equiv a\pmod m$</li>
+<li>对称性：若 $a\equiv b\pmod m$，则 $b\equiv a\pmod m$</li>
+<li>传递性：若 $a\equiv b\pmod m$，$b\equiv c\pmod m$，则 $a\equiv c\pmod m$</li>
+<li>若 $a\equiv b\pmod m$，则 $a+c\equiv b+c\pmod m$</li>
+<li>若 $a\equiv b\pmod m$，则 $ac\equiv bc\pmod m$（同除c不一定成立）</li>
+<li>若 $ac\equiv bc\pmod m$，且 $d=(c,m)$，那么 $a\equiv b\pmod{\frac{m}{d}}$<br>特别的，当 $(c,m)=1$时，即 $c$ 和 $m$ 互素时，$a\equiv b\pmod m$</li>
+<li>若 $a\equiv b\pmod m$，$c\equiv d\pmod m$，则<br>$a+c\equiv b+d\pmod m$<br>$ac\equiv bd\pmod m$</li>
+<li>若 $a\equiv b\pmod m$，则 $a^k\equiv b^k\pmod m$</li>
+</ol>
+<ul>
+<li>证明用定义就可以了，没什么难度<h1 id="模指数运算"><a href="#模指数运算" class="headerlink" title="模指数运算"></a>模指数运算</h1>例：求$2^{644}$对模645的最小正剩余<br>由自反性，我们有$2\equiv 2\pmod 645$，<br>由性质8，我们有<br>$2^2\equiv 4\pmod {645}$<br>$2^4\equiv 16\pmod {645}$<br>$2^8\equiv 256\pmod {645}$<br>$2^{16}\equiv 256^2\equiv 391\pmod {645}$<br>$\cdots$<br>$2^{512}\equiv 256\pmod {645}$<br>所以$2^{644}=2^{512+128+4}\equiv 256\times 391\times 16=1601536\equiv 1\pmod{645}$</li>
+</ul>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/" class="archive-article-date">
-  <time datetime="2020-08-05T11:38:28.000Z" itemprop="datePublished">Aug 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/">&lt;数论&gt;莫比乌斯反演</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/" class="archive-article-date">
-  <time datetime="2020-08-04T07:45:03.000Z" itemprop="datePublished">Aug 4</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/" data-id="ckdlf8llg000ekkuhhzpgc8x4" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/">&lt;数论&gt;完全数和梅森素数</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/" class="archive-article-date">
-  <time datetime="2020-08-03T09:06:04.000Z" itemprop="datePublished">Aug 3</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/">&lt;数论&gt;积性函数</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/02/sui-bi-20207/" class="archive-article-date">
-  <time datetime="2020-08-02T14:47:36.000Z" itemprop="datePublished">Aug 2</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/02/sui-bi-20207/">随笔2020.7</a>
-    </h1>
+    <a href="/2020/07/29/noip-mo-ni-zao-yu-zhan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          NOIP模拟  遭遇战
+        
+      </div>
+    </a>
   
+  
+    <a href="/2020/07/26/luo-gu-p2077-hong-lu-deng/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">洛谷 P2077 红绿灯</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
