@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zhujie &#39;s blog</title>
+  
+  <subtitle>技术博客/狗头</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-08-08T11:01:06.839Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Zhujie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;数论&gt;阶和原根</title>
+    <link href="http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/"/>
+    <id>http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/</id>
+    <published>2020-08-07T11:20:36.000Z</published>
+    <updated>2020-08-08T11:01:06.839Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;整数的阶&quot;&gt;&lt;a href=&quot;#整数的阶&quot; class=&quot;headerlink&quot; title=&quot;整数的阶&quot;&gt;&lt;/a&gt;整数的阶&lt;/h1&gt;&lt;h2 id=&quot;欧拉定理&quot;&gt;&lt;a href=&quot;#欧拉定理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;莫比乌斯反演</title>
+    <link href="http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/"/>
+    <id>http://yoursite.com/2020/08/05/lessshu-lun-greatermo-bi-wu-si-fan-yan/</id>
+    <published>2020-08-05T11:38:28.000Z</published>
+    <updated>2020-08-05T15:38:01.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在之前学积性函数的时候会看到诸如$F(n)=\sum_{d|n}{f(d)}$的式子，其中 $f$ 是积性函数，这个式子是知道 $f(n)$ 推导其和函数，那么我们能不能知道和函数 $F(n)$ 反推 $f$ 呢？利用莫比乌斯反演可以实现这一过程&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;完全数和梅森素数</title>
+    <link href="http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/"/>
+    <id>http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/</id>
+    <published>2020-08-04T07:45:03.000Z</published>
+    <updated>2020-08-04T13:31:36.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;因子数和因子和函数&quot;&gt;&lt;a href=&quot;#因子数和因子和函数&quot; class=&quot;headerlink&quot; title=&quot;因子数和因子和函数&quot;&gt;&lt;/a&gt;因子数和因子和函数&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;因子和函数&lt;br&gt;定义为整数n的所有正因子之和，记为
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;积性函数</title>
+    <link href="http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/"/>
+    <id>http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/</id>
+    <published>2020-08-03T09:06:04.000Z</published>
+    <updated>2020-08-04T13:32:44.051Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;积性函数&quot;&gt;&lt;a href=&quot;#积性函数&quot; class=&quot;headerlink&quot; title=&quot;积性函数&quot;&gt;&lt;/a&gt;积性函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;先看定义：对于所有定义在正整数上的函数称为&lt;strong&gt;算术函数&lt;/strong&gt;，对于所有满足
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔2020.7</title>
+    <link href="http://yoursite.com/2020/08/02/sui-bi-20207/"/>
+    <id>http://yoursite.com/2020/08/02/sui-bi-20207/</id>
+    <published>2020-08-02T14:47:36.000Z</published>
+    <updated>2020-08-02T15:56:23.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;emsp;&amp;emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。&lt;br&gt;&amp;emsp;&amp;emsp;&lt;strong&gt;关于为什么要写博客&lt;/stron
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;线性同余方程和中国剩余定理</title>
+    <link href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/"/>
+    <id>http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/</id>
+    <published>2020-07-31T11:40:54.000Z</published>
+    <updated>2020-08-01T03:43:31.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;线性同余方程&quot;&gt;&lt;a href=&quot;#线性同余方程&quot; class=&quot;headerlink&quot; title=&quot;线性同余方程&quot;&gt;&lt;/a&gt;线性同余方程&lt;/h1&gt;&lt;p&gt;对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;算法&gt;快速排序和高精度运算</title>
+    <link href="http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/"/>
+    <id>http://yoursite.com/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/</id>
+    <published>2020-07-31T08:39:02.000Z</published>
+    <updated>2020-07-31T13:38:18.933Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot; title=&quot;快速排序&quot;&gt;&lt;/a&gt;快速排序&lt;/h1&gt;&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛谷 P1011 车站</title>
+    <link href="http://yoursite.com/2020/07/30/luo-gu-p1011-che-zhan/"/>
+    <id>http://yoursite.com/2020/07/30/luo-gu-p1011-che-zhan/</id>
+    <published>2020-07-30T11:55:10.000Z</published>
+    <updated>2020-07-31T13:38:49.375Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NOIP模拟  遭遇战</title>
+    <link href="http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/"/>
+    <id>http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/</id>
+    <published>2020-07-29T10:00:03.000Z</published>
+    <updated>2020-07-31T13:37:30.174Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;小林和小华在一个$n\times
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;同余和模指数运算</title>
+    <link href="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/"/>
+    <id>http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/</id>
+    <published>2020-07-27T10:33:15.000Z</published>
+    <updated>2020-07-31T13:35:22.414Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;同余定义&quot;&gt;&lt;a href=&quot;#同余定义&quot; class=&quot;headerlink&quot; title=&quot;同余定义&quot;&gt;&lt;/a&gt;同余定义&lt;/h1&gt;&lt;p&gt;设$a,b,m$为整数，若 $m|(a-b)$，即
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛谷 P2077 红绿灯</title>
+    <link href="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/"/>
+    <id>http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/</id>
+    <published>2020-07-26T13:50:59.000Z</published>
+    <updated>2020-07-31T13:37:16.750Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;丢番图方程</title>
+    <link href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/"/>
+    <id>http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/</id>
+    <published>2020-07-25T09:25:14.000Z</published>
+    <updated>2020-07-31T13:35:48.091Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;什么是丢番图方程&quot;&gt;&lt;a href=&quot;#什么是丢番图方程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;C++面向对象&gt;类1</title>
+    <link href="http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/"/>
+    <id>http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/</id>
+    <published>2020-07-24T14:09:15.000Z</published>
+    <updated>2020-08-01T03:59:38.984Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;算术基本定理和费马因子分解</title>
+    <link href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/"/>
+    <id>http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/</id>
+    <published>2020-07-24T10:43:27.000Z</published>
+    <updated>2020-07-31T13:36:06.230Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;算术基本定理&quot;&gt;&lt;a href=&quot;#算术基本定理&quot; class=&quot;headerlink&quot; title=&quot;算术基本定理&quot;&gt;&lt;/a&gt;算术基本定理&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）&lt;h2 id=&quot;证明&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;Eratosthenes（埃拉托色尼）筛法</title>
+    <link href="http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/"/>
+    <id>http://yoursite.com/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/</id>
+    <published>2020-07-23T14:06:44.000Z</published>
+    <updated>2020-07-31T13:36:28.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛谷 P1548 棋盘问题</title>
+    <link href="http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/"/>
+    <id>http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/</id>
+    <published>2020-07-23T10:47:01.000Z</published>
+    <updated>2020-07-31T13:37:05.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;设有一个$N\times M$方格的棋盘$(1\leq N\leq 100, 1\leq M\leq
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+</feed>
