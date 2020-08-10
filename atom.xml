@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-09T15:40:14.625Z</updated>
+  <updated>2020-08-10T07:59:15.167Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;数论&gt;原根的存在性和指数</title>
+    <link href="http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/"/>
+    <id>http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/</id>
+    <published>2020-08-10T07:17:32.000Z</published>
+    <updated>2020-08-10T07:59:15.167Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;原根的存在性真的看得我头皮发麻，所以这边直接放结论了，这章主要写写和指数有关的知识&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;面向对象&gt;操作符重载</title>

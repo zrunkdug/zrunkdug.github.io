@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="开始学到数论中一个相当重要的理论了，整个同余理论在数论中的出现还是非常多的。讲讲什么是同余和同余的一些性质">
+  <meta name="description" content="原根的存在性真的看得我头皮发麻，所以这边直接放结论了，这章主要写写和指数有关的知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;数论&gt;同余和模指数运算">
-<meta property="og:url" content="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/index.html">
+<meta property="og:title" content="&lt;数论&gt;原根的存在性和指数">
+<meta property="og:url" content="http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="开始学到数论中一个相当重要的理论了，整个同余理论在数论中的出现还是非常多的。讲讲什么是同余和同余的一些性质">
+<meta property="og:description" content="原根的存在性真的看得我头皮发麻，所以这边直接放结论了，这章主要写写和指数有关的知识">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-27T10:33:15.000Z">
-<meta property="article:modified_time" content="2020-08-09T15:46:44.867Z">
+<meta property="article:published_time" content="2020-08-10T07:17:32.000Z">
+<meta property="article:modified_time" content="2020-08-10T07:59:15.167Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/">
+<link rel="canonical" href="http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><数论>同余和模指数运算 | ZJ的后花园</title>
+  <title><数论>原根的存在性和指数 | ZJ的后花园</title>
   
 
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E4%BD%99%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">同余定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E4%BD%99%E7%9A%84%E5%87%A0%E4%B8%AA%E6%80%A7%E8%B4%A8"><span class="nav-number">2.</span> <span class="nav-text">同余的几个性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%8C%87%E6%95%B0%E8%BF%90%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text">模指数运算</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E6%A0%B9%E7%9A%84%E5%AD%98%E5%9C%A8%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">原根的存在性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">指数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">2.1.</span> <span class="nav-text">指数的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">2.2.</span> <span class="nav-text">指数的应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%82%E5%89%A9%E4%BD%99"><span class="nav-number">3.</span> <span class="nav-text">幂剩余</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <数论>同余和模指数运算
+          <数论>原根的存在性和指数
         </h1>
 
         <div class="post-meta">
@@ -261,16 +261,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-07-27 18:33:15" itemprop="dateCreated datePublished" datetime="2020-07-27T18:33:15+08:00">2020-07-27</time>
+              <time title="Created: 2020-08-10 15:17:32 / Modified: 15:59:15" itemprop="dateCreated datePublished" datetime="2020-08-10T15:17:32+08:00">2020-08-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-09 23:46:44" itemprop="dateModified" datetime="2020-08-09T23:46:44+08:00">2020-08-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -290,23 +284,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>开始学到数论中一个相当重要的理论了，整个同余理论在数论中的出现还是非常多的。讲讲什么是同余和同余的一些性质<br><a id="more"></a></p>
-<h1 id="同余定义"><a href="#同余定义" class="headerlink" title="同余定义"></a>同余定义</h1><p>设$a,b,m$为整数，若 $m|(a-b)$，即 $a=km+b$，那么称m为模，a同余于b模m以及b是a对模m的剩余<br>记作 $a\equiv b\pmod m$</p>
-<ul>
-<li>刚学看这个符号比较累，讲下我的理解，可以用计算机语言mod来理解一下，模m就是mod m的意思，如果上述等式成立，那么说明a和b是同余的（a模m和b模m的余数相等），也可以说明a mod m的值是b<h1 id="同余的几个性质"><a href="#同余的几个性质" class="headerlink" title="同余的几个性质"></a>同余的几个性质</h1></li>
+        <p>原根的存在性真的看得我头皮发麻，所以这边直接放结论了，这章主要写写和指数有关的知识<br><a id="more"></a></p>
+<h1 id="原根的存在性"><a href="#原根的存在性" class="headerlink" title="原根的存在性"></a>原根的存在性</h1><ul>
+<li>正整数 $n,n&gt;1$ 存在原根当且仅当 $n=2,4,p^t,p^{2t}$，其中 $p$ 为奇素数且 $t$ 是正整数</li>
+</ul>
+<h1 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h1><ul>
+<li>设 $r$ 是 $m$ 的一个原根，那么可知 $r,r^2,r^3,\cdots ,r^{\phi(m)}$ 构成了模 $m$ 的既约剩余系，所以一定存在一个唯一的正整数 $x$ 且 $1\leq x\leq \phi(m)$ 使得 $r^x\equiv a\pmod m$（其中 $a$ 与 $m$ 互素）</li>
+<li>这里的 $x$ 记作 $ind_ra$，$x$ 称为 $a$ 对模 $m$ 以 $r$ 为底的指数<h2 id="指数的性质"><a href="#指数的性质" class="headerlink" title="指数的性质"></a>指数的性质</h2></li>
 </ul>
 <ol>
-<li>自反性：$a\equiv a\pmod m$</li>
-<li>对称性：若 $a\equiv b\pmod m$，则 $b\equiv a\pmod m$</li>
-<li>传递性：若 $a\equiv b\pmod m$，$b\equiv c\pmod m$，则 $a\equiv c\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，则 $a+c\equiv b+c\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，则 $ac\equiv bc\pmod m$（同除c不一定成立）</li>
-<li>若 $ac\equiv bc\pmod m$，且 $d=(c,m)$，那么 $a\equiv b\pmod{\frac{m}{d}}$<br>特别的，当 $(c,m)=1$时，即 $c$ 和 $m$ 互素时，$a\equiv b\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，$c\equiv d\pmod m$，则<br>$a+c\equiv b+d\pmod m$<br>$ac\equiv bd\pmod m$</li>
-<li>若 $a\equiv b\pmod m$，则 $a^k\equiv b^k\pmod m$</li>
+<li>$ind_r1\equiv 0\pmod {\phi(m)}$</li>
+<li>$ind_r(ab)\equiv ind_ra+ind_rb\pmod {\phi(m)}$</li>
+<li>$ind_ra^k\equiv k\cdot ind_ra\pmod {\phi(m)}$</li>
 </ol>
 <ul>
-<li>证明用定义就可以了，没什么难度<h1 id="模指数运算"><a href="#模指数运算" class="headerlink" title="模指数运算"></a>模指数运算</h1>例：求$2^{644}$对模645的最小正剩余<br>由自反性，我们有$2\equiv 2\pmod 645$，<br>由性质8，我们有<br>$2^2\equiv 4\pmod {645}$<br>$2^4\equiv 16\pmod {645}$<br>$2^8\equiv 256\pmod {645}$<br>$2^{16}\equiv 256^2\equiv 391\pmod {645}$<br>$\cdots$<br>$2^{512}\equiv 256\pmod {645}$<br>所以$2^{644}=2^{512+128+4}\equiv 256\times 391\times 16=1601536\equiv 1\pmod{645}$</li>
+<li>可以看到指数的性质和对数是差不多的，所以指数也被称为离散对数<h2 id="指数的应用"><a href="#指数的应用" class="headerlink" title="指数的应用"></a>指数的应用</h2></li>
+</ul>
+<ol>
+<li>例：求 $7^x\equiv 6\pmod {17}$ 的所有解</li>
+</ol>
+<ul>
+<li>对同余式两边取指数，得到 $ind_3{7^x}\equiv ind_36=15\pmod {16}$<br>由指数的性质，得到 $ind_3{7^x}\equiv x\cdot ind_37=11x\pmod{16}$<br>接下来用之前的解线性同余方程的方法求解就行了<br>最后解得 $x\equiv 13\pmod {16}$</li>
+</ul>
+<ol>
+<li>不止是解同余方程，指数在密码学中也有很广泛的应用，因为给定素数 $p$ 和原根 $r$ 去找 $a$ 对模 $m$ 以 $r$ 为底的指数是有一定的计算难度的，所以指数是很多公钥密码系的基础，例如Diffie-Hellman密码系统（如果以后有空的话可能会学点密码学）</li>
+</ol>
+<h1 id="幂剩余"><a href="#幂剩余" class="headerlink" title="幂剩余"></a>幂剩余</h1><ol>
+<li>定义：如果 $m$ 和 $k$ 都是正整数且 $a$ 是一个与 $m$ 互素的整数，若同余方程 $x^k\equiv a\pmod m$有解，则称 $a$ 是 $m$ 的 $k$ 次幂剩余</li>
+<li>如果 $m$ 是素数，$k$ 是正整数且 $a$ 是一个与 $p$ 互素的整数，那么 $a$ 是 $m$ 的 $k$ 次幂剩余当且仅当 $a^{(p-1)/d}\equiv 1\pmod p$，其中 $d=(k,p-1)$</li>
+<li>例：同余方程 $x^6\equiv 5\pmod {17}$是否有解</li>
+</ol>
+<ul>
+<li>由于$5^{16/(6,16)}=5^8\equiv -1\pmod {17}$，所以该同余方程无解</li>
 </ul>
 
     </div>
@@ -321,14 +330,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/26/luo-gu-p2077-hong-lu-deng/" rel="prev" title="洛谷 P2077 红绿灯">
-                  <i class="fa fa-chevron-left"></i> 洛谷 P2077 红绿灯
+                <a href="/2020/08/09/lessmian-xiang-dui-xiang-greatercao-zuo-fu-chong-zai/" rel="prev" title="<面向对象>操作符重载">
+                  <i class="fa fa-chevron-left"></i> <面向对象>操作符重载
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/07/29/noip-mo-ni-zao-yu-zhan/" rel="next" title="NOIP模拟  遭遇战">
-                  NOIP模拟  遭遇战 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
