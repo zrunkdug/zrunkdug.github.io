@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-10T07:59:15.167Z</updated>
+  <updated>2020-08-12T09:17:45.913Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&lt;组合数学&gt;排列与组合</title>
+    <link href="http://yoursite.com/2020/08/12/lesszu-he-shu-xue-greaterpai-lie-yu-zu-he/"/>
+    <id>http://yoursite.com/2020/08/12/lesszu-he-shu-xue-greaterpai-lie-yu-zu-he/</id>
+    <published>2020-08-12T08:28:37.000Z</published>
+    <updated>2020-08-12T09:17:45.913Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;初等数论大体上是学完了，现在每天复习巩固就行了，现在开始组合数学的学习，第一章大致上都是高中的内容，就当复习了，然后这章所有的内容不额外开一篇新的文章了，全部更新在这篇文章下面。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="组合数学" scheme="http://yoursite.com/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>&lt;数论&gt;原根的存在性和指数</title>
     <link href="http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/"/>
     <id>http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/</id>
     <published>2020-08-10T07:17:32.000Z</published>
-    <updated>2020-08-10T07:59:15.167Z</updated>
+    <updated>2020-08-10T08:00:40.745Z</updated>
     
     <summary type="html">
     
