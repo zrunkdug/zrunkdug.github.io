@@ -30,7 +30,7 @@
 <meta property="og:description" content="初等数论大体上是学完了，现在每天复习巩固就行了，现在开始组合数学的学习，第一章大致上都是高中的内容，就当复习了，然后这章所有的内容不额外开一篇新的文章了，全部更新在这篇文章下面。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-12T08:28:37.000Z">
-<meta property="article:modified_time" content="2020-08-13T10:50:04.727Z">
+<meta property="article:modified_time" content="2020-08-14T14:26:48.285Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%AE%A1%E6%95%B0%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">四个基本的计数原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E9%87%8D%E9%9B%86%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">多重集合的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E6%8E%92%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">集合的排列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%84%E5%90%88"><span class="nav-number">4.</span> <span class="nav-text">集合的组合</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%AE%A1%E6%95%B0%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">四个基本的计数原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E9%87%8D%E9%9B%86%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">多重集合的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E6%8E%92%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">集合的排列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%84%E5%90%88"><span class="nav-number">4.</span> <span class="nav-text">集合的组合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E9%87%8D%E9%9B%86%E5%90%88%E7%9A%84%E6%8E%92%E5%88%97"><span class="nav-number">5.</span> <span class="nav-text">多重集合的排列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E9%87%8D%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%84%E5%90%88"><span class="nav-number">6.</span> <span class="nav-text">多重集合的组合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E6%A6%82%E7%8E%87"><span class="nav-number">7.</span> <span class="nav-text">有限概率</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -269,7 +269,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-13 18:50:04" itemprop="dateModified" datetime="2020-08-13T18:50:04+08:00">2020-08-13</time>
+                <time title="Modified: 2020-08-14 22:26:48" itemprop="dateModified" datetime="2020-08-14T22:26:48+08:00">2020-08-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -329,6 +329,25 @@
 <li>定理1的推导如下：对于一个有$n$个元素的集合$S$，我们令其中一个元素为$x$，现在选出这个的$r$子集，其中没有$x$的分到$A$集合，有$x$的分到$B$集合，由加法原理，我们知道$C(n,r)=|A|+|B|$，对于$A$集合，我们可以认为是对$n-1$个元素的$S$集合的$r$组合，即$C(n-1,r)$，对于$B$集合，我们可以认为是对$n-1$个元素的$r-1$组合，然后再每个组合上加上$x$，即$C(n-1,r-1)$，这就完成了证明</li>
 <li>定理2：<script type="math/tex; mode=display">C(n,0)+C(n,1)+\cdots +C(n,n)=2^n</script></li>
 <li>定理2的推导如下：我们把等号左边看出集合$S$的所有子集的个数，即空集，$1$子集，$2$子集，$\cdots$，我们知道集合的所有子集的个数是 $2^n$，即等号右边。</li>
+</ul>
+<h1 id="多重集合的排列"><a href="#多重集合的排列" class="headerlink" title="多重集合的排列"></a>多重集合的排列</h1><ul>
+<li>之前看过了集合的排列，现在来看看对于存在重复数大于1的多重集合的排列是如果运算的</li>
+<li>首先我们思考重复数无穷大的情况，推导过程如下：<br>设$S$存在$k$不同类型的元素，每个元素的重复数为无穷大，现在求$S$的$r$排列，显然第一个位置有$k$种，第二个位置和第一个位置的选择没有直接联系，所以同样有$k$种选择，所以当重复数为<strong>无穷大</strong>的时候，$k$种不同元素的$S$的$r$排列为：$k^r$（特别的，当重复数大于等于$r$时，这个公式都成立）</li>
+<li>现在我们考虑重复数小于$r$的情况，先看定理</li>
+<li>设$S$是多重集合，且存在$k$个不同类型的元素，每个元素的重复数分别为$n_1,n_1,\cdots,n_k$，$S$的大小为$n$，那么$S$的<strong>全排列</strong>为<script type="math/tex; mode=display">\frac{n!}{n_1!n_2!\cdots n_k!}</script></li>
+<li>例：求词MISSISSIPPI的字母的排列数<br>显然其多重集合为 {$1\cdot M,4\cdot I,4\cdot S,2\cdot P$}，那么按照公式可得<script type="math/tex; mode=display">\frac{11!}{1!\cdot 4!\cdot 4!\cdot 2!}</script></li>
+</ul>
+<h1 id="多重集合的组合"><a href="#多重集合的组合" class="headerlink" title="多重集合的组合"></a>多重集合的组合</h1><ul>
+<li>多重集合的$r$组合实质上就是大小为$r$的多重<strong>子集</strong>的个数</li>
+<li>同样的，对于重复数为无穷大的多重集合来说，设其重复数为$k$，那么这个多重集合的$r$组合公式为<script type="math/tex; mode=display">C(r+k-1,r)</script></li>
+<li>推导过程等我哪天看懂了再补上</li>
+<li>例：设现在有8种不同颜色的球，每个球的个数为无穷大，现在要把它们装到一个容量为12的盒子里，问有几种装法<br>显然这是一个多重集合的组合问题，我们直接上公式得到 $C(12+8-1,12)=C(19,12)$</li>
+<li>现在我们考虑每种颜色的球都至少有一种的情况</li>
+<li>假设组合结果中每种颜色的球的个数为$x_1,x_2,\cdots,x_k$，显然$x_1+x_2+\cdots+x_k$，这时是对每种球的个数都大于等于0的情况，即<strong>非负整数解</strong>，这时是可以套用公式的，但是现在考虑至少有1个球的情况，即 $x_i\geq 1$，我们可以用 $y_i-1$代替每一个$x_i$，这样就得到 $y_1+y_2+\cdots+y_k=r-k$ 的式子，这种情况下就化为了求该方程的<strong>非负整数解</strong>，所以套用公式即可</li>
+<li>所以如果要求每种小球的都至少有一种的分配情况，我们可以得到 $y_1+y_2+y_3+y_4=6$，然后套用公式就得到了$C(6+4-1,6)=C(9,6)$ 种</li>
+</ul>
+<h1 id="有限概率"><a href="#有限概率" class="headerlink" title="有限概率"></a>有限概率</h1><ul>
+<li>和高中学的没什么区别，这里就不写了</li>
 </ul>
 
     </div>
