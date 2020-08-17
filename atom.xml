@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-16T05:11:00.035Z</updated>
+  <updated>2020-08-17T14:58:32.970Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;算法&gt;n!的素因数分解</title>
+    <link href="http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/"/>
+    <id>http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/</id>
+    <published>2020-08-17T14:32:59.000Z</published>
+    <updated>2020-08-17T14:58:32.970Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;众所周知$n!$是一个增长速度及其快的函数，比如$15!$的数量级就是$10$的$12$次方了，对大数的素因数分解一直都是比较困难的，但是对$n!$来说有特殊的算法可以实现快速地实现素因数分解&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;组合数学&gt;鸽巢原理</title>
@@ -373,25 +392,6 @@
     
     
       <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>洛谷 P1548 棋盘问题</title>
-    <link href="http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/"/>
-    <id>http://yoursite.com/2020/07/23/luo-gu-p1548-qi-pan-wen-ti/</id>
-    <published>2020-07-23T10:47:01.000Z</published>
-    <updated>2020-08-09T15:47:19.080Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;设有一个$N\times M$方格的棋盘$(1\leq N\leq 100, 1\leq M\leq 100)$&lt;br&gt;求出该棋盘中包含多少个正方形、多少个长方形（不包括正方形）&lt;br&gt;输入N，M，输出正方形的个数和长方形的个数&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法题" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
     
   </entry>
