@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-18T11:17:22.836Z</updated>
+  <updated>2020-08-18T14:30:53.261Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;算法&gt;生成排列和生成组合</title>
+    <link href="http://yoursite.com/2020/08/18/lesssuan-fa-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/"/>
+    <id>http://yoursite.com/2020/08/18/lesssuan-fa-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/</id>
+    <published>2020-08-18T14:22:56.000Z</published>
+    <updated>2020-08-18T14:30:53.261Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;和组合数学一样的内容，但是我决定分成两块，&amp;lt;组合数学&amp;gt;写理论，&amp;lt;算法&amp;gt;写C++实现，以后复习数论或组合数学的知识都会尝试用C++实现以下，然后扔到&amp;lt;算法&amp;gt;里&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;组合数学&gt;生成排列和生成组合</title>
@@ -373,25 +392,6 @@
     
     
       <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;算术基本定理和费马因子分解</title>
-    <link href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/"/>
-    <id>http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/</id>
-    <published>2020-07-24T10:43:27.000Z</published>
-    <updated>2020-08-09T15:46:40.844Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;数论中相当重要的一个定理：算术基本定理。然后讲一个因子分解的技巧：费马因子分解&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
   </entry>
