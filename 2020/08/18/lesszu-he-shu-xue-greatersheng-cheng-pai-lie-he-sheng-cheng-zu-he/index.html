@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="什么是丢番图方程丢番图方程主要是解决形如$ax+by&#x3D;c$（a,b,c均为整数）的整数解的问题，比如$2x+3y&#x3D;7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题">
+  <meta name="description" content="其实这是算法的内容，不过我主要懒得把C++实现写了，所以我就把这块先放到组合数学里去了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;数论&gt;丢番图方程">
-<meta property="og:url" content="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/index.html">
+<meta property="og:title" content="&lt;组合数学&gt;生成排列和生成组合">
+<meta property="og:url" content="http://yoursite.com/2020/08/18/lesszu-he-shu-xue-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="什么是丢番图方程丢番图方程主要是解决形如$ax+by&#x3D;c$（a,b,c均为整数）的整数解的问题，比如$2x+3y&#x3D;7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题">
+<meta property="og:description" content="其实这是算法的内容，不过我主要懒得把C++实现写了，所以我就把这块先放到组合数学里去了">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-25T09:25:14.000Z">
-<meta property="article:modified_time" content="2020-08-09T15:46:20.048Z">
+<meta property="article:published_time" content="2020-08-18T10:10:45.000Z">
+<meta property="article:modified_time" content="2020-08-18T11:17:22.836Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/">
+<link rel="canonical" href="http://yoursite.com/2020/08/18/lesszu-he-shu-xue-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><数论>丢番图方程 | ZJ的后花园</title>
+  <title><组合数学>生成排列和生成组合 | ZJ的后花园</title>
   
 
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%A2%E7%95%AA%E5%9B%BE%E6%96%B9%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">什么是丢番图方程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A2%E7%95%AA%E5%9B%BE%E6%96%B9%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">丢番图方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%81%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A2%E7%95%AA%E5%9B%BE%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-number">4.</span> <span class="nav-text">丢番图方程的推广</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%8E%92%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">生成排列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E7%BB%84%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">生成组合</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/18/lesszu-he-shu-xue-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <数论>丢番图方程
+          <组合数学>生成排列和生成组合
         </h1>
 
         <div class="post-meta">
@@ -261,23 +261,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-07-25 17:25:14" itemprop="dateCreated datePublished" datetime="2020-07-25T17:25:14+08:00">2020-07-25</time>
+              <time title="Created: 2020-08-18 18:10:45 / Modified: 19:17:22" itemprop="dateCreated datePublished" datetime="2020-08-18T18:10:45+08:00">2020-08-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-09 23:46:20" itemprop="dateModified" datetime="2020-08-09T23:46:20+08:00">2020-08-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+                  <a href="/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">组合数学</span></a>
                 </span>
             </span>
 
@@ -290,24 +284,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="什么是丢番图方程"><a href="#什么是丢番图方程" class="headerlink" title="什么是丢番图方程"></a>什么是丢番图方程</h1><p>丢番图方程主要是解决形如$ax+by=c$（a,b,c均为整数）的整数解的问题，比如$2x+3y=7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题<br><a id="more"></a></p>
-<h1 id="丢番图方程"><a href="#丢番图方程" class="headerlink" title="丢番图方程"></a>丢番图方程</h1><p>对于形如$ax+by=c$的方程，设$d=(a,b)$，如果$d|c$，那么方程有无数多组解，反之无解<br>其中$x=x_0+\frac{b}{d}\times n$，$y=y_0-\frac{a}{d}\times n$（其中n为整数，$x_0,y_0$为方程的特解）</p>
-<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>这里的证明需要几个定理</p>
-<ol>
-<li>若$d=(a,b)$，那么$(a/d,b/d)=1$</li>
-<li>若$c|ab$，$(c,a)=1$，那么$c|b$</li>
-</ol>
-<ul>
-<li>先证明整数解的存在问题，如果原方程有整数解使得$ax+by=c$，由于$d=(a,b)$，那么$d|a,d|b$，由整除的性质，$d|ax+by$，即$d|c$，所以当$d|c$的时候，原方程一定有整数解，反之，当d无法整除c的时候，原方程无整数解</li>
-<li>然后证明解的结构，现在假设原方程有整数解，那么$ax+by=c$，且$d|c$，所以$d=ce$，由于$d|a,d|b$，所以存在整数s,t使得$as+bt=d$，两边乘以e，得$a(se)+b(te)=de=c$，所以方程的特解为$x_0=se$，$y_0=te$，然后求方程的通解，令$ax+by-ax_0-by_0=a(x-x_0)+b(y-y_0)=0$，两边除以d然后移下位置，得到$\frac{a}{d}(x-x_0)=\frac{b}{d}(y_0-y)$，由$(a/d,b/d)=1$，且$\frac{a}{d}|\frac{b}{d}(y_0-y)$，通过定理1和2，推出$\frac{a}{d}|(y_0-y)$，所以$y=y_0-\frac{a}{d}\times n$，同理可以解得$x=x_0+\frac{b}{d}\times n$<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1></li>
+        <p>其实这是算法的内容，不过我主要懒得把C++实现写了，所以我就把这块先放到组合数学里去了<br><a id="more"></a></p>
+<h1 id="生成排列"><a href="#生成排列" class="headerlink" title="生成排列"></a>生成排列</h1><ul>
+<li>先想一个简单的思路：对于{$1,2,\cdots,n$}的排列，假设我们已经获得了{$1,2,\cdots,n-1$}的所有排列，我们只需在{$1,2,\cdots,n-1$}的每一个排列中找到空位插入$n$，例如我们要求{$1,2,3,4$}的所有排列，现在有一个$n-1$排列<script type="math/tex; mode=display">3,2,1</script>我们把$4$插入到这个排列中的所有空位中，就得到了<script type="math/tex; mode=display">3,2,1,4</script><script type="math/tex; mode=display">3,2,4,1</script><script type="math/tex; mode=display">3,4,2,1</script><script type="math/tex; mode=display">4,3,2,1</script>所以我们可以用这种方法递归地求出所有的排列，因为我们通过$1$排列可以得到$2$排列，$2$排列可以得到$3$排列，$\cdots$</li>
+<li>现在我们要定义一个新的符号：$n_0$和$n_1$，其中$0$和$1$代表方向左和右（即$n$的指向），如果$n$指向一个与他相邻且比它小的数，那么称$n$是<strong>可移动的</strong>，例如$2^→,6^→,3^→,1^←,5^→,4^→$只有$3,5,6$是可移动的（书上用的是像向量那样的左右的箭头，但是我不知道markdown怎么打左箭头，所以用右上标代替了）</li>
+<li>下面我们给出算法</li>
 </ul>
 <ol>
-<li>求$15x+9y=7$的整数解<br>由于$(15,9)=3$，且3不能整除7，所以原方程无解</li>
-<li>求$21x+14y=70$的整数解<br>由于$(21,14)=7$，且$7|70$，所以原方程有整数解。由欧几里得算法可知，$21\times 1+(-1)\times 14=7$，所以$21\times 10+(-10)\times 14=70$，所以特解为$x_0=10$，$y_0=-10$，由丢番图方程的通解的公式，解得$x=10+\frac{14}{7} \times n=10+2n$，$y=-10-\frac{21}{7}\times n=-10-3n$<h1 id="丢番图方程的推广"><a href="#丢番图方程的推广" class="headerlink" title="丢番图方程的推广"></a>丢番图方程的推广</h1></li>
+<li>将$1,2,3,\cdots,n$设置为$1^←,2^←,\cdots,n^←$</li>
+<li>求出最大的可移动数$m$</li>
+<li>交换$m$和它所指向的数</li>
+<li>交换所有满足$p&gt;m$的$p$的方向</li>
 </ol>
 <ul>
-<li>对于$a_0x_0+a_1x_1+\cdots +a_nx_n=c$的整数解的问题，$d=(a_0,a_1,\cdots ,a_n)$，当且仅当$d|c$，且原方程存在一个解的时候，原方程有无数多组解</li>
-<li>对于丢番图方程组的问题，一般采取对方程组消元的方法求解</li>
+<li>下面举个求出{$1,2,3,4$}的生成排列的例子<script type="math/tex; mode=display">1^←,2^←,3^←,4^←</script><script type="math/tex; mode=display">1^←,2^←,4^←,3^←</script><script type="math/tex; mode=display">1^←,4^←,2^←,3^←</script><script type="math/tex; mode=display">4^←,1^←,2^←,3^←</script><script type="math/tex; mode=display">4^→,1^←,3^←,2^←</script><script type="math/tex; mode=display">1^←,4^→,3^←,2^←</script><script type="math/tex; mode=display">1^←,3^←,4^→,2^←</script><script type="math/tex; mode=display">\cdots</script><script type="math/tex; mode=display">2^←,1^←,3^→,4^→</script></li>
+</ul>
+<h1 id="生成组合"><a href="#生成组合" class="headerlink" title="生成组合"></a>生成组合</h1><ul>
+<li>生成组合有两种方法，先看第一种方法：二进制算法</li>
+<li>二进制算法的思路：因为组合可以看做集合$S$的所有子集，所以对于每个元素，它的存在与否都可以用$0$和$1$来表示，例如{$1,2,3,4$}的一个三元组合是{$1,2,4$}，对应$1101$，我们知道集合$S$的所有子集个数是$2^n$，而所有子集都可以用$0$和$1$来表示，所以就想到了二进制，我们只需要求出$0$到$2^n-1$的所有数的二进制表示法，也就得到了所有的组合</li>
+<li>所以算法如下</li>
+</ul>
+<ol>
+<li>从$0\cdots 00$开始到$1\cdots 11$，每次在二进制运算中$+1$</li>
+<li>取出$1$代表的元素从而形成集合即可</li>
+<li>交换所有满足$p&gt;m$的$p$的方向</li>
+</ol>
+<ul>
+<li>下面举个求出{$4,3,2,1$}的生成组合的例子（没有居中是因为我不会左对齐）<br>$0000→\phi$<br>$0001→1$<br>$0010→2$<br>$0011→1,2$<br>$0100→3$<br>$0101→1,3$<br>$0111→1,2,3$<br>$\cdots$<br>$1111→1,2,3,4$</li>
 </ul>
 
     </div>
@@ -322,14 +325,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/" rel="prev" title="<C++面向对象>类1">
-                  <i class="fa fa-chevron-left"></i> <C++面向对象>类1
+                <a href="/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/" rel="prev" title="<算法>n!的素因数分解">
+                  <i class="fa fa-chevron-left"></i> <算法>n!的素因数分解
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/07/26/luo-gu-p2077-hong-lu-deng/" rel="next" title="洛谷 P2077 红绿灯">
-                  洛谷 P2077 红绿灯 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
