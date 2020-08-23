@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-19T14:33:49.918Z</updated>
+  <updated>2020-08-23T14:41:23.249Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;随笔&gt;2020.8</title>
+    <link href="http://yoursite.com/2020/08/23/lesssui-bi-greater20208/"/>
+    <id>http://yoursite.com/2020/08/23/lesssui-bi-greater20208/</id>
+    <published>2020-08-23T13:57:43.000Z</published>
+    <updated>2020-08-23T14:41:23.249Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我感受到了前所未有的压迫感…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;算法&gt;生成排列和生成组合</title>
@@ -373,25 +392,6 @@
     
     
       <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;C++面向对象&gt;类1</title>
-    <link href="http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/"/>
-    <id>http://yoursite.com/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/</id>
-    <published>2020-07-24T14:09:15.000Z</published>
-    <updated>2020-08-09T15:46:00.841Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;基本把类、继承、多态过了一遍，现在重新从类开始做一遍整理&lt;br&gt;这章整理一下类的声明，公有和私有，命名空间定义函数以及几个要点&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     
   </entry>
