@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-23T14:41:23.249Z</updated>
+  <updated>2020-09-05T13:45:24.796Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;随笔&gt;2020.9.6</title>
+    <link href="http://yoursite.com/2020/09/05/lesssui-bi-greater202096/"/>
+    <id>http://yoursite.com/2020/09/05/lesssui-bi-greater202096/</id>
+    <published>2020-09-05T13:39:20.000Z</published>
+    <updated>2020-09-05T13:45:24.796Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;居然有人要我多写随笔，那我就每周日更新吧&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;算法&gt;高精度阶乘和快速幂</title>
+    <link href="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/"/>
+    <id>http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/</id>
+    <published>2020-09-05T08:08:55.000Z</published>
+    <updated>2020-09-05T13:45:40.618Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实就是高精度乘以单精度的算法&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;随笔&gt;2020.8</title>
@@ -349,44 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;开始学到数论中一个相当重要的理论了，整个同余理论在数论中的出现还是非常多的。讲讲什么是同余和同余的一些性质&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>洛谷 P2077 红绿灯</title>
-    <link href="http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/"/>
-    <id>http://yoursite.com/2020/07/26/luo-gu-p2077-hong-lu-deng/</id>
-    <published>2020-07-26T13:50:59.000Z</published>
-    <updated>2020-08-09T15:47:22.731Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;在一个城市，有一条笔直的公路，在这条公路上有$N$个十字路口，每个路口都设有一个红绿灯，已知相邻的两个路口距离为$A_i$千米$(1\leq i&lt;N)$，每个路口的红灯时间为$R\_i$，绿灯时间为$G\_i$，没有黄灯，现在有一辆车从距离1号十字路口$M$千米的位置出发，且此时所有路口的红绿灯刚好从红灯跳到绿灯，问这辆车通过每个路口的时间(不能闯红灯，这辆车的速度为1千米每分钟)。
-    
-    </summary>
-    
-    
-      <category term="算法题" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;丢番图方程</title>
-    <link href="http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/"/>
-    <id>http://yoursite.com/2020/07/25/lessshu-lun-greaterdiu-fan-tu-fang-cheng/</id>
-    <published>2020-07-25T09:25:14.000Z</published>
-    <updated>2020-08-09T15:46:20.048Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;什么是丢番图方程&quot;&gt;&lt;a href=&quot;#什么是丢番图方程&quot; class=&quot;headerlink&quot; title=&quot;什么是丢番图方程&quot;&gt;&lt;/a&gt;什么是丢番图方程&lt;/h1&gt;&lt;p&gt;丢番图方程主要是解决形如$ax+by=c$（a,b,c均为整数）的整数解的问题，比如$2x+3y=7$有没有整数解，有多少个整数解，这是丢番图方程解决的问题&lt;br&gt;
     
     </summary>
     

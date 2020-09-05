@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="&amp;emsp;&amp;emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。">
+  <meta name="description" content="其实就是高精度乘以单精度的算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;随笔&gt;2020.7">
-<meta property="og:url" content="http://yoursite.com/2020/08/02/sui-bi-20207/index.html">
+<meta property="og:title" content="&lt;算法&gt;高精度阶乘和快速幂">
+<meta property="og:url" content="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。">
+<meta property="og:description" content="其实就是高精度乘以单精度的算法">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-02T14:47:36.000Z">
-<meta property="article:modified_time" content="2020-08-23T14:47:40.198Z">
+<meta property="article:published_time" content="2020-09-05T08:08:55.000Z">
+<meta property="article:modified_time" content="2020-09-05T13:45:40.618Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/08/02/sui-bi-20207/">
+<link rel="canonical" href="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><随笔>2020.7 | ZJ的后花园</title>
+  <title><算法>高精度阶乘和快速幂 | ZJ的后花园</title>
   
 
 
@@ -166,7 +166,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -178,6 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98"><span class="nav-number">1.</span> <span class="nav-text">高精度阶乘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%B9%82"><span class="nav-number">2.</span> <span class="nav-text">快速幂</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">2.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -235,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/02/sui-bi-20207/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -251,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <随笔>2020.7
+          <算法>高精度阶乘和快速幂
         </h1>
 
         <div class="post-meta">
@@ -260,23 +261,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-08-02 22:47:36" itemprop="dateCreated datePublished" datetime="2020-08-02T22:47:36+08:00">2020-08-02</time>
+              <time title="Created: 2020-09-05 16:08:55 / Modified: 21:45:40" itemprop="dateCreated datePublished" datetime="2020-09-05T16:08:55+08:00">2020-09-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-23 22:47:40" itemprop="dateModified" datetime="2020-08-23T22:47:40+08:00">2020-08-23</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
             </span>
 
@@ -289,7 +284,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>&emsp;&emsp;不出意外的话以后每个月都写篇随笔吧，总结一下这个月干了什么，以及接下来想干什么。本来也没打算写随笔，但是最近确实太累了，学的也有点乱，写篇随笔理理思路，顺便消磨一下时间。<br><a id="more"></a><br>&emsp;&emsp;<strong>关于为什么要写博客</strong>：<br>&emsp;&emsp;目前阶段写博客主要是给自己看的，毕竟实力有限，把每天学的和做的一些比较好的题写下来，一方面增加记忆，一方面写的时候加强理解（毕竟你得理解了才能把东西写出来是吧）。尤其是写数论的时候，写之前基本都是要把证明理解了，然后再用自己的话写下来，这样的话我以后回看的时候也好理解。然后写博客的时候我尽量做到不要硬抄书上的东西，这样做和高中那种抄概念式的做笔记没什么区别，除了好看整洁一无是处，写下来的东西一定是带有自己的理解的。所以我写博客的主要目的就是像记笔记一样，方便以后自己的回看和复习，顺便整理思路，增加记忆。<br>&emsp;&emsp;<strong>最近学的东西</strong>：<br>&emsp;&emsp;数学：正好一直对数论比较感兴趣，所以买了本二潘的《初等数论》，看了这本书我才知道我是真的毫无数学天赋（还好我没报数学系），看的实在心态炸裂所以换了《初等数论及其应用》，外国人写的书确实门槛低而且好理解，看到现在也以及看了一半了，整体来说收获还是很大的，不过我还是没有到能把大部分课后题都独立完成的程度。<br>&emsp;&emsp;面向对象：目前是类，继承，多态学完了，本来想看完这些直接学数据结构的，结果发现数据结构上来就是模板，没有办法只能继续学面向对象，现在还差操作符重载、模板和输入输出流<br>&emsp;&emsp;算法：还是每天做几道题，然后学点新的，现在也就会了秦九韶公式还有高精度运算，另外还有几个依赖数论的算法，比如埃拉托色尼筛法（学数论的好处就是这些算法都很好理解）。<br>&emsp;&emsp;<strong>接下来想干嘛</strong><br>&emsp;&emsp;7月份算法方面学的实在太乱了，《算导》看了前几页直接劝退，学贪心、深搜、宽搜的时候也非常的累，感觉以及超出我现在的水平了。我觉得学的还是不成体系，我翻了翻《算导》的目录感觉这些算法也依赖树和图这些离散和数据结构的内容。所以8月份想先把面向对象结束，应该能在8月中旬的时候弄完，数论估计要学到开学了，然后上离散或者数据结构，那几个算法先放一放，毕竟我还是太菜了。到时候看情况可以先学点数字逻辑，否则真的干不过分流的那些绩点怪了。数学方面想学的实在太多了，不过实在能力有限，以后应该会深入学点线代、概率论。</p>
+        <p>其实就是高精度乘以单精度的算法<br><a id="more"></a></p>
+<h1 id="高精度阶乘"><a href="#高精度阶乘" class="headerlink" title="高精度阶乘"></a>高精度阶乘</h1><ul>
+<li>相对高精度乘法来说，高精度阶乘只需要一个数组来存储高精度的数字，所以甚至不需要char数组来存输入的数字，只需要用一个int类型的数组存每次阶乘的数字即可。<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int t;cin&gt;&gt;t;</span><br><span class="line">    int n,m;</span><br><span class="line">    for(int i&#x3D;0;i&lt;t;i++)&#123;</span><br><span class="line">        int ans&#x3D;0;</span><br><span class="line">        cin&gt;&gt;n;</span><br><span class="line">        int number[65536]&#x3D;&#123;0&#125;;</span><br><span class="line">        number[1]&#x3D;1;</span><br><span class="line">        int h&#x3D;1;</span><br><span class="line">        for(int j&#x3D;2;j&lt;&#x3D;n;j++)&#123;</span><br><span class="line">            for(int k&#x3D;0;k&lt;&#x3D;h;k++)&#123;</span><br><span class="line">                number[k]*&#x3D;j;</span><br><span class="line">            &#125;</span><br><span class="line">            for(int k&#x3D;0;k&lt;&#x3D;h;k++)&#123;</span><br><span class="line">                number[k+1]+&#x3D;number[k]&#x2F;10;</span><br><span class="line">                number[k]%&#x3D;10;</span><br><span class="line">            &#125;</span><br><span class="line">            while(number[h+1]&gt;0)&#123;</span><br><span class="line">                h++;</span><br><span class="line">                number[h+1]+&#x3D;number[h]&#x2F;10;</span><br><span class="line">                number[h]%&#x3D;10;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int j&#x3D;h;j&gt;0;j--)&#123;</span><br><span class="line">            cout&lt;&lt;number[j];</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h1><ul>
+<li>一般来说我们需要计算$2^{23}$，我们的常规思路就是用循环跑23次，但是如果指数很大的话，这样做的效率是非常低的，快速幂的思想就是把原式看成 $2^{16+4+2+1}$，即<script type="math/tex; mode=display">2^{2^4+2^2+2^1+2^0}</script></li>
+<li>可以看到我们只需要将指数用二进制表示然后做出一些相应的运算就可以大大提升运行效率。23的二进制是10111，所以只要对所有是1的算出指数即可。</li>
+<li>原来的时间复杂度是$O(n)$，快速幂后就降低到了$O(log_n)$<h2 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int quick_pow(int base,int n)&#123;</span><br><span class="line">    int ans&#x3D;1;</span><br><span class="line">    while(n)&#123;</span><br><span class="line">        if(n&amp;1!&#x3D;0)&#123;</span><br><span class="line">            ans*&#x3D;base;</span><br><span class="line">        &#125;</span><br><span class="line">        base*&#x3D;base;</span><br><span class="line">        n&gt;&gt;&#x3D;1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
     </div>
 
@@ -303,13 +307,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/" rel="prev" title="<数论>线性同余方程和中国剩余定理">
-                  <i class="fa fa-chevron-left"></i> <数论>线性同余方程和中国剩余定理
+                <a href="/2020/08/23/lesssui-bi-greater20208/" rel="prev" title="<随笔>2020.8">
+                  <i class="fa fa-chevron-left"></i> <随笔>2020.8
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/" rel="next" title="<数论>积性函数">
-                  <数论>积性函数 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/09/05/lesssui-bi-greater202096/" rel="next" title="<随笔>2020.9.6">
+                  <随笔>2020.9.6 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
