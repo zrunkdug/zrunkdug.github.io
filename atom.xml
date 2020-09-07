@@ -40,11 +40,11 @@
     <link href="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/"/>
     <id>http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/</id>
     <published>2020-09-05T08:08:55.000Z</published>
-    <updated>2020-09-05T13:45:40.618Z</updated>
+    <updated>2020-09-07T15:05:29.883Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;其实就是高精度乘以单精度的算法&lt;br&gt;
+      &lt;p&gt;其实就是高精度乘以单精度的算法，然后写一下算法中经常用到的快速幂，后续还会补一些快速幂的应用&lt;br&gt;
     
     </summary>
     
