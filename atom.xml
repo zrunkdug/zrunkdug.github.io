@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-05T13:45:24.796Z</updated>
+  <updated>2020-09-12T15:26:24.734Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;算法&gt;生成组合的r子集（字典序）</title>
+    <link href="http://yoursite.com/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/"/>
+    <id>http://yoursite.com/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/</id>
+    <published>2020-09-12T15:13:58.000Z</published>
+    <updated>2020-09-12T15:26:24.734Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前的算法是利用二进制生成组合的全部情况，现在考虑生成组合的$r$子集&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;随笔&gt;2020.9.6</title>
@@ -40,7 +59,7 @@
     <link href="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/"/>
     <id>http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/</id>
     <published>2020-09-05T08:08:55.000Z</published>
-    <updated>2020-09-07T15:05:29.883Z</updated>
+    <updated>2020-09-11T15:45:53.057Z</updated>
     
     <summary type="html">
     
@@ -373,25 +392,6 @@
     
     
       <category term="算法题" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;同余和模指数运算</title>
-    <link href="http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/"/>
-    <id>http://yoursite.com/2020/07/27/lessshu-lun-greatertong-yu-he-mo-zhi-shu-yun-suan/</id>
-    <published>2020-07-27T10:33:15.000Z</published>
-    <updated>2020-08-09T15:46:44.867Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开始学到数论中一个相当重要的理论了，整个同余理论在数论中的出现还是非常多的。讲讲什么是同余和同余的一些性质&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
   </entry>
