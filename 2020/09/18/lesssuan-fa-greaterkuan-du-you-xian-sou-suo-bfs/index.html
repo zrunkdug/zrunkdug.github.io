@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="线性同余方程对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程">
+  <meta name="description" content="学了三天才整明白的…下次写深度优先搜索（DFS）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;数论&gt;线性同余方程和中国剩余定理">
-<meta property="og:url" content="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/index.html">
+<meta property="og:title" content="&lt;算法&gt;宽度优先搜索（BFS）">
+<meta property="og:url" content="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="线性同余方程对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程">
+<meta property="og:description" content="学了三天才整明白的…下次写深度优先搜索（DFS）">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-31T11:40:54.000Z">
-<meta property="article:modified_time" content="2020-08-09T15:46:11.212Z">
+<meta property="article:published_time" content="2020-09-18T15:26:42.000Z">
+<meta property="article:modified_time" content="2020-09-18T15:44:03.128Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/">
+<link rel="canonical" href="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><数论>线性同余方程和中国剩余定理 | ZJ的后花园</title>
+  <title><算法>宽度优先搜索（BFS） | ZJ的后花园</title>
   
 
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">线性同余方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%86"><span class="nav-number">1.2.</span> <span class="nav-text">逆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90"><span class="nav-number">1.3.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">中国剩余定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">例子</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%BD%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-number">1.</span> <span class="nav-text">宽度优先搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5"><span class="nav-number">2.1.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="nav-number">2.2.</span> <span class="nav-text">样例输出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <数论>线性同余方程和中国剩余定理
+          <算法>宽度优先搜索（BFS）
         </h1>
 
         <div class="post-meta">
@@ -261,23 +261,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-07-31 19:40:54" itemprop="dateCreated datePublished" datetime="2020-07-31T19:40:54+08:00">2020-07-31</time>
+              <time title="Created: 2020-09-18 23:26:42 / Modified: 23:44:03" itemprop="dateCreated datePublished" datetime="2020-09-18T23:26:42+08:00">2020-09-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-09 23:46:11" itemprop="dateModified" datetime="2020-08-09T23:46:11+08:00">2020-08-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
             </span>
 
@@ -290,27 +284,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="线性同余方程"><a href="#线性同余方程" class="headerlink" title="线性同余方程"></a>线性同余方程</h1><p>对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程<br><a id="more"></a></p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
-<li>对于一元线性同余方程 $ax\equiv b\pmod m$，设 $(a,m)=d$，如果 $d|b$，则存在$d$个不同余的解，设$x_0$为原方程的特解，则$x=x_0+\frac{m}{d}t$，反之则无解，注意对于任意一个特解，其所有同余解都是原方程的解</li>
-<li>特别的，当$a$和$m$互素的时候，原方程有唯一解</li>
-<li>将同余式化为一般的方程式然后利用丢番图方程的解法可以证明上述结论<h2 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h2></li>
-<li>我们将 $ax\equiv 1\pmod m$ 的解称为 $a$ 模 $m$ 的逆（反之也成立）</li>
-<li>逆有一个重要的性质，即对于方程$ax\equiv b\pmod m$，两边乘以 $a$ 模 $m$ 的逆 $c$，得到 $acx\equiv x\equiv bc\pmod m$<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2></li>
-</ul>
-<ol>
-<li>求 $9x\equiv 12\pmod {15}$<br>$d=(9,15)=3$，且 $3|12$，所以原方程有3个不同余的解<br>通过丢番图方程可以解得原方程有一个特解 $x_0=8$，所以 $x=8+(15/3)t=8+5t$<br>所以原方程的解分别为：<br>$x\equiv 8\pmod {15}$，$x\equiv 13\pmod {15}$，$x\equiv 3\pmod {15}$</li>
-<li>求 $7x\equiv 22\pmod {31}$<br>通过计算可知 9 是 7 模 31 的逆，所以 $x\equiv 22\times 7\equiv 12\pmod {31}$<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1></li>
-</ol>
-<ul>
-<li>设$m_1,m_2,\cdots,m_n$是两两互素的的正整数，则同余方程组<script type="math/tex; mode=display">x\equiv a_1\pmod {m_1}</script><script type="math/tex; mode=display">x\equiv a_2\pmod {m_2}</script><script type="math/tex; mode=display">\cdots</script><script type="math/tex; mode=display">x\equiv a_n\pmod {m_n}</script></li>
-<li>有模 $M=m_1m_2\cdots m_n$ 的唯一解，设 $M_1=m_2m_3\cdots m_n$，$y_n$ 为 $M_1$ 模 $m_1$ 的逆</li>
-<li>则解为 $x\equiv (a_1y_1M_1+a_1y_1M_1+\cdots+a_ny_nM_n)\pmod M$<h2 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h2></li>
-</ul>
-<ol>
-<li>求下列同余方程组的解<script type="math/tex; mode=display">x\equiv 1\pmod 3</script><script type="math/tex; mode=display">x\equiv 2\pmod 5</script><script type="math/tex; mode=display">x\equiv 3\pmod 7</script>$M=3\times 5\times 7=105$，$M_1=5\times 7=35$，同理 $M_2=21$，$M_3=15$<br>由 $35y_1\equiv 1\pmod 3$，解得 $y_1\equiv 2\pmod 3$，同理解得 $y_2\equiv 1\pmod 5$，$y_3\equiv 1\pmod 7$<br>所以$x\equiv 1\times 2\times 35+2\times 1\times 21+3\times 1\times 15=157\equiv 52\pmod {105}$</li>
-</ol>
-
+        <p>学了三天才整明白的…下次写深度优先搜索（DFS）<br><a id="more"></a></p>
+<h1 id="宽度优先搜索"><a href="#宽度优先搜索" class="headerlink" title="宽度优先搜索"></a>宽度优先搜索</h1><p>宽度优先搜索的本质是利用队列的方法，就拿走迷宫举个例子，当我在起点的时候，周围所有能走的点都是一个状态，现在把每一个状态存到队列中，然后只要队列不是空的，那就取出队首的元素，再将下一个状态存到队列中，由于队列的本质是先进先出，所以下一次取出的是之前状态（即起点之后的那个点），形象地来看就是宽度优先的意思，宽度优先比较适合求解最短路径的问题。</p>
+<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p>给定一个大小为$N\times M$的迷宫，S为起点，G为终点，#为障碍，求起点到终点的最短路径</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 10</span><br><span class="line">#S######.#</span><br><span class="line">......#..#</span><br><span class="line">.#.##.##.#</span><br><span class="line">.#........</span><br><span class="line">##.##.####</span><br><span class="line">....#....#</span><br><span class="line">.#######.#</span><br><span class="line">....#.....</span><br><span class="line">.####.###.</span><br><span class="line">....#...G#</span><br></pre></td></tr></table></figure>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">22</span><br></pre></td></tr></table></figure>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;utility&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int INF&#x3D;65536;</span><br><span class="line">char map[105][105];&#x2F;&#x2F;迷宫</span><br><span class="line">int d[105][105];&#x2F;&#x2F;最短路径</span><br><span class="line">int n,m,sx,sy,x2,y2;</span><br><span class="line">int dx[4]&#x3D;&#123;0,0,1,-1&#125;;&#x2F;&#x2F;上下左右</span><br><span class="line">int dy[4]&#x3D;&#123;1,-1,0,0&#125;;</span><br><span class="line">pair&lt;int,int&gt; p;</span><br><span class="line"></span><br><span class="line">int bfs(int x,int y)&#123;</span><br><span class="line">    queue&lt;pair&lt;int,int&gt;&gt; que;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        for(int j&#x3D;1;j&lt;&#x3D;m;j++)&#123;</span><br><span class="line">            d[i][j]&#x3D;INF;&#x2F;&#x2F;首先将每个点初始化为无穷大</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    que.push(pair&lt;int,int&gt;(sx,sy));</span><br><span class="line">    d[sx][sy]&#x3D;0;&#x2F;&#x2F;起点的最短路径为0</span><br><span class="line">    while(!que.empty())&#123;</span><br><span class="line">        pair&lt;int,int&gt; p&#x3D;que.front();que.pop();&#x2F;&#x2F;取出队首元素</span><br><span class="line">        if(p.first&#x3D;&#x3D;x2&amp;&amp;p.second&#x3D;&#x3D;y2)&#123;&#x2F;&#x2F;如果是终点，则返回路径长度</span><br><span class="line">            return d[x2][y2];</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;4;i++)&#123;&#x2F;&#x2F;四个方向循环</span><br><span class="line">            int nx&#x3D;p.first+dx[i],ny&#x3D;p.second+dy[i];</span><br><span class="line">            if(map[nx][ny]!&#x3D;&#39;#&#39;&amp;&amp;d[nx][ny]&#x3D;&#x3D;INF)&#123;</span><br><span class="line">                que.push(pair&lt;int,int&gt;(nx,ny));&#x2F;&#x2F;下一个方向可走则入队</span><br><span class="line">                d[nx][ny]&#x3D;d[p.first][p.second]+1;&#x2F;&#x2F;下一个方向的路径+1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i&#x3D;0;i&lt;&#x3D;n+1;i++)&#123;</span><br><span class="line">        for(int j&#x3D;0;j&lt;&#x3D;m+1;j++)&#123;</span><br><span class="line">            map[i][j]&#x3D;&#39;#&#39;;&#x2F;&#x2F;将边界初始化为障碍</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        for(int j&#x3D;1;j&lt;&#x3D;m;j++)&#123;</span><br><span class="line">            cin&gt;&gt;map[i][j];</span><br><span class="line">            if(map[i][j]&#x3D;&#x3D;&#39;S&#39;)&#123;&#x2F;&#x2F;记录起点</span><br><span class="line">                sx&#x3D;i;sy&#x3D;j;</span><br><span class="line">            &#125;</span><br><span class="line">            if(map[i][j]&#x3D;&#x3D;&#39;G&#39;)&#123;&#x2F;&#x2F;记录终点</span><br><span class="line">                x2&#x3D;i;y2&#x3D;j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;bfs(sx,sy)&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -323,14 +302,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/31/lesssuan-fa-greaterkuai-su-pai-xu-he-gao-jing-du-yun-suan/" rel="prev" title="<算法>快速排序和高精度运算">
-                  <i class="fa fa-chevron-left"></i> <算法>快速排序和高精度运算
+                <a href="/2020/09/18/lesssui-bi-greater2020918/" rel="prev" title="<随笔>2020.9.18">
+                  <i class="fa fa-chevron-left"></i> <随笔>2020.9.18
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/02/sui-bi-20207/" rel="next" title="<随笔>2020.7">
-                  <随笔>2020.7 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
