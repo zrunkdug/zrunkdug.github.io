@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-12T15:33:14.049Z</updated>
+  <updated>2020-09-18T10:10:50.818Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;随笔&gt;2020.9.18</title>
+    <link href="http://yoursite.com/2020/09/18/lesssui-bi-greater2020918/"/>
+    <id>http://yoursite.com/2020/09/18/lesssui-bi-greater2020918/</id>
+    <published>2020-09-18T10:08:22.000Z</published>
+    <updated>2020-09-18T10:10:50.818Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这波是突然更新&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;算法&gt;生成组合的r子集（字典序）</title>
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;火车从始发站（称为第$1$站）开出，在始发站上车的人数为$a$，然后到达第$2$站，在第$2$站有人上、下车，但上、下车的人数相同，因此在第$2$站开出时（即在到达第3站之前）车上的人数保持为$a$人。从第$3$站起（包括第$3$站）上、下车的人数有一定规律：上车的人数都是前两站上车人数之和，而下车人数等于上一站上车人数，一直到终点站的前一站（第$(n-1)$站），都满足此规律。现给出的条件是：共有$n$个车站，始发站上车的人数为$b$，最后一站下车的人数是$m$（全部下车）。试问$x$站开出时车上的人数是多少？&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法题" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>NOIP模拟  遭遇战</title>
-    <link href="http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/"/>
-    <id>http://yoursite.com/2020/07/29/noip-mo-ni-zao-yu-zhan/</id>
-    <published>2020-07-29T10:00:03.000Z</published>
-    <updated>2020-08-09T15:47:26.648Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;小林和小华在一个$n\times n$的矩形方格里玩游戏，矩形左上角为$(0,0)$，右下角为$(n-1,n-1)$。两人同时进入地图的随机位置，并以相同速度进行走位。为了隐蔽性，两人都不会再走自己走过的格子。如果两人向某一方向前进，那么他们会跑到不能跑为止，当不能跑的时候，小林会向右转，小华会向左转，如果不能跑，则不再动。现在已知两人进去地图的初始位置和方向，请算出两人遭遇的位置。&lt;br&gt;
     
     </summary>
     
