@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-26T14:44:58.925Z</updated>
+  <updated>2020-09-27T14:58:36.574Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;算法&gt;深度优先搜索（DFS）</title>
+    <link href="http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/"/>
+    <id>http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/</id>
+    <published>2020-09-27T14:54:09.000Z</published>
+    <updated>2020-09-27T14:58:36.574Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;没有什么比暴力枚举更吸引人的了     —鲁迅&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;算法&gt;记忆化搜索</title>
@@ -373,25 +392,6 @@
     
     
       <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;线性同余方程和中国剩余定理</title>
-    <link href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/"/>
-    <id>http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/</id>
-    <published>2020-07-31T11:40:54.000Z</published>
-    <updated>2020-08-09T15:46:11.212Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;线性同余方程&quot;&gt;&lt;a href=&quot;#线性同余方程&quot; class=&quot;headerlink&quot; title=&quot;线性同余方程&quot;&gt;&lt;/a&gt;线性同余方程&lt;/h1&gt;&lt;p&gt;对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
   </entry>
