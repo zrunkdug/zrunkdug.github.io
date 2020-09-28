@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-27T14:58:36.574Z</updated>
+  <updated>2020-09-28T06:40:22.789Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;随笔&gt;2020.9</title>
+    <link href="http://yoursite.com/2020/09/28/lesssui-bi-greater20209/"/>
+    <id>http://yoursite.com/2020/09/28/lesssui-bi-greater20209/</id>
+    <published>2020-09-28T06:34:39.000Z</published>
+    <updated>2020-09-28T06:40:22.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我决定随笔还是月更，因为周更的话我才思枯竭，小学生文笔不允许我写这么多文章&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;算法&gt;深度优先搜索（DFS）</title>
@@ -74,25 +93,6 @@
   </entry>
   
   <entry>
-    <title>&lt;随笔&gt;2020.9.18</title>
-    <link href="http://yoursite.com/2020/09/18/lesssui-bi-greater2020918/"/>
-    <id>http://yoursite.com/2020/09/18/lesssui-bi-greater2020918/</id>
-    <published>2020-09-18T10:08:22.000Z</published>
-    <updated>2020-09-18T15:50:20.739Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这波是突然更新&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>&lt;算法&gt;生成组合的r子集（字典序）</title>
     <link href="http://yoursite.com/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/"/>
     <id>http://yoursite.com/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/</id>
@@ -107,25 +107,6 @@
     
     
       <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;随笔&gt;2020.9.6</title>
-    <link href="http://yoursite.com/2020/09/05/lesssui-bi-greater202096/"/>
-    <id>http://yoursite.com/2020/09/05/lesssui-bi-greater202096/</id>
-    <published>2020-09-05T13:39:20.000Z</published>
-    <updated>2020-09-05T13:45:24.796Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;居然有人要我多写随笔，那我就每周日更新吧&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
@@ -392,6 +373,25 @@
     
     
       <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;数论&gt;线性同余方程和中国剩余定理</title>
+    <link href="http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/"/>
+    <id>http://yoursite.com/2020/07/31/lessshu-lie-greaterxian-xing-tong-yu-fang-cheng/</id>
+    <published>2020-07-31T11:40:54.000Z</published>
+    <updated>2020-08-09T15:46:11.212Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;线性同余方程&quot;&gt;&lt;a href=&quot;#线性同余方程&quot; class=&quot;headerlink&quot; title=&quot;线性同余方程&quot;&gt;&lt;/a&gt;线性同余方程&lt;/h1&gt;&lt;p&gt;对于形如 $ax\equiv b\pmod m$的同余式称为一元线性同余方程&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
   </entry>
