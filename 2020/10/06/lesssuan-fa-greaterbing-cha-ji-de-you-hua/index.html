@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="没有什么比暴力枚举更吸引人的了     —鲁迅">
+  <meta name="description" content="并查集网上写的很详细，这里就不浪费时间了，主要稍微写点并查集的优化问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;算法&gt;深度优先搜索（DFS）">
-<meta property="og:url" content="http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/index.html">
+<meta property="og:title" content="&lt;算法&gt;并查集的优化">
+<meta property="og:url" content="http://yoursite.com/2020/10/06/lesssuan-fa-greaterbing-cha-ji-de-you-hua/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="没有什么比暴力枚举更吸引人的了     —鲁迅">
+<meta property="og:description" content="并查集网上写的很详细，这里就不浪费时间了，主要稍微写点并查集的优化问题">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-27T14:54:09.000Z">
-<meta property="article:modified_time" content="2020-09-27T14:58:36.574Z">
+<meta property="article:published_time" content="2020-10-06T06:48:41.000Z">
+<meta property="article:modified_time" content="2020-10-06T07:30:02.285Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/">
+<link rel="canonical" href="http://yoursite.com/2020/10/06/lesssuan-fa-greaterbing-cha-ji-de-you-hua/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><算法>深度优先搜索（DFS） | ZJ的后花园</title>
+  <title><算法>并查集的优化 | ZJ的后花园</title>
   
 
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">例题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AA%E4%BC%98%E5%8C%96%E7%9A%84%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-number">1.</span> <span class="nav-text">未优化的并查集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">1.1.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%88%E5%B9%B6"><span class="nav-number">1.2.</span> <span class="nav-text">合并</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">并查集的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E9%AB%98%E5%BA%A6%E7%9A%84%E5%90%88%E5%B9%B6%E4%BC%98%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">基于高度的合并优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9"><span class="nav-number">2.2.</span> <span class="nav-text">路径压缩</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/06/lesssuan-fa-greaterbing-cha-ji-de-you-hua/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <算法>深度优先搜索（DFS）
+          <算法>并查集的优化
         </h1>
 
         <div class="post-meta">
@@ -263,7 +263,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-27 22:54:09 / Modified: 22:58:36" itemprop="dateCreated datePublished" datetime="2020-09-27T22:54:09+08:00">2020-09-27</time>
+              <time title="Created: 2020-10-06 14:48:41 / Modified: 15:30:02" itemprop="dateCreated datePublished" datetime="2020-10-06T14:48:41+08:00">2020-10-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -284,11 +284,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>没有什么比暴力枚举更吸引人的了     —鲁迅<br><a id="more"></a><br>深度优先搜索的本质其实就是暴力枚举，不过深搜利用了递归（栈），如果把深搜画成一颗树的话，深搜会先搜索到树的根结点，然后再回溯到上一个结点，如此往复，我觉得<strong>回溯</strong>是深搜的核心，具体怎么回溯主要是建立一个bool型数组记录该点是否访问过，在每次搜索前设置为访问过(true)，在每次搜索后回溯到未访问的状态(false)。深度优先搜索可以解决组合或者排列的问题，也可以解决从起点到终点有多少条路径的问题（类似走迷宫，不过输出的是到终点的路径总数）</p>
-<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p>输出n的全排列，以字典序输出</p>
-<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
-<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4</span><br><span class="line">1 2 4 3</span><br><span class="line">1 3 2 4</span><br><span class="line">1 3 4 2</span><br><span class="line">1 4 2 3</span><br><span class="line">1 4 3 2</span><br><span class="line">2 1 3 4</span><br><span class="line">2 1 4 3</span><br><span class="line">2 3 1 4</span><br><span class="line">2 3 4 1</span><br><span class="line">2 4 1 3</span><br><span class="line">2 4 3 1</span><br><span class="line">3 1 2 4</span><br><span class="line">3 1 4 2</span><br><span class="line">3 2 1 4</span><br><span class="line">3 2 4 1</span><br><span class="line">3 4 1 2</span><br><span class="line">3 4 2 1</span><br><span class="line">4 1 2 3</span><br><span class="line">4 1 3 2</span><br><span class="line">4 2 1 3</span><br><span class="line">4 2 3 1</span><br><span class="line">4 3 1 2</span><br><span class="line">4 3 2 1</span><br></pre></td></tr></table></figure>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n;</span><br><span class="line">int number[65536];</span><br><span class="line">bool vis[65536]&#x3D;&#123;false&#125;;</span><br><span class="line">void dfs(int ans)&#123;</span><br><span class="line">    if(ans&#x3D;&#x3D;n)&#123;&#x2F;&#x2F;全部搜索完毕则输出结果</span><br><span class="line">        for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">            cout&lt;&lt;number[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        if(!vis[i])&#123;</span><br><span class="line">            vis[i]&#x3D;true;&#x2F;&#x2F;标记已经访问过</span><br><span class="line">            number[ans]&#x3D;i;</span><br><span class="line">            dfs(ans+1);&#x2F;&#x2F;进行下一项的搜索</span><br><span class="line">            vis[i]&#x3D;false;&#x2F;&#x2F;回溯</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    dfs(0);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>并查集网上写的很详细，这里就不浪费时间了，主要稍微写点并查集的优化问题<br><a id="more"></a></p>
+<h1 id="未优化的并查集"><a href="#未优化的并查集" class="headerlink" title="未优化的并查集"></a>未优化的并查集</h1><p>先简单写写我对并查集的理解：对于每一个数据都有一个父亲结点，所以我们只需要一个一维数组将每组数据的父亲结点的值存入即可，如果一个数据的父亲结点是他自己，那么这个数据就是根结点，所谓并查就是合并两个集合和查询某组数据是否在同一个集合中：如果需要判断两个数据是否在一个集合中，只需要判断他们的根结点是不是同一个即可，集合的合并操作也是如此，实际执行中是输入两组数据然后合并这两组数据所在的集合，具体操作就是将两组数据的其中一个根结点A作为另一个根结点B的父亲结点即可，这样之后所有根结点为B的数据的根结点就变为A了，也就实现了并查集的合并操作。</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int find(int n)&#123;</span><br><span class="line">    if(par[n]&#x3D;&#x3D;n)&#123;</span><br><span class="line">        return n;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        return find(par[n]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void unite(int x,int y)&#123;</span><br><span class="line">    x&#x3D;find(x);</span><br><span class="line">    y&#x3D;find(y);</span><br><span class="line">    if(x!&#x3D;y)&#123;</span><br><span class="line">        par[y]&#x3D;x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="并查集的优化"><a href="#并查集的优化" class="headerlink" title="并查集的优化"></a>并查集的优化</h1><p>从上述代码可以看出，未优化的并查集很容易产生<strong>退化</strong>，即某棵树的所有结点形成了一条链，使得时间复杂度退化到了$O(n)$</p>
+<h2 id="基于高度的合并优化"><a href="#基于高度的合并优化" class="headerlink" title="基于高度的合并优化"></a>基于高度的合并优化</h2><p>为了防止发生并查集的退化，我们可以存入并查集的高度(rank)，当两个集合合并的时候，将rank大的集合的根结点作为rank小的一个集合的父亲结点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void unite(int x,int y)&#123;</span><br><span class="line">    x&#x3D;find(x);</span><br><span class="line">    y&#x3D;find(y);</span><br><span class="line">    if(rank[x]&gt;rank[y])&#123;</span><br><span class="line">        par[y]&#x3D;x;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        par[x]&#x3D;y;</span><br><span class="line">        if(rank[x]&#x3D;&#x3D;rank[y])&#123;</span><br><span class="line">            rank++;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h2><p>在每次进行对数据的查询操作完成后，我们可以直接将该数据作为根节点的一个子节点，这样下次查询就不需要递归了，事实上，在查询该数据的时候，其所有父节点的根结点都是相同的，所以每次递归其实都可以将当前结点作为根结点的子节点，所以在每次查询操作结束之后，该集合的所有数据的父节点就是其根结点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int find(int n)&#123;</span><br><span class="line">    if(par[n]&#x3D;&#x3D;n)&#123;</span><br><span class="line">        return n;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        return par[n]&#x3D;find(par[n]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>优化后的并查集的时间复杂度是$O(\alpha(n))$，其中$\alpha(n)$是阿克曼(Ackermann)函数的反函数，快于$O(logn)$</p>
+
     </div>
 
     
@@ -301,14 +304,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/09/26/lesssuan-fa-greaterji-yi-hua-sou-suo/" rel="prev" title="<算法>记忆化搜索">
-                  <i class="fa fa-chevron-left"></i> <算法>记忆化搜索
+                <a href="/2020/09/28/lesssui-bi-greater20209/" rel="prev" title="<随笔>2020.9">
+                  <i class="fa fa-chevron-left"></i> <随笔>2020.9
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/09/28/lesssui-bi-greater20209/" rel="next" title="<随笔>2020.9">
-                  <随笔>2020.9 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
