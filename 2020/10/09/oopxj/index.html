@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="学了三天才整明白的…下次写深度优先搜索（DFS）">
+  <meta name="description" content="最近在复习面向对象，写一些复习中遇到的细节问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;算法&gt;宽度优先搜索（BFS）">
-<meta property="og:url" content="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/index.html">
+<meta property="og:title" content="&lt;面向对象&gt;类的一些细节问题">
+<meta property="og:url" content="http://yoursite.com/2020/10/09/oopxj/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="学了三天才整明白的…下次写深度优先搜索（DFS）">
+<meta property="og:description" content="最近在复习面向对象，写一些复习中遇到的细节问题">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-18T15:26:42.000Z">
-<meta property="article:modified_time" content="2020-09-18T15:44:03.128Z">
+<meta property="article:published_time" content="2020-10-09T06:48:41.000Z">
+<meta property="article:modified_time" content="2020-10-09T15:55:32.796Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/">
+<link rel="canonical" href="http://yoursite.com/2020/10/09/oopxj/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><算法>宽度优先搜索（BFS） | ZJ的后花园</title>
+  <title><面向对象>类的一些细节问题 | ZJ的后花园</title>
   
 
 
@@ -166,7 +166,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -178,7 +178,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%BD%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-number">1.</span> <span class="nav-text">宽度优先搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5"><span class="nav-number">2.1.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="nav-number">2.2.</span> <span class="nav-text">样例输出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +235,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/09/oopxj/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +251,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <算法>宽度优先搜索（BFS）
+          <面向对象>类的一些细节问题
         </h1>
 
         <div class="post-meta">
@@ -263,7 +262,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-18 23:26:42 / Modified: 23:44:03" itemprop="dateCreated datePublished" datetime="2020-09-18T23:26:42+08:00">2020-09-18</time>
+              <time title="Created: 2020-10-09 14:48:41 / Modified: 23:55:32" itemprop="dateCreated datePublished" datetime="2020-10-09T14:48:41+08:00">2020-10-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -271,7 +270,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                  <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="index"><span itemprop="name">面向对象</span></a>
                 </span>
             </span>
 
@@ -284,12 +283,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>学了三天才整明白的…下次写深度优先搜索（DFS）<br><a id="more"></a></p>
-<h1 id="宽度优先搜索"><a href="#宽度优先搜索" class="headerlink" title="宽度优先搜索"></a>宽度优先搜索</h1><p>宽度优先搜索的本质是利用队列的方法，就拿走迷宫举个例子，当我在起点的时候，周围所有能走的点都是一个状态，现在把每一个状态存到队列中，然后只要队列不是空的，那就取出队首的元素，再将下一个状态存到队列中，由于队列的本质是先进先出，所以下一次取出的是之前状态（即起点之后的那个点），形象地来看就是宽度优先的意思，宽度优先比较适合求解最短路径的问题。</p>
-<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p>给定一个大小为$N\times M$的迷宫，S为起点，G为终点，#为障碍，求起点到终点的最短路径</p>
-<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 10</span><br><span class="line">#S######.#</span><br><span class="line">......#..#</span><br><span class="line">.#.##.##.#</span><br><span class="line">.#........</span><br><span class="line">##.##.####</span><br><span class="line">....#....#</span><br><span class="line">.#######.#</span><br><span class="line">....#.....</span><br><span class="line">.####.###.</span><br><span class="line">....#...G#</span><br></pre></td></tr></table></figure>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">22</span><br></pre></td></tr></table></figure>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;utility&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int INF&#x3D;65536;</span><br><span class="line">char map[105][105];&#x2F;&#x2F;迷宫</span><br><span class="line">int d[105][105];&#x2F;&#x2F;最短路径</span><br><span class="line">int n,m,sx,sy,x2,y2;</span><br><span class="line">int dx[4]&#x3D;&#123;0,0,1,-1&#125;;&#x2F;&#x2F;上下左右</span><br><span class="line">int dy[4]&#x3D;&#123;1,-1,0,0&#125;;</span><br><span class="line">pair&lt;int,int&gt; p;</span><br><span class="line"></span><br><span class="line">int bfs(int x,int y)&#123;</span><br><span class="line">    queue&lt;pair&lt;int,int&gt;&gt; que;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        for(int j&#x3D;1;j&lt;&#x3D;m;j++)&#123;</span><br><span class="line">            d[i][j]&#x3D;INF;&#x2F;&#x2F;首先将每个点初始化为无穷大</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    que.push(pair&lt;int,int&gt;(sx,sy));</span><br><span class="line">    d[sx][sy]&#x3D;0;&#x2F;&#x2F;起点的最短路径为0</span><br><span class="line">    while(!que.empty())&#123;</span><br><span class="line">        pair&lt;int,int&gt; p&#x3D;que.front();que.pop();&#x2F;&#x2F;取出队首元素</span><br><span class="line">        if(p.first&#x3D;&#x3D;x2&amp;&amp;p.second&#x3D;&#x3D;y2)&#123;&#x2F;&#x2F;如果是终点，则返回路径长度</span><br><span class="line">            return d[x2][y2];</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;4;i++)&#123;&#x2F;&#x2F;四个方向循环</span><br><span class="line">            int nx&#x3D;p.first+dx[i],ny&#x3D;p.second+dy[i];</span><br><span class="line">            if(map[nx][ny]!&#x3D;&#39;#&#39;&amp;&amp;d[nx][ny]&#x3D;&#x3D;INF)&#123;</span><br><span class="line">                que.push(pair&lt;int,int&gt;(nx,ny));&#x2F;&#x2F;下一个方向可走则入队</span><br><span class="line">                d[nx][ny]&#x3D;d[p.first][p.second]+1;&#x2F;&#x2F;下一个方向的路径+1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i&#x3D;0;i&lt;&#x3D;n+1;i++)&#123;</span><br><span class="line">        for(int j&#x3D;0;j&lt;&#x3D;m+1;j++)&#123;</span><br><span class="line">            map[i][j]&#x3D;&#39;#&#39;;&#x2F;&#x2F;将边界初始化为障碍</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        for(int j&#x3D;1;j&lt;&#x3D;m;j++)&#123;</span><br><span class="line">            cin&gt;&gt;map[i][j];</span><br><span class="line">            if(map[i][j]&#x3D;&#x3D;&#39;S&#39;)&#123;&#x2F;&#x2F;记录起点</span><br><span class="line">                sx&#x3D;i;sy&#x3D;j;</span><br><span class="line">            &#125;</span><br><span class="line">            if(map[i][j]&#x3D;&#x3D;&#39;G&#39;)&#123;&#x2F;&#x2F;记录终点</span><br><span class="line">                x2&#x3D;i;y2&#x3D;j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;bfs(sx,sy)&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>最近在复习面向对象，写一些复习中遇到的细节问题<br><a id="more"></a></p>
+<ol>
+<li>struct和class的区别主要就是对象的可访问性，struct所以成员都是默认public的，而class一般会把数据成员设为private</li>
+<li>class比较推荐的写法是先public再private，这样写的优点是对公有成员函数一目了然<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class x&#123;</span><br><span class="line">public:</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">private:</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>关于对const的用法，如果函数不改变参数，一般将参数设置为const，如果函数不隐式或显式地改变类的数据成员，一般将函数设置为const。其实加不加const不会影响整体程序的运行，但是加上是一个良好的编程习惯，同时某些编译器会对const做出一些优化处理。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void set(const int&amp; n)&#123;</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">&#125;</span><br><span class="line">int get_n() const&#123;</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>能把函数的参数设为引用就设置为引用，因为这样做可以减少一次赋值操作，具体见类的那一篇文章</li>
+<li>-&gt;和.的区别不用再说，其实-&gt;就是(*p).的另一种表示，只是换成-&gt;更好写了而已</li>
+<li>构造函数的初始化段：如果类成员中出现const的数据成员，那么无法用通过赋值操作的构造函数初始化数据成员，对于const的数据成员，只能通过初始化段的方式进行初始化，而对于其他类型的数据成员，赋值和初始化段都是可以的，比较推荐全部采用初始化段的写法。初始段的初始化顺序取决于数据成员在类中的声明顺序，而非在初始化段中的顺序<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class x&#123;</span><br><span class="line">public:</span><br><span class="line">    &#x2F;&#x2F;下面这种写法是错误的，因为b是常量</span><br><span class="line">    x(const int &amp;a_,const int &amp;b_)&#123;a&#x3D;a_;b&#x3D;b_;&#125;</span><br><span class="line">    &#x2F;&#x2F;下面这种写法就是初始化段</span><br><span class="line">    x():a(0),b(0)&#123;&#125;;</span><br><span class="line">private:</span><br><span class="line">    int a;</span><br><span class="line">    const int b;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>C++中分配一块动态内存是new，而C是malloc，区别就是C++可以在new的同时调用构造函数，而C是不可以的，因为我没学过C，所以这个了解一下就行了。</li>
+<li>析构函数是对象被摧毁是调用的，对象摧毁有两种情况：delete和超出作用范围</li>
+<li>如果把一个数据成员定义为static，那么这个成员就是类成员(class member)，只属于这个类本身而不属于类的对象，也就是说无论创建多少个对象，这个数据只有一个，之前的都是对象成员(object member)，类成员可以用于统计类的个数，static类型只能在类之外初始化，同时它也不占类的空间，对类的对象sizeof一下会发现加不加static大小都是一样的</li>
+</ol>
+
     </div>
 
     
@@ -302,14 +308,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/" rel="prev" title="<算法>生成组合的r子集（字典序）">
-                  <i class="fa fa-chevron-left"></i> <算法>生成组合的r子集（字典序）
+                <a href="/2020/10/06/lesssuan-fa-greaterbing-cha-ji-de-you-hua/" rel="prev" title="<算法>并查集的优化">
+                  <i class="fa fa-chevron-left"></i> <算法>并查集的优化
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/09/26/lesssuan-fa-greaterji-yi-hua-sou-suo/" rel="next" title="<算法>记忆化搜索">
-                  <算法>记忆化搜索 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
