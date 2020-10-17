@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-09T15:55:32.796Z</updated>
+  <updated>2020-10-17T15:37:00.501Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&lt;算法&gt;二分搜索</title>
+    <link href="http://yoursite.com/2020/10/17/erfensousuo/"/>
+    <id>http://yoursite.com/2020/10/17/erfensousuo/</id>
+    <published>2020-10-17T06:48:41.000Z</published>
+    <updated>2020-10-17T15:37:00.501Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我喜欢这种又快又暴力的算法&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>&lt;面向对象&gt;类的一些细节问题</title>
     <link href="http://yoursite.com/2020/10/09/oopxj/"/>
     <id>http://yoursite.com/2020/10/09/oopxj/</id>
     <published>2020-10-09T06:48:41.000Z</published>
-    <updated>2020-10-09T15:55:32.796Z</updated>
+    <updated>2020-10-17T15:39:56.456Z</updated>
     
     <summary type="html">
     
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;由之前学的积性函数，开始学习另外的两个积性函数，然后讲讲梅森素数，是一个非常有趣的方向&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;积性函数</title>
-    <link href="http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/"/>
-    <id>http://yoursite.com/2020/08/03/lessshu-lun-greatercheng-xing-han-shu/</id>
-    <published>2020-08-03T09:06:04.000Z</published>
-    <updated>2020-08-09T15:46:16.058Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这一章开始学习数论函数，从欧拉函数到因子、因子数函数，我觉得这一章还是比较好理解的&lt;br&gt;
     
     </summary>
     

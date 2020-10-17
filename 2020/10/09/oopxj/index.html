@@ -30,7 +30,7 @@
 <meta property="og:description" content="最近在复习面向对象，写一些复习中遇到的细节问题">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-09T06:48:41.000Z">
-<meta property="article:modified_time" content="2020-10-09T15:55:32.796Z">
+<meta property="article:modified_time" content="2020-10-17T15:39:56.456Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
@@ -191,7 +191,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -260,10 +260,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-10-09 14:48:41 / Modified: 23:55:32" itemprop="dateCreated datePublished" datetime="2020-10-09T14:48:41+08:00">2020-10-09</time>
+              <time title="Created: 2020-10-09 14:48:41" itemprop="dateCreated datePublished" datetime="2020-10-09T14:48:41+08:00">2020-10-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-10-17 23:39:56" itemprop="dateModified" datetime="2020-10-17T23:39:56+08:00">2020-10-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -285,7 +291,7 @@
     <div class="post-body" itemprop="articleBody">
         <p>最近在复习面向对象，写一些复习中遇到的细节问题<br><a id="more"></a></p>
 <ol>
-<li>struct和class的区别主要就是对象的可访问性，struct所以成员都是默认public的，而class一般会把数据成员设为private</li>
+<li>struct和class的区别主要就是数据成员的可访问性，struct所有成员都是默认public的，而class默认会把数据成员设为private，除非显式地声明public</li>
 <li>class比较推荐的写法是先public再private，这样写的优点是对公有成员函数一目了然<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class x&#123;</span><br><span class="line">public:</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">private:</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
 <li>关于对const的用法，如果函数不改变参数，一般将参数设置为const，如果函数不隐式或显式地改变类的数据成员，一般将函数设置为const。其实加不加const不会影响整体程序的运行，但是加上是一个良好的编程习惯，同时某些编译器会对const做出一些优化处理。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void set(const int&amp; n)&#123;</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">&#125;</span><br><span class="line">int get_n() const&#123;</span><br><span class="line">    &#x2F;&#x2F;...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>能把函数的参数设为引用就设置为引用，因为这样做可以减少一次赋值操作，具体见类的那一篇文章</li>
@@ -313,6 +319,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2020/10/17/erfensousuo/" rel="next" title="<算法>二分搜索">
+                  <算法>二分搜索 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
