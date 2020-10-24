@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-17T15:37:00.501Z</updated>
+  <updated>2020-10-24T08:28:10.603Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;ML&gt;KNN算法的C++实现</title>
+    <link href="http://yoursite.com/2020/10/24/KNN/"/>
+    <id>http://yoursite.com/2020/10/24/KNN/</id>
+    <published>2020-10-24T06:48:41.000Z</published>
+    <updated>2020-10-24T08:28:10.603Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;虽然我用C++写不出决策树，但是我可以写出KNN&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="ML" scheme="http://yoursite.com/categories/ML/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;算法&gt;二分搜索</title>
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;在之前学积性函数的时候会看到诸如$F(n)=\sum_{d|n}{f(d)}$的式子，其中 $f$ 是积性函数，这个式子是知道 $f(n)$ 推导其和函数，那么我们能不能知道和函数 $F(n)$ 反推 $f$ 呢？利用莫比乌斯反演可以实现这一过程&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;完全数和梅森素数</title>
-    <link href="http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/"/>
-    <id>http://yoursite.com/2020/08/04/lessshu-lun-greaterwan-quan-shu-he-mei-sen-su-shu/</id>
-    <published>2020-08-04T07:45:03.000Z</published>
-    <updated>2020-08-09T15:46:48.551Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由之前学的积性函数，开始学习另外的两个积性函数，然后讲讲梅森素数，是一个非常有趣的方向&lt;br&gt;
     
     </summary>
     
