@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-31T15:28:42.986Z</updated>
+  <updated>2020-11-13T11:52:31.532Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hduoj题解(1)</title>
+    <link href="http://yoursite.com/2020/11/13/hduoj/"/>
+    <id>http://yoursite.com/2020/11/13/hduoj/</id>
+    <published>2020-11-13T06:48:41.000Z</published>
+    <updated>2020-11-13T11:52:31.532Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;定个小目标，每天至少一道hduoj的题，更新在这篇文章里&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法题" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;ML&gt;ID3决策树的C++实现</title>
@@ -373,25 +392,6 @@
     
     
       <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;阶和原根</title>
-    <link href="http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/"/>
-    <id>http://yoursite.com/2020/08/07/lessshu-lun-greaterjie-he-yuan-gen/</id>
-    <published>2020-08-07T11:20:36.000Z</published>
-    <updated>2020-08-09T15:46:33.268Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;先写一下之前没写的欧拉定理，然后讲讲阶和原根，说实话这一章我学的真的挺懵的，后面会涉及原根的存在性问题和素性判断&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
   </entry>
