@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-11-17T15:13:01.311Z</updated>
+  <updated>2020-11-21T15:54:12.550Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;随笔&gt;2020.11</title>
+    <link href="http://yoursite.com/2020/11/21/suibi2020_11/"/>
+    <id>http://yoursite.com/2020/11/21/suibi2020_11/</id>
+    <published>2020-11-21T06:48:41.000Z</published>
+    <updated>2020-11-21T15:54:12.550Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下周考试，但是我复习不动了，把随笔补了&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>oop review</title>
@@ -373,25 +392,6 @@
     
     
       <category term="组合数学" scheme="http://yoursite.com/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;数论&gt;原根的存在性和指数</title>
-    <link href="http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/"/>
-    <id>http://yoursite.com/2020/08/10/lessshu-lun-greateryuan-gen-de-cun-zai-xing-he-zhi-shu/</id>
-    <published>2020-08-10T07:17:32.000Z</published>
-    <updated>2020-08-10T08:00:40.745Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;原根的存在性真的看得我头皮发麻，所以这边直接放结论了，这章主要写写和指数有关的知识&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://yoursite.com/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
   </entry>
