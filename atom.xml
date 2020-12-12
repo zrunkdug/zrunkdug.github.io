@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-06T04:17:33.559Z</updated>
+  <updated>2020-12-12T11:56:02.027Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>&lt;数学&gt;概率论</title>
-    <link href="http://yoursite.com/2020/12/06/gailvlun/"/>
-    <id>http://yoursite.com/2020/12/06/gailvlun/</id>
-    <published>2020-12-06T06:48:41.000Z</published>
-    <updated>2020-12-06T04:17:33.559Z</updated>
+    <title>&lt;算法&gt;动态规划(DP)</title>
+    <link href="http://yoursite.com/2020/12/12/dp/"/>
+    <id>http://yoursite.com/2020/12/12/dp/</id>
+    <published>2020-12-12T06:48:41.000Z</published>
+    <updated>2020-12-12T11:56:02.027Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;主要是记一些重要的公式&lt;br&gt;
+      &lt;p&gt;目前只会一些简单的DP，牛逼的DP看不懂&lt;br&gt;
     
     </summary>
     
     
-      <category term="数学" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
