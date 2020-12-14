@@ -30,7 +30,7 @@
 <meta property="og:description" content="When you stop learning,you start dying">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-14T06:48:41.000Z">
-<meta property="article:modified_time" content="2020-12-14T14:12:58.480Z">
+<meta property="article:modified_time" content="2020-12-14T14:19:48.368Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
@@ -263,7 +263,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-12-14 14:48:41 / Modified: 22:12:58" itemprop="dateCreated datePublished" datetime="2020-12-14T14:48:41+08:00">2020-12-14</time>
+              <time title="Created: 2020-12-14 14:48:41 / Modified: 22:19:48" itemprop="dateCreated datePublished" datetime="2020-12-14T14:48:41+08:00">2020-12-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,7 +298,7 @@
 <p>而用常量来替换#define如下所示可以清晰地找到问题同时也能完成#define所做的工作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const double test&#x3D;1.23</span><br></pre></td></tr></table></figure></p>
 <p>对于类体内的静态常量数据成员，先看看下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class B&#123;</span><br><span class="line">    static const int test&#x3D;5;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br>如果这时直接在main函数中创建一个指向test对象的常量指针，编译会不通过，这时为什么呢？因为这里的test是声明式(declaration)而非定义式(definition)，所以内存中并没有创建这样的一个静态对象，所以在main函数之前的全局区添加定义式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const int B::test;</span><br></pre></td></tr></table></figure><br>这里test并不需要初始化，因为在之前的声明中已经初始化了</p>
 <p>这里再顺带一提类中成员的初始化，如果上述的test不是静态常量，而是静态数据成员，那么是不能再类体内初始化的，如果test是常量数据成员，在C++11中可以在类内初始化，或者用初始化段的方法初始化</p>
-<p>再讲讲#define的其他缺点，例如我们写下了如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define add(a,b) a+b</span><br></pre></td></tr></table></figure><br>这样写有一个好处就是不需要指定参数的数据类型，有点模板那意思，但是这样的写法会出现一些意想不到的问题，例如如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a*add(b,c)*d</span><br></pre></td></tr></table></figure><br>我们的本意设计是a*(b,c)*d，但是预处理的结果是a*b+c*d，解决这一问题的方法要么就是把define中的a+b换成(a+b)，要么就是写个template函数，最优的选择通常都是后者，因为使用前者依然可能会出现一些别的错误</p>
+<p>再讲讲#define的其他缺点，例如我们写下了如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define add(a,b) a+b</span><br></pre></td></tr></table></figure><br>这样写有一个好处就是不需要指定参数的数据类型，有点模板那意思，但是这样的写法会出现一些意想不到的问题，例如如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a*add(b,c)*d</span><br></pre></td></tr></table></figure><br>我们的本意设计是a*(b+c)*d，但是预处理的结果是a*b+c*d，解决这一问题的方法要么就是把define中的a+b换成(a+b)，要么就是写个template函数，最优的选择通常都是后者，因为使用前者依然可能会出现一些别的错误</p>
 <p>如果不想浪费调用函数的时间，可以在前面加上inline关键字，即内联函数，就是直接在调用中展开，而不是调用函数区的代码，某种意义上来说inline的template函数很好地完成了#define的功能</p>
 <p>但是并不是说#define就一无是处，例如在控制编译中#define依然不可替代</p>
 <p>条款2概括起来就是一句话：少用#define</p>
