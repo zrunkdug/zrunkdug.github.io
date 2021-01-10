@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-08T16:41:41.973Z</updated>
+  <updated>2021-01-10T08:08:00.183Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>稀疏矩阵的二元组表示</title>
+    <link href="http://yoursite.com/2021/01/10/matrix/"/>
+    <id>http://yoursite.com/2021/01/10/matrix/</id>
+    <published>2021-01-10T06:48:41.000Z</published>
+    <updated>2021-01-10T08:08:00.183Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;写了一个下午…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&lt;算法&gt;KMP</title>
@@ -373,25 +392,6 @@
     
     
       <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;组合数学&gt;鸽巢原理</title>
-    <link href="http://yoursite.com/2020/08/15/lesszu-he-shu-xue-greaterge-chao-yuan-li/"/>
-    <id>http://yoursite.com/2020/08/15/lesszu-he-shu-xue-greaterge-chao-yuan-li/</id>
-    <published>2020-08-15T03:54:03.000Z</published>
-    <updated>2020-08-16T05:11:00.035Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我觉得鸽巢原理是一个看似非常笨比但是使用非常广泛的原理，包括在我学初等数论的时候也经常能够看到鸽巢原理在证明中的应用。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="组合数学" scheme="http://yoursite.com/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
   </entry>
