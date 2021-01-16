@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-15T13:02:28.254Z</updated>
+  <updated>2021-01-16T13:46:42.712Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>进集训队了</title>
+    <link href="http://yoursite.com/2021/01/16/jixundui/"/>
+    <id>http://yoursite.com/2021/01/16/jixundui/</id>
+    <published>2021-01-16T06:48:41.000Z</published>
+    <updated>2021-01-16T13:46:42.712Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随缘更新随笔，显然吹逼比写技术博客有趣，记录一下自己的想法，以便日后对自己现今糟糕的认知做出反思&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>稀疏矩阵的二元组表示</title>
@@ -373,25 +392,6 @@
     
     
       <category term="组合数学" scheme="http://yoursite.com/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;n!的素因数分解</title>
-    <link href="http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/"/>
-    <id>http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/</id>
-    <published>2020-08-17T14:32:59.000Z</published>
-    <updated>2020-08-17T14:58:32.970Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;众所周知$n!$是一个增长速度及其快的函数，比如$15!$的数量级就是$10$的$12$次方了，对大数的素因数分解一直都是比较困难的，但是对$n!$来说有特殊的算法可以实现快速地实现素因数分解&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
