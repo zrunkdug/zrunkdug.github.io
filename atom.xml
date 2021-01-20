@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-16T13:46:42.712Z</updated>
+  <updated>2021-01-20T15:00:33.100Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线段树</title>
+    <link href="http://yoursite.com/2021/01/20/xianduanshu/"/>
+    <id>http://yoursite.com/2021/01/20/xianduanshu/</id>
+    <published>2021-01-20T06:48:41.000Z</published>
+    <updated>2021-01-20T15:00:33.100Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简单的线段树模板&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="模板" scheme="http://yoursite.com/categories/%E6%A8%A1%E6%9D%BF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>进集训队了</title>
@@ -373,25 +392,6 @@
     
     
       <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;组合数学&gt;生成排列和生成组合</title>
-    <link href="http://yoursite.com/2020/08/18/lesszu-he-shu-xue-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/"/>
-    <id>http://yoursite.com/2020/08/18/lesszu-he-shu-xue-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/</id>
-    <published>2020-08-18T10:10:45.000Z</published>
-    <updated>2020-08-19T14:31:49.359Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;其实这是算法的内容，不过我主要懒得把C++实现写了，所以我就把这块先放到组合数学里去了&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="组合数学" scheme="http://yoursite.com/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
   </entry>

@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="众所周知$n!$是一个增长速度及其快的函数，比如$15!$的数量级就是$10$的$12$次方了，对大数的素因数分解一直都是比较困难的，但是对$n!$来说有特殊的算法可以实现快速地实现素因数分解">
+  <meta name="description" content="简单的线段树模板">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;算法&gt;n!的素因数分解">
-<meta property="og:url" content="http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/index.html">
+<meta property="og:title" content="线段树">
+<meta property="og:url" content="http://yoursite.com/2021/01/20/xianduanshu/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="众所周知$n!$是一个增长速度及其快的函数，比如$15!$的数量级就是$10$的$12$次方了，对大数的素因数分解一直都是比较困难的，但是对$n!$来说有特殊的算法可以实现快速地实现素因数分解">
+<meta property="og:description" content="简单的线段树模板">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-17T14:32:59.000Z">
-<meta property="article:modified_time" content="2020-08-17T14:58:32.970Z">
+<meta property="article:published_time" content="2021-01-20T06:48:41.000Z">
+<meta property="article:modified_time" content="2021-01-20T15:00:33.100Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/">
+<link rel="canonical" href="http://yoursite.com/2021/01/20/xianduanshu/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><算法>n!的素因数分解 | ZJ的后花园</title>
+  <title>线段树 | ZJ的后花园</title>
   
 
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n-%E7%B4%A0%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3%E7%AE%97%E6%B3%95"><span class="nav-text">n!素因数分解算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0"><span class="nav-text">C++实现</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#build"><span class="nav-text">build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pushdown"><span class="nav-text">pushdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add"><span class="nav-text">add</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#search"><span class="nav-text">search</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/17/lesssuan-fa-greaternde-su-yin-shu-fen-jie/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/20/xianduanshu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <算法>n!的素因数分解
+          线段树
         </h1>
 
         <div class="post-meta">
@@ -263,7 +263,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-17 22:32:59 / Modified: 22:58:32" itemprop="dateCreated datePublished" datetime="2020-08-17T22:32:59+08:00">2020-08-17</time>
+              <time title="Created: 2021-01-20 14:48:41 / Modified: 23:00:33" itemprop="dateCreated datePublished" datetime="2021-01-20T14:48:41+08:00">2021-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -271,7 +271,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                  <a href="/categories/%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">模板</span></a>
                 </span>
             </span>
 
@@ -284,14 +284,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>众所周知$n!$是一个增长速度及其快的函数，比如$15!$的数量级就是$10$的$12$次方了，对大数的素因数分解一直都是比较困难的，但是对$n!$来说有特殊的算法可以实现快速地实现素因数分解<br><a id="more"></a></p>
-<h1 id="n-素因数分解算法"><a href="#n-素因数分解算法" class="headerlink" title="n!素因数分解算法"></a>n!素因数分解算法</h1><ol>
-<li>求出$n$以内的所有素数</li>
-<li>算出所有$\alpha(p_i,n)$，其中<script type="math/tex; mode=display">\alpha(p,n)=\sum_{j=1}^{k}{[\frac{n}{p^j}]}</script></li>
-<li>最后分解式为<script type="math/tex; mode=display">n!=\sum_{j=1}^{k}{p_j^{\alpha(p_j,n)}}</script></li>
-<li>例如求$20!$的素因数分解式<br>不超过$20$的数有$2,3,5,7,11,13,17,19$<script type="math/tex; mode=display">\alpha(2,20)=[\frac{20}{2}]+[\frac{20}{4}]+[\frac{20}{8}]+[\frac{20}{16}]</script>所以$\alpha(2,20)=10+5+2+1=18$<br>同理求出$\alpha(3,20),\alpha(5,20),\cdots$<br>最后解得<script type="math/tex; mode=display">20!=2^{18}\cdot 3^8\cdot 5^4\cdot 7^2\cdot 11\cdot 13\cdot 17\cdot 19</script></li>
-</ol>
-<h1 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    bool prime[65536];</span><br><span class="line">    &#x2F;&#x2F;筛出n以内的素数</span><br><span class="line">    for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        prime[i]&#x3D;true;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;2;i*i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        for(int j&#x3D;2*i;j&lt;&#x3D;n;j+&#x3D;i)&#123;</span><br><span class="line">            if(prime[j])&#123;</span><br><span class="line">                prime[j]&#x3D;false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;n!素因数分解</span><br><span class="line">    int number[65536]&#x3D;&#123;0&#125;;</span><br><span class="line">    for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">        if(prime[i])&#123;</span><br><span class="line">            for(int j&#x3D;i;j&lt;&#x3D;n;j*&#x3D;i)&#123;</span><br><span class="line">                number[i]+&#x3D;(n&#x2F;j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;输出结果</span><br><span class="line">    bool first&#x3D;true;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        if(prime[i])&#123;</span><br><span class="line">            if(first)&#123;</span><br><span class="line">                cout&lt;&lt;i&lt;&lt;&quot;^&quot;&lt;&lt;number[i];</span><br><span class="line">                first&#x3D;false;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                cout&lt;&lt;&quot;+&quot;&lt;&lt;i&lt;&lt;&quot;^&quot;&lt;&lt;number[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>简单的线段树模板<br><a id="more"></a><br>我觉得这篇博客讲的很好，大体是按照这篇文章写的模板，后续可能会做一些调整</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jason2003/p/9676729.html">线段树</a></p>
+<h2 id="build"><a href="#build" class="headerlink" title="build"></a>build</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void build(int l,int r,int p&#x3D;1)&#123;</span><br><span class="line">    arr[p].l&#x3D;l;arr[p].r&#x3D;r;</span><br><span class="line">    if(l&#x3D;&#x3D;r)&#123;</span><br><span class="line">        arr[p].sum&#x3D;number[l];</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    int mid&#x3D;(l+r)&#x2F;2;</span><br><span class="line">    build(l,mid,2*p);</span><br><span class="line">    build(mid+1,r,2*p+1);</span><br><span class="line">    arr[p].sum&#x3D;arr[2*p].sum+arr[2*p+1].sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pushdown"><a href="#pushdown" class="headerlink" title="pushdown"></a>pushdown</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void pushdown(int i)&#123;</span><br><span class="line">    if(arr[i].mark!&#x3D;0)&#123;</span><br><span class="line">        arr[2*i].mark+&#x3D;arr[i].mark;</span><br><span class="line">        arr[2*i+1].mark+&#x3D;arr[i].mark;</span><br><span class="line">        int mid&#x3D;(arr[i].l+arr[i].r)&#x2F;2;</span><br><span class="line">        arr[2*i].sum+&#x3D;arr[i].mark*(mid-arr[i].l+1);</span><br><span class="line">        arr[2*i+1].sum+&#x3D;arr[i].mark*(arr[i].r-mid);</span><br><span class="line">        arr[i].mark&#x3D;0;</span><br><span class="line">    &#125;</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void add(int i,int l,int r,int k)&#123;</span><br><span class="line">    if(arr[i].r&lt;l||arr[i].l&gt;r)&#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if(arr[i].l&gt;&#x3D;l&amp;&amp;arr[i].r&lt;&#x3D;r)&#123;</span><br><span class="line">        arr[i].sum+&#x3D;(arr[i].r-arr[i].l+1)*k;</span><br><span class="line">        if(arr[i].r!&#x3D;arr[i].l)</span><br><span class="line">            arr[i].mark+&#x3D;k;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    pushdown(i);</span><br><span class="line">    if(arr[2*i].r&gt;&#x3D;l)</span><br><span class="line">        add(2*i,l,r,k);</span><br><span class="line">    if(arr[2*i+1].l&lt;&#x3D;r)</span><br><span class="line">        add(2*i+1,l,r,k);</span><br><span class="line">    arr[i].sum&#x3D;arr[2*i].sum+arr[2*i+1].sum;</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="search"><a href="#search" class="headerlink" title="search"></a>search</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">long long search(int i,int l,int r)&#123;</span><br><span class="line">    if(arr[i].l&gt;&#x3D;l&amp;&amp;arr[i].r&lt;&#x3D;r)&#123;</span><br><span class="line">        return arr[i].sum;</span><br><span class="line">    &#125;</span><br><span class="line">    if(arr[i].r&lt;l||arr[i].l&gt;r)</span><br><span class="line">        return 0;</span><br><span class="line">    pushdown(i);</span><br><span class="line">    long long s&#x3D;0;</span><br><span class="line">    if(arr[2*i].r&gt;&#x3D;l)</span><br><span class="line">        s+&#x3D;search(2*i,l,r);</span><br><span class="line">    if(arr[2*i+1].l&lt;&#x3D;r)</span><br><span class="line">        s+&#x3D;search(2*i+1,l,r);</span><br><span class="line">    return s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -304,14 +302,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/15/lesszu-he-shu-xue-greaterge-chao-yuan-li/" rel="prev" title="<组合数学>鸽巢原理">
-                  <i class="fa fa-chevron-left"></i> <组合数学>鸽巢原理
+                <a href="/2021/01/16/jixundui/" rel="prev" title="进集训队了">
+                  <i class="fa fa-chevron-left"></i> 进集训队了
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/18/lesszu-he-shu-xue-greatersheng-cheng-pai-lie-he-sheng-cheng-zu-he/" rel="next" title="<组合数学>生成排列和生成组合">
-                  <组合数学>生成排列和生成组合 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
