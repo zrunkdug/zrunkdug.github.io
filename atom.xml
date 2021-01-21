@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-20T15:00:33.100Z</updated>
+  <updated>2021-01-21T14:57:31.232Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://yoursite.com/2021/01/20/xianduanshu/"/>
     <id>http://yoursite.com/2021/01/20/xianduanshu/</id>
     <published>2021-01-20T06:48:41.000Z</published>
-    <updated>2021-01-20T15:00:33.100Z</updated>
+    <updated>2021-01-21T14:57:31.232Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;简单的线段树模板&lt;br&gt;
+      &lt;p&gt;简单的线段树模板&lt;br&gt;2020.1.21更新: 增加了若干注释便于理解&lt;br&gt;
     
     </summary>
     
