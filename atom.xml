@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-21T15:26:20.361Z</updated>
+  <updated>2021-01-23T13:18:30.271Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学问题</title>
+    <link href="http://yoursite.com/2021/01/23/shuxue/"/>
+    <id>http://yoursite.com/2021/01/23/shuxue/</id>
+    <published>2021-01-23T06:48:41.000Z</published>
+    <updated>2021-01-23T13:18:30.271Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;专门放数学问题的模板&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="模板" scheme="http://yoursite.com/categories/%E6%A8%A1%E6%9D%BF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>并查集</title>
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;之前的算法是利用二进制生成组合的全部情况，现在考虑生成组合的$r$子集&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;高精度阶乘和快速幂</title>
-    <link href="http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/"/>
-    <id>http://yoursite.com/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/</id>
-    <published>2020-09-05T08:08:55.000Z</published>
-    <updated>2020-09-11T15:45:53.057Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;其实就是高精度乘以单精度的算法，然后写一下算法中经常用到的快速幂，后续还会补一些快速幂的应用&lt;br&gt;
     
     </summary>
     

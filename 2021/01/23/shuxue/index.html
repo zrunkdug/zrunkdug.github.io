@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="数论中相当重要的一个定理：算术基本定理。然后讲一个因子分解的技巧：费马因子分解">
+  <meta name="description" content="专门放数学问题的模板">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;数论&gt;算术基本定理和费马因子分解">
-<meta property="og:url" content="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/index.html">
+<meta property="og:title" content="数学问题">
+<meta property="og:url" content="http://yoursite.com/2021/01/23/shuxue/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="数论中相当重要的一个定理：算术基本定理。然后讲一个因子分解的技巧：费马因子分解">
+<meta property="og:description" content="专门放数学问题的模板">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-24T10:43:27.000Z">
-<meta property="article:modified_time" content="2020-08-09T15:46:40.844Z">
+<meta property="article:published_time" content="2021-01-23T06:48:41.000Z">
+<meta property="article:modified_time" content="2021-01-23T13:18:30.271Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/">
+<link rel="canonical" href="http://yoursite.com/2021/01/23/shuxue/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><数论>算术基本定理和费马因子分解 | ZJ的后花园</title>
+  <title>数学问题 | ZJ的后花园</title>
   
 
 
@@ -178,7 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">算术基本定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%81%E6%98%8E"><span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%95%E9%99%A4%E6%B3%95%E5%92%8C%E8%B4%B9%E9%A9%AC%E5%9B%A0%E5%AD%90%E5%88%86%E8%A7%A3"><span class="nav-text">试除法和费马因子分解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E9%99%A4%E6%B3%95"><span class="nav-text">试除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%B9%E9%A9%AC%E5%9B%A0%E5%AD%90%E5%88%86%E8%A7%A3"><span class="nav-text">费马因子分解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%B9%E9%A9%AC%E6%95%B0"><span class="nav-text">费马数</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95"><span class="nav-text">欧几里得算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%93%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95"><span class="nav-text">拓展欧几里得算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83"><span class="nav-text">乘法逆元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%B9%82"><span class="nav-text">快速幂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%83%E6%B0%8F%E7%AD%9B"><span class="nav-text">埃氏筛</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -236,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/24/lessshu-lun-greatersuan-zhu-ji-ben-ding-li-he-fei-ma-yin-zi-fen-jie/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/23/shuxue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <数论>算术基本定理和费马因子分解
+          数学问题
         </h1>
 
         <div class="post-meta">
@@ -261,23 +261,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-07-24 18:43:27" itemprop="dateCreated datePublished" datetime="2020-07-24T18:43:27+08:00">2020-07-24</time>
+              <time title="Created: 2021-01-23 14:48:41 / Modified: 21:18:30" itemprop="dateCreated datePublished" datetime="2021-01-23T14:48:41+08:00">2021-01-23</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-09 23:46:40" itemprop="dateModified" datetime="2020-08-09T23:46:40+08:00">2020-08-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+                  <a href="/categories/%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">模板</span></a>
                 </span>
             </span>
 
@@ -290,30 +284,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>数论中相当重要的一个定理：算术基本定理。然后讲一个因子分解的技巧：费马因子分解<br><a id="more"></a></p>
-<h1 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h1><ul>
-<li>每一个大于1的正整数都可以被唯一地写成素数的乘积（忽略排序）<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2>由于唯一性的证明需要两个引理，这里就用反证法证明一下存在性。</li>
-<li>假设不是所有的正整数可以被写成素数的乘积，我们不能写为素数乘积的数组成的集合设为$T$，由最小自然数原理可知，集合$T$内存在一个最小的正整数n，现在n有两种情况：<ul>
-<li>第一种n是素数，那么$n=n$，即可以写成素数的乘积，矛盾，所以假设不成立</li>
-<li>第二种n是合数，那么$n=ab,(1&lt;a&lt;n,1&lt;b&lt;n)$，由于a,b小于n，所以a,b不在集合$T$内，即a,b可以表示为素数的乘积，即$a=p_1p_2\cdots p_n$，$b=q_1q_2\cdots q_n$（其中p,q为素数），那么$n=p_1p_2\cdots p_n\times q_1q_2\cdots q_n$，n就表示为了素数的乘积，矛盾，所以假设不成立</li>
-</ul>
-</li>
-<li>综上，每一个大于1的正整数都可以被写成素数的乘积（忽略排序）</li>
-<li>唯一性的证明见书<h1 id="试除法和费马因子分解"><a href="#试除法和费马因子分解" class="headerlink" title="试除法和费马因子分解"></a>试除法和费马因子分解</h1>既然对于任意一个大于1的正整数可以写成素数的乘积，现在比较关心的问题就是每一个数如何写成这样乘积的形式，目前有两种效率比较低的办法是我能看得懂的<h2 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h2></li>
-<li>我们知道对于任意一个合数n，一定存在一个素因子$p\leq \sqrt{n}$，那么我们可以从2开始用所有的素数去试除这个n，下面举个例子：<ul>
-<li>设n=310，现在从2开始试除，由于$2|310$，所以$310=2\times 155$，然后对155从2开始试除，显然2无法整除155，然后用$3,5,\cdots$试除，显然$5|155$，所以$310=2\times 5\times 31$，然后继续从5开始找素数试除（这里有个问题，为什么从5开始试除而不是从2开始，因为前面155无法被2整除，就意味着310不存在大小为2的因子了，所以是从恰好能够整除的素数开始继续试除），继续找$5,7\cdots$由于$7&gt;\sqrt{31}$，说明31不存在小于$\sqrt{n}$的素因子，所以31为素数，所以$310=2\times 5\times 31$<h2 id="费马因子分解"><a href="#费马因子分解" class="headerlink" title="费马因子分解"></a>费马因子分解</h2></li>
-</ul>
-</li>
-<li>先看一个引理：如果n是正奇数，那么n可以分解为两个正整数的积和两个平方数的差是一一对应的</li>
-<li>简单说下什么意思：就是对于一个正奇数n，可以写成$n=ab=s^2-t^2$，正过来看，$s=\frac{a+b}{2},t=\frac{a-b}{2}$，反过来看，$a=s+t,b=s-t$</li>
-<li>既然对于所有的正奇数都可以写成两数的乘积，那么就可以进行因子分解，我们寻找一个数s，其中$s^2=t^2-n$，由于$t\geq \sqrt{n}$，所以从大于$\sqrt{n}$的正整数$t,t+1,t+2\cdots$开始找t，使得$t^2-n$是一个完全平方数，然后n就可以写成$n=(s+t)(s-t)$，注意到寻找t的过程一定是有限的，因为$n=1\times n$是一定存在的，此时$t=\frac{n+1}{2}$，而这也说明n是素数</li>
-<li>同样的举个例子：<ul>
-<li>设n=6077，由于$77&lt;\sqrt{6077}&lt;78$，所以从$t^2-6077$，其中$t=78,79,80\cdots$，经过计算发现$81^2-6077=484=22^2$，所以$n=(81+22)\times (81-22)=103\times 59$</li>
-</ul>
-</li>
-<li>费马因子分解也是一个效率比较低的算法，比较适合两个因子比较接近的情况下的分解，同时费马因子分解的结果并非一定是素因数<h1 id="费马数"><a href="#费马数" class="headerlink" title="费马数"></a>费马数</h1></li>
-<li>了解一下吧，写不动了，而且我暂时没看出这玩意儿有什么用</li>
-</ul>
+        <p>专门放数学问题的模板<br><a id="more"></a></p>
+<h2 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h2><p>原理见《算法导论》第三版P547，证明很简单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int gcd(int a,int b)&#123;</span><br><span class="line">    if(b&#x3D;&#x3D;0)&#123;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        return gcd(b,a%b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="拓展欧几里得算法"><a href="#拓展欧几里得算法" class="headerlink" title="拓展欧几里得算法"></a>拓展欧几里得算法</h2><p>数论中有一个结论，a和b的最大公因数一定是a和b的所有线性组合中的最小正数<br>拓展欧几里得算法可以在递归的过程中求得其最小正线性组合的系数x和y<br>注意x和y的通解为</p>
+<script type="math/tex; mode=display">x_k=x+\frac{b}{gcd(a,b)}</script><script type="math/tex; mode=display">y_k=y-\frac{a}{gcd(a,b)}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int exgcd(int a,int b,int&amp; x,int&amp; y)&#123;</span><br><span class="line">    if(b&#x3D;&#x3D;0)&#123;</span><br><span class="line">        x&#x3D;1;</span><br><span class="line">        y&#x3D;0;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">    int d&#x3D;exgcd(b,a%b,y,x);</span><br><span class="line">    y-&#x3D;(a&#x2F;b)*x;</span><br><span class="line">    return d;&#x2F;&#x2F;返回的d为最大公因数，x和y因为是引用所以已经求得了结果</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="乘法逆元"><a href="#乘法逆元" class="headerlink" title="乘法逆元"></a>乘法逆元</h2><p>主要用以解决 $(a/b)\% p$ 的问题，因为除法是不能像加减乘那么处处取模的，这里就需要用到逆元的概念，求得b的模p意义下的逆元，这样就把除法转化为了乘法，即变为了$a\times inv(b)$，然后就可以处处取模了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int exgcd(int a,int b,int&amp; x,int&amp; y)&#123;&#x2F;&#x2F;先用拓展欧几里得计算系数</span><br><span class="line">    if(b&#x3D;&#x3D;0)&#123;</span><br><span class="line">        x&#x3D;1;</span><br><span class="line">        y&#x3D;0;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">    int d&#x3D;exgcd(b,a%b,y,x);</span><br><span class="line">    y-&#x3D;(a&#x2F;b)*x;</span><br><span class="line">    return d;</span><br><span class="line">&#125;</span><br><span class="line">int inv(int a,int p)&#123;</span><br><span class="line">    int x,y;</span><br><span class="line">    if(exgcd(a,b,x,y)!&#x3D;1)&#123;&#x2F;&#x2F;如果a和p互质，则不存在逆元</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    return (x%p+p)%p;&#x2F;&#x2F;防止x为负数，这里多取一次模</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>另一种方法是用费马小定理，这种情形只在p为质数的情况下成立，先看一下费马小定理</p>
+<script type="math/tex; mode=display">如果a和p互质，且p为质数，则a^{p-1}\equiv1(mod\ p)</script><p>根据费马小定理我们可以看出乘法逆元为$a^{p-2}\ mod\ p$，所以只需要对其取快速幂即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;这里省略快速幂的代码</span><br><span class="line">int inv(int a,int p)&#123;</span><br><span class="line">    return qpow(a,p-2,p)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h2><p>原理见<a target="_blank" rel="noopener" href="https://zrunkdug.github.io/2020/09/05/lesssuan-fa-greatergao-jing-du-jie-cheng-he-kuai-su-mi/">&lt;算法&gt;高精度阶乘和快速幂</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">long long quick_pow(int base,int n)&#123;</span><br><span class="line">    long long ans&#x3D;1;&#x2F;&#x2F;初始值</span><br><span class="line">    while(n)&#123;</span><br><span class="line">        if(n&amp;1)&#123;&#x2F;&#x2F;如果最右边是1</span><br><span class="line">            ans*&#x3D;base;&#x2F;&#x2F;则是需要的，乘进ans</span><br><span class="line">        &#125;</span><br><span class="line">        base*&#x3D;base;&#x2F;&#x2F;自乘</span><br><span class="line">        n&gt;&gt;&#x3D;1;&#x2F;&#x2F;右移一位</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="埃氏筛"><a href="#埃氏筛" class="headerlink" title="埃氏筛"></a>埃氏筛</h2><p>原理见<a target="_blank" rel="noopener" href="https://zrunkdug.github.io/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/">&lt;数论&gt;Eratosthenes（埃拉托色尼）筛法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int func(int n)&#123;</span><br><span class="line">    int ans&#x3D;0;&#x2F;&#x2F;素数个数</span><br><span class="line">    for(int i&#x3D;0;i&lt;&#x3D;n;i++)&#123;&#x2F;&#x2F;初始化</span><br><span class="line">        isprime[i]&#x3D;true;</span><br><span class="line">    &#125;</span><br><span class="line">    isprime[0]&#x3D;isprime[1]&#x3D;false;&#x2F;&#x2F;0和1不是素数</span><br><span class="line">    for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;&#x2F;&#x2F;从2开始筛</span><br><span class="line">        if(isprime[i])&#123;&#x2F;&#x2F;如果是素数</span><br><span class="line">            prime[ans++]&#x3D;i;&#x2F;&#x2F;存到prime</span><br><span class="line">            for(int j&#x3D;2*i;j&lt;&#x3D;n;j+&#x3D;i)&#123;&#x2F;&#x2F;筛去其所有倍数</span><br><span class="line">                isprime[j]&#x3D;false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;&#x2F;&#x2F;返回素数的个数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -327,14 +305,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/23/lessshu-lun-greatereratosthenesai-la-tuo-se-ni-shai-fa/" rel="prev" title="<数论>Eratosthenes（埃拉托色尼）筛法">
-                  <i class="fa fa-chevron-left"></i> <数论>Eratosthenes（埃拉托色尼）筛法
+                <a href="/2021/01/21/bingchaji/" rel="prev" title="并查集">
+                  <i class="fa fa-chevron-left"></i> 并查集
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/07/24/lesscmian-xiang-dui-xiang-greaterlei-1/" rel="next" title="<C++面向对象>类1">
-                  <C++面向对象>类1 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
