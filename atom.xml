@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-23T13:18:30.271Z</updated>
+  <updated>2021-01-25T14:24:09.363Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寒假集训day1题解+总结</title>
+    <link href="http://yoursite.com/2021/01/25/acmday1/"/>
+    <id>http://yoursite.com/2021/01/25/acmday1/</id>
+    <published>2021-01-25T06:48:41.000Z</published>
+    <updated>2021-01-25T14:24:09.363Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;STL应用+二分搜索+尺取法&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="acm" scheme="http://yoursite.com/categories/acm/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>数学问题</title>
@@ -59,11 +78,11 @@
     <link href="http://yoursite.com/2021/01/20/xianduanshu/"/>
     <id>http://yoursite.com/2021/01/20/xianduanshu/</id>
     <published>2021-01-20T06:48:41.000Z</published>
-    <updated>2021-01-24T05:25:26.806Z</updated>
+    <updated>2021-01-25T13:17:19.279Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;简单的线段树模板&lt;br&gt;2020.1.21更新: 增加了若干注释便于理解&lt;br&gt;
+      &lt;p&gt;简单的线段树模板&lt;br&gt;2020.1.21更新: 增加了若干注释便于理解&lt;br&gt;2020.1.24更新：增加了乘法线段树&lt;br&gt;
     
     </summary>
     
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;学了三天才整明白的…下次写深度优先搜索（DFS）&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;生成组合的r子集（字典序）</title>
-    <link href="http://yoursite.com/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/"/>
-    <id>http://yoursite.com/2020/09/12/lesssuan-fa-greatersheng-cheng-zu-he-de-r-zi-ji-zi-dian-xu/</id>
-    <published>2020-09-12T15:13:58.000Z</published>
-    <updated>2020-09-12T15:33:14.049Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前的算法是利用二进制生成组合的全部情况，现在考虑生成组合的$r$子集&lt;br&gt;
     
     </summary>
     

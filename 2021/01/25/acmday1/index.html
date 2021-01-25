@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+  </script>
+
+  <meta name="description" content="STL应用+二分搜索+尺取法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="寒假集训day1题解+总结">
+<meta property="og:url" content="http://yoursite.com/2021/01/25/acmday1/index.html">
+<meta property="og:site_name" content="ZJ的后花园">
+<meta property="og:description" content="STL应用+二分搜索+尺取法">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-25T06:48:41.000Z">
+<meta property="article:modified_time" content="2021-01-25T14:24:09.363Z">
+<meta property="article:author" content="Zhujie">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://yoursite.com/2021/01/25/acmday1/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>寒假集训day1题解+总结 | ZJ的后花园</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ZJ的后花园" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ZJ的后花园</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">技术博客/狗头</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Last-minute-enhancements"><span class="nav-text">A. Last minute enhancements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Managing-Difficulties"><span class="nav-text">C. Managing Difficulties</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-Jessica%E2%80%99s-Reading-Problem"><span class="nav-text">F. Jessica’s Reading Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#G-Andy%E2%80%99s-First-Dictionary"><span class="nav-text">G. Andy’s First Dictionary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Ugly-Numbers"><span class="nav-text">I. Ugly Numbers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-Bovine-Dilemma"><span class="nav-text">K. Bovine Dilemma</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Zhujie</p>
+  <div class="site-description" itemprop="description">Stay hungry, stay foolish</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/25/acmday1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhujie">
+      <meta itemprop="description" content="Stay hungry, stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZJ的后花园">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          寒假集训day1题解+总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-25 14:48:41 / Modified: 22:24:09" itemprop="dateCreated datePublished" datetime="2021-01-25T14:48:41+08:00">2021-01-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/acm/" itemprop="url" rel="index"><span itemprop="name">acm</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>STL应用+二分搜索+尺取法<br><a id="more"></a><br>rank9,A了6道题，先把A了的题写了，剩下的以后补，题解省略了所有的头文件和宏定义</p>
+<h2 id="A-Last-minute-enhancements"><a href="#A-Last-minute-enhancements" class="headerlink" title="A. Last minute enhancements"></a>A. Last minute enhancements</h2><p>题源：<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1466/B">codeforces-1466B</a><br>签到题，由于需要求互异元素的个数，所以需要用到set，由于输入数据是升序排列，所以每次询问set尾部的元素，如果相同，则+1，否则直接插入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int number[MAXN];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int t;cin&gt;&gt;t;</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        set&lt;int&gt; s;</span><br><span class="line">        int n;cin&gt;&gt;n;</span><br><span class="line">        int ans&#x3D;0;</span><br><span class="line">        for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">            int x;</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">            set&lt;int&gt;::reverse_iterator it;</span><br><span class="line">            it&#x3D;s.rbegin();</span><br><span class="line">            if(!s.empty()&amp;&amp;x&#x3D;&#x3D;*it)&#123;</span><br><span class="line">               x++;</span><br><span class="line">            &#125;</span><br><span class="line">            s.insert(x);</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%d\n&quot;,s.size());</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="C-Managing-Difficulties"><a href="#C-Managing-Difficulties" class="headerlink" title="C. Managing Difficulties"></a>C. Managing Difficulties</h2><p>题源：<a target="_blank" rel="noopener" href="https://codeforces.com/gym/102411/problem/M">codeforces-Gym-202411M</a><br>暴力求解的时间复杂度为$O(n^3)$，显然会TLE，于是想了一种$O(n^2)$的办法，首先对$j$遍历$[1,n)$作为外层循环，根据题意显然$i$遍历$[0,j)$作为内层循环，这样做有一个好处，就是用哈希map的办法找到我们想要的$a_k$，即$2a_j-a_i$，每次将其+1，然后在下一次遍历$j$的时候，这时的$j$是有可能作为上一次循环的$k$出现的，通过询问哈希map找到$a_k$的次数(即符合条件的三元组的个数)并加到ans中，注意这里要用哈希的map，因为涉及到大量的询问，否则会超时<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">long long number[MAXN];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int t;scanf(&quot;%d&quot;,&amp;t);</span><br><span class="line">    unordered_map&lt;long long,long long&gt; m;</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        m.clear();</span><br><span class="line">        int n;scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">        long long ans&#x3D;0;</span><br><span class="line">        for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">            scanf(&quot;%lld&quot;,&amp;number[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;1;i&lt;n;i++)&#123;</span><br><span class="line">            if(m[number[i]]&gt;0&amp;&amp;i&gt;1)&#123;</span><br><span class="line">                &#x2F;&#x2F;如果当前的a[j]在map中出现的次数&gt;0</span><br><span class="line">                &#x2F;&#x2F;则加到ans中，代表已经找到了符合条件的三元组</span><br><span class="line">                ans+&#x3D;m[number[i]];</span><br><span class="line">            &#125;</span><br><span class="line">            if(i&#x3D;&#x3D;n-1)&#123;&#x2F;&#x2F;这里已经询问过k了，做一个剪枝</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            for(int j&#x3D;0;j&lt;i;j++)&#123;</span><br><span class="line">                if(2*number[i]-number[j]&lt;0)&#123;&#x2F;&#x2F;这里也是一个剪枝</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;&#x2F;&#x2F;a[k]的次数+1</span><br><span class="line">                    m[2*number[i]-number[j]]++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%lld\n&quot;,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="F-Jessica’s-Reading-Problem"><a href="#F-Jessica’s-Reading-Problem" class="headerlink" title="F. Jessica’s Reading Problem"></a>F. Jessica’s Reading Problem</h2><p>题源：<a target="_blank" rel="noopener" href="http://poj.org/problem?id=3320">POJ-3320</a><br>白书上的尺取法例题，可以看到当需要求得一串满足某一条件的最小的连续区间，使用尺取法可以达到很好的时间复杂度，其实这题如果不是之前做过的话我是做不出来的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">int number[MAXN];</span><br><span class="line">set&lt;int&gt; s;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;number[i]);</span><br><span class="line">        s.insert(number[i]);&#x2F;&#x2F;每个知识点放进集合</span><br><span class="line">    &#125;</span><br><span class="line">    int res&#x3D;n;&#x2F;&#x2F;默认结果为整个区间</span><br><span class="line">    int maxnum&#x3D;s.size();&#x2F;&#x2F;求出知识点的个数</span><br><span class="line">    int s&#x3D;0,t&#x3D;0,num&#x3D;0;</span><br><span class="line">    map&lt;int,int&gt; m;</span><br><span class="line">    while(true)&#123;</span><br><span class="line">        while(t&lt;n&amp;&amp;num&lt;maxnum)&#123;</span><br><span class="line">            if(m[number[t++]]++&#x3D;&#x3D;0)&#123;&#x2F;&#x2F;右区间向右靠</span><br><span class="line">                num++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(num&lt;maxnum)&#123;&#x2F;&#x2F;右区间到n，退出循环</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        res&#x3D;min(res,t-s);&#x2F;&#x2F;求最小值</span><br><span class="line">        if(--m[number[s++]]&#x3D;&#x3D;0)&#123;&#x2F;&#x2F;左区间向右靠</span><br><span class="line">            num--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d\n&quot;,res);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="G-Andy’s-First-Dictionary"><a href="#G-Andy’s-First-Dictionary" class="headerlink" title="G. Andy’s First Dictionary"></a>G. Andy’s First Dictionary</h2><p>题源：<a target="_blank" rel="noopener" href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1756">UVA-10815</a><br>题目大意很简单，就是提取一篇文章中所有的单词并按照字典序组成字典，所以每次通过string提取单词，然后统一化为小写，insert到set中即可，这里的难点在于提取单词，一开始我以为只需要将每个string的标点符号去掉就可以了，但是有个问题，如果提取的是”fuck,you”这字符串，那么去掉标点就变成了”fuckyou”，显然不是我们想要的结果，这里有两种办法，首先都是将所有标点化为空格，然后用stringstream或者将每个字符存入一个新的string，读到空格则代表一个单词结束，将其插入set即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">int number[MAXN];</span><br><span class="line">set&lt;string&gt; s;</span><br><span class="line">int main()&#123;</span><br><span class="line">    string str;</span><br><span class="line">    while(cin&gt;&gt;str)&#123;</span><br><span class="line">        int l&#x3D;str.length();</span><br><span class="line">        for(int i&#x3D;0;i&lt;l;i++)&#123;</span><br><span class="line">            if(isalpha(str[i])) str[i]&#x3D;tolower(str[i]);</span><br><span class="line">            else str[i]&#x3D;&#39; &#39;;</span><br><span class="line">        &#125;</span><br><span class="line">        string temp;</span><br><span class="line">        stringstream ss(str);</span><br><span class="line">        while(ss&gt;&gt;temp)&#123;</span><br><span class="line">            s.insert(temp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(auto i&#x3D;s.begin();i!&#x3D;s.end();i++)&#123;</span><br><span class="line">        cout&lt;&lt;*i&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="I-Ugly-Numbers"><a href="#I-Ugly-Numbers" class="headerlink" title="I. Ugly Numbers"></a>I. Ugly Numbers</h2><p>题源：<a target="_blank" rel="noopener" href="https://vjudge.net/contest/419538#problem/I">UVA-136</a><br>这题我直接暴力打表做的，用的时间也不多，大概10s就能出结果，当然如果是第15000个可能就不能用这种方法了，更好的办法是用优先队列+set，我们已知2,3,5是丑数，那么对于任意一个丑数x，2x，3x，5x也一定是丑数，通过优先队列从小到大生成所有的丑数即可，注意用set判重，这里直接放别人的代码了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">int f[3]&#x3D;&#123;2,3,5&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    priority_queue&lt;LL,vector&lt;LL&gt;,greater&lt;LL&gt; &gt; qq;</span><br><span class="line">    set&lt;LL&gt; s;</span><br><span class="line">    qq.push(1);</span><br><span class="line">    s.insert(1);</span><br><span class="line">    for(int i&#x3D;1;;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        LL x&#x3D;qq.top();</span><br><span class="line">        qq.pop();</span><br><span class="line"></span><br><span class="line">        if(i&#x3D;&#x3D;1500)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; &quot;The 1500&#39;th ugly number is &quot; &lt;&lt; x &lt;&lt; &quot;.\n&quot;;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int j&#x3D;0;j&lt;3;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            LL x2&#x3D;x*f[j];</span><br><span class="line">            if(!s.count(x2))</span><br><span class="line">            &#123;</span><br><span class="line">                s.insert(x2);</span><br><span class="line">                qq.push(x2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">   &#x2F;&#x2F; cout&lt;&lt;&quot;The 1500&#39;th ugly number is 859963392.&quot;&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="K-Bovine-Dilemma"><a href="#K-Bovine-Dilemma" class="headerlink" title="K. Bovine Dilemma"></a>K. Bovine Dilemma</h2><p>题源：<a target="_blank" rel="noopener" href="https://vjudge.net/contest/419538#problem/K">codeforces-problem-1466A</a><br>比第一题还水的签到题，因为高度是相同的，只需要枚举每两个横坐标的差值并将它们存到set中即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">int number[MAXN];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int t;cin&gt;&gt;t;</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        set&lt;int&gt; s;</span><br><span class="line">        int n;cin&gt;&gt;n;</span><br><span class="line">        int number[MAXN];</span><br><span class="line">        for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">            cin&gt;&gt;number[i];</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;n-1;i++)&#123;</span><br><span class="line">            for(int j&#x3D;i+1;j&lt;n;j++)&#123;</span><br><span class="line">                s.insert(number[j]-number[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;s.size()&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/23/shuxue/" rel="prev" title="数学问题">
+                  <i class="fa fa-chevron-left"></i> 数学问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhujie</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
