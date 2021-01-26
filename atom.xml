@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-25T14:24:09.363Z</updated>
+  <updated>2021-01-26T09:48:08.983Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寒假集训day2题解+总结</title>
+    <link href="http://yoursite.com/2021/01/26/acmday2/"/>
+    <id>http://yoursite.com/2021/01/26/acmday2/</id>
+    <published>2021-01-26T06:48:41.000Z</published>
+    <updated>2021-01-26T09:48:08.983Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;博弈论太难了o(╥﹏╥)o&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="acm" scheme="http://yoursite.com/categories/acm/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>寒假集训day1题解+总结</title>
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;先写下记忆化搜索，明天写深度优先搜索&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;宽度优先搜索（BFS）</title>
-    <link href="http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/"/>
-    <id>http://yoursite.com/2020/09/18/lesssuan-fa-greaterkuan-du-you-xian-sou-suo-bfs/</id>
-    <published>2020-09-18T15:26:42.000Z</published>
-    <updated>2020-09-18T15:44:03.128Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;学了三天才整明白的…下次写深度优先搜索（DFS）&lt;br&gt;
     
     </summary>
     

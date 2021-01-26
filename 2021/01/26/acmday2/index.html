@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="上帝用7天创造了世界，我用7个小时弄懂了KMP算法">
+  <meta name="description" content="博弈论太难了o(╥﹏╥)o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;算法&gt;KMP">
-<meta property="og:url" content="http://yoursite.com/2021/01/09/test2/index.html">
+<meta property="og:title" content="寒假集训day2题解+总结">
+<meta property="og:url" content="http://yoursite.com/2021/01/26/acmday2/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="上帝用7天创造了世界，我用7个小时弄懂了KMP算法">
+<meta property="og:description" content="博弈论太难了o(╥﹏╥)o">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-09T06:48:41.000Z">
-<meta property="article:modified_time" content="2021-01-10T08:10:19.252Z">
+<meta property="article:published_time" content="2021-01-26T06:48:41.000Z">
+<meta property="article:modified_time" content="2021-01-26T09:48:08.983Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2021/01/09/test2/">
+<link rel="canonical" href="http://yoursite.com/2021/01/26/acmday2/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title><算法>KMP | ZJ的后花园</title>
+  <title>寒假集训day2题解+总结 | ZJ的后花园</title>
   
 
 
@@ -166,7 +166,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -178,6 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%80%BB%E7%BB%93"><span class="nav-text">一个简单的总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-text">一个简单的例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA%E7%BB%93%E8%AE%BA%E6%80%A7%E7%9A%84%E5%8D%9A%E5%BC%88"><span class="nav-text">几个结论性的博弈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%BC%88"><span class="nav-text">巴什博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nim%E5%8D%9A%E5%BC%88"><span class="nav-text">Nim博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A8%81%E4%BD%90%E5%A4%AB%E5%8D%9A%E5%BC%88"><span class="nav-text">威佐夫博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E5%8D%9A%E5%BC%88"><span class="nav-text">斐波那契博弈</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -235,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/09/test2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/26/acmday2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -251,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <算法>KMP
+          寒假集训day2题解+总结
         </h1>
 
         <div class="post-meta">
@@ -260,23 +261,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-01-09 14:48:41" itemprop="dateCreated datePublished" datetime="2021-01-09T14:48:41+08:00">2021-01-09</time>
+              <time title="Created: 2021-01-26 14:48:41 / Modified: 17:48:08" itemprop="dateCreated datePublished" datetime="2021-01-26T14:48:41+08:00">2021-01-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-10 16:10:19" itemprop="dateModified" datetime="2021-01-10T16:10:19+08:00">2021-01-10</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                  <a href="/categories/acm/" itemprop="url" rel="index"><span itemprop="name">acm</span></a>
                 </span>
             </span>
 
@@ -289,12 +284,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>上帝用7天创造了世界，我用7个小时弄懂了KMP算法<br><a id="more"></a><br><strong>首先我默认你已经了解了BF算法和基本的KMP算法的思想</strong></p>
-<p>BF算法是朴素的字符串匹配算法，在对每个字符匹配的过程中如果遇到失配则将模式串回退到起点，并进行下一个文本串的匹配，这样做的效率是非常低的，因为<strong>没有利用到之前失配的信息</strong></p>
-<p>现在我们看一个例子，文本串为ABACABAB，模式串为ABAB，如果我们跑一遍BF算法会发现在C失配后还要跑一遍B，但其实在第一遍匹配的过程中已经可以得知B是根本不需要匹配的，因为ABA有着相同的大小为1的前后缀A，且是<strong>最大</strong>前后缀，所以在重新进行第二次匹配的过程中只需要将<strong>模式串的后缀作为文本串的前缀</strong>，且这段前缀是不需要进行匹配的，直接从这里开始向后匹配就行了</p>
-<p>这里解释一下为什么需要最大的相同前后缀，这样做可以保证获取的信息不会有遗漏，也可以保证可以略过中间的不在前后缀中的信息，比如上面那个例子的B</p>
-<p>所以我们就需要对模式串进行预处理，获取前缀函数，这里前缀函数的一个递归是个难点(其实我更觉得有点像DP)，在前缀函数中，假定现在已经获取的最长前后缀的长度是j，那么在读取下一个字符时，如果字符等同于$P_{j+1}$，那么j++，否则就要去找到第二长的相等前后缀再去看是否可以使得j++，答案就是在第一长的前后缀中找到最长前后缀，为什么这么做？因为第二前后缀必然小于第一前后缀，且由于前后缀相等，那么在第二前后缀中找到的最长前缀也是模式串的后缀，这样做就可以高效地生成前缀函数了</p>
-<p>前缀函数代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; pre_func(string &amp;p)&#123;</span><br><span class="line">    int m&#x3D;p.length();&#x2F;&#x2F;模式串长度</span><br><span class="line">    vector&lt;int&gt; kmp(m);&#x2F;&#x2F;前缀函数</span><br><span class="line">    for(int i&#x3D;1;i&lt;m;i++)&#123;</span><br><span class="line">        int j&#x3D;kmp[i-1];&#x2F;&#x2F;上一次的最长长度</span><br><span class="line">        while(j&gt;0&amp;&amp;p[j]!&#x3D;p[i])&#123;&#x2F;&#x2F;如果新字符不相等</span><br><span class="line">            j&#x3D;kmp[j-1];&#x2F;&#x2F;找第二长前后缀看看是否相等</span><br><span class="line">        &#125;&#x2F;&#x2F;直到j为0意味着要么新字符从未出现过</span><br><span class="line">        if(p[j]&#x3D;&#x3D;p[i])&#123;&#x2F;&#x2F;要么就是长度为1</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        kmp[i]&#x3D;j;</span><br><span class="line">    &#125;</span><br><span class="line">    return kmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>KMP算法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">string p,t;cin&gt;&gt;t&gt;&gt;p;</span><br><span class="line">vector&lt;int&gt; pre&#x3D;pre_func(p);</span><br><span class="line">int n&#x3D;t.length(),m&#x3D;p.length();&#x2F;&#x2F;文本串长度，模式串长度</span><br><span class="line">int j&#x3D;0;&#x2F;&#x2F;已经匹配的长度</span><br><span class="line">for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">    while(j&gt;0&amp;&amp;t[i]!&#x3D;p[j])&#123;&#x2F;&#x2F;失配则根据前缀函数移动模式串</span><br><span class="line">        j&#x3D;pre[j-1];&#x2F;&#x2F;移动后接着看是否匹配</span><br><span class="line">    &#125;&#x2F;&#x2F;直到j为0，意味着要么完全失配要么长度为1</span><br><span class="line">       &#x2F;&#x2F;完全失配就是BF算法的情况</span><br><span class="line">    if(t[i]&#x3D;&#x3D;p[j])&#123;&#x2F;&#x2F;成功匹配则长度+1</span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">    if(j&#x3D;&#x3D;m)&#123;&#x2F;&#x2F;j长度等于模式串长度，则输出位置</span><br><span class="line">        cout&lt;&lt;i-m+1+1&lt;&lt;endl;</span><br><span class="line">        j&#x3D;pre[j-1];&#x2F;&#x2F;接着匹配</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>博弈论太难了o(╥﹏╥)o<br><a id="more"></a><br>rank15，A了5道题，全靠SG函数模板，其实根本没有理解内核，然后花了一个下午理解了一下SG函数的本质，现在懂一点了</p>
+<h2 id="一个简单的总结"><a href="#一个简单的总结" class="headerlink" title="一个简单的总结"></a>一个简单的总结</h2><p>其实SG函数就是一个记忆化搜索的过程，相当于模拟出所有必胜态的先手步数</p>
+<p>这里我们先规定：对于当前进行操作的玩家，N为必胜态，P为必败态<br>如果把博弈的结果看作一个有向无环图(DAG)的话，这里有三个性质</p>
+<ol>
+<li>没有后续结点的结点就是无法进行任何合法操作的状态，即必败态</li>
+<li>对于任意的一个必胜态，一定可以找到一个操作使之进入必败态</li>
+<li>对于任意的一个必败态，其后任意操作一定是必胜态</li>
+</ol>
+<p>通过这样的性质我们可以从DAG上反推所有的游戏结果，在此过程中就需要一个mex函数，返回集合中最小的不属于这个集合的非负整数，例如mex{1,2}=0,mex{0,1,3}=2，而SG函数则代表了必胜态(!=0)还是必败态(==0)，以及其操作的值</p>
+<h2 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h2><p>现在我们看一个简单的问题，假设我们有一堆石子，数量为n，有Alice和Bob两个玩家，每次从只能这堆石子拿1或3或4个，Alice先手，假设双方的每次行动都采取最佳策略，问给定n如何求出谁是胜者</p>
+<p>首先我们需要找到终态来反推SG函数，显然当石子的个数为0时，是必败态，即SG(0)=0，然后看n=1的情况，显然这种情况只能拿1个石子，然后就转移到了SG(1-1)=SG(0)=0，通过mex函数算得mex{0}=1，所以SG(1)=1，同理对所有的n枚举拿1,3,4个石子的情况，这里用记忆化搜索可以加快速度，最后成功打表出了所有的SG(n)的值，其中值为0的是必败态，否则为必胜态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">int n,f[MAXN];</span><br><span class="line">int number[3]&#x3D;&#123;1,3,4&#125;;</span><br><span class="line">int sg(int x)&#123;</span><br><span class="line">    bool vis[MAXN]&#x3D;&#123;0&#125;;</span><br><span class="line">    if(x&#x3D;&#x3D;0)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    if(f[x]!&#x3D;0)&#123;</span><br><span class="line">        return f[x];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;3;i++)&#123;&#x2F;&#x2F;枚举所有的下一个状态</span><br><span class="line">        if(x-number[i]&gt;&#x3D;0)&#123;</span><br><span class="line">            vis[sg(x-number[i])]&#x3D;true;&#x2F;&#x2F;这里递归</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;MAXN;i++)&#123;&#x2F;&#x2F;mex函数的过程</span><br><span class="line">        if(!vis[i])&#123;</span><br><span class="line">            return f[x]&#x3D;i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;cin&gt;&gt;n;</span><br><span class="line">    if(sg(n)&#x3D;&#x3D;0)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;Bob\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        cout&lt;&lt;&quot;Alice\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="几个结论性的博弈"><a href="#几个结论性的博弈" class="headerlink" title="几个结论性的博弈"></a>几个结论性的博弈</h2><h3 id="巴什博弈"><a href="#巴什博弈" class="headerlink" title="巴什博弈"></a>巴什博弈</h3><p>有$1$堆$n$个石子，每次每人能取$[1,m]$个石子<br>结论：当$n=k(m+1)$时，先手必败，否则必胜<br>证明：当$n\leq m$时，先手直接抓$n$个石子，必胜，当$n=m+1$时，无论先手抓多少个石子，剩余的石子始终小于等于$m$，后手必胜，当$n=k(m+1)$时，先手抓$x$个石子，后手抓(m+1-x)个石子，从而保证剩余的石子个数始终为$m+1$的整数倍，这样当倍数为$1$的时候先手就必输了</p>
+<h3 id="Nim博弈"><a href="#Nim博弈" class="headerlink" title="Nim博弈"></a>Nim博弈</h3><p>有任意堆石子，每次每人能取某一堆的至少$1$个石子<br>结论：将所有堆的SG函数求异或和，0则先手必败，非零则先手必胜</p>
+<h3 id="威佐夫博弈"><a href="#威佐夫博弈" class="headerlink" title="威佐夫博弈"></a>威佐夫博弈</h3><p>有$2$堆分别有$a$个和$b$个的石子，每人每次可以任选一堆拿走任意数量石子或在两堆拿走相同数量的石子<br>结论：$k=|a-b|$，$k^{‘}=k\times \frac{1+\sqrt{5}}{2}$，如果$k^{‘}=min(a,b)$，则先手必胜，否则后手必胜</p>
+<h3 id="斐波那契博弈"><a href="#斐波那契博弈" class="headerlink" title="斐波那契博弈"></a>斐波那契博弈</h3><p>有$1$堆$n$个石子，先手第一次可以拿任意个，但不能全拿或不拿，之后每个人最少拿一个，最多拿前一个人的两倍<br>结论：石子数为斐波那契数时先手必败</p>
 
     </div>
 
@@ -308,14 +313,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/01/new_year/" rel="prev" title="我的这一年">
-                  <i class="fa fa-chevron-left"></i> 我的这一年
+                <a href="/2021/01/25/acmday1/" rel="prev" title="寒假集训day1题解+总结">
+                  <i class="fa fa-chevron-left"></i> 寒假集训day1题解+总结
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/01/10/matrix/" rel="next" title="稀疏矩阵的二元组表示">
-                  稀疏矩阵的二元组表示 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
