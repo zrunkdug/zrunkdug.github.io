@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-28T09:21:03.748Z</updated>
+  <updated>2021-01-29T16:11:28.295Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我终于弄懂了AC自动机</title>
+    <link href="http://yoursite.com/2021/01/29/aczidongji/"/>
+    <id>http://yoursite.com/2021/01/29/aczidongji/</id>
+    <published>2021-01-29T06:48:41.000Z</published>
+    <updated>2021-01-29T16:11:28.295Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;趁我现在思路还清晰赶紧写到博客上，集训题解有空再补&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>寒假集训day3题解+总结</title>
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;并查集网上写的很详细，这里就不浪费时间了，主要稍微写点并查集的优化问题&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;深度优先搜索（DFS）</title>
-    <link href="http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/"/>
-    <id>http://yoursite.com/2020/09/27/lesssuan-fa-greatershen-du-you-xian-sou-suo/</id>
-    <published>2020-09-27T14:54:09.000Z</published>
-    <updated>2020-09-27T14:58:36.574Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;没有什么比暴力枚举更吸引人的了     —鲁迅&lt;br&gt;
     
     </summary>
     
