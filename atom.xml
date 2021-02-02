@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-29T16:11:28.295Z</updated>
+  <updated>2021-02-02T16:17:12.872Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>寒假集训day8题解+总结</title>
+    <link href="http://yoursite.com/2021/02/02/acmday8/"/>
+    <id>http://yoursite.com/2021/02/02/acmday8/</id>
+    <published>2021-02-02T06:48:41.000Z</published>
+    <updated>2021-02-02T16:17:12.872Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;为什么是day8呢，因为day4-7忘记写了，这次写点线段树和ST表&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="acm" scheme="http://yoursite.com/categories/acm/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>我终于弄懂了AC自动机</title>
     <link href="http://yoursite.com/2021/01/29/aczidongji/"/>
     <id>http://yoursite.com/2021/01/29/aczidongji/</id>
     <published>2021-01-29T06:48:41.000Z</published>
-    <updated>2021-01-29T16:11:28.295Z</updated>
+    <updated>2021-02-02T16:19:26.351Z</updated>
     
     <summary type="html">
     
@@ -373,25 +392,6 @@
     
     
       <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;并查集的优化</title>
-    <link href="http://yoursite.com/2020/10/06/lesssuan-fa-greaterbing-cha-ji-de-you-hua/"/>
-    <id>http://yoursite.com/2020/10/06/lesssuan-fa-greaterbing-cha-ji-de-you-hua/</id>
-    <published>2020-10-06T06:48:41.000Z</published>
-    <updated>2020-10-07T13:22:13.110Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;并查集网上写的很详细，这里就不浪费时间了，主要稍微写点并查集的优化问题&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
