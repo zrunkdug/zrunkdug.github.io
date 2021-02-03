@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-02T16:17:12.872Z</updated>
+  <updated>2021-02-03T14:53:53.036Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树学</title>
+    <link href="http://yoursite.com/2021/02/03/tree/"/>
+    <id>http://yoursite.com/2021/02/03/tree/</id>
+    <published>2021-02-03T06:48:41.000Z</published>
+    <updated>2021-02-03T14:53:53.036Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近公共祖先(LCA)+树形DP&lt;br&gt;就当是集训day9的题解和总结了&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>寒假集训day8题解+总结</title>
@@ -373,25 +392,6 @@
     
     
       <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;面向对象&gt;类的一些细节问题</title>
-    <link href="http://yoursite.com/2020/10/09/oopxj/"/>
-    <id>http://yoursite.com/2020/10/09/oopxj/</id>
-    <published>2020-10-09T06:48:41.000Z</published>
-    <updated>2020-10-17T15:39:56.456Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在复习面向对象，写一些复习中遇到的细节问题&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     
   </entry>
