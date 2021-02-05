@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+  </script>
+
+  <meta name="description" content="其中部分借鉴了一些大佬的板子还需要填的坑：类：线段、圆、三角形、极坐标算法：极角排序、凸包、平面扫描、最近点对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算几何">
+<meta property="og:url" content="http://yoursite.com/2021/02/05/jisuanjihe/index.html">
+<meta property="og:site_name" content="ZJ的后花园">
+<meta property="og:description" content="其中部分借鉴了一些大佬的板子还需要填的坑：类：线段、圆、三角形、极坐标算法：极角排序、凸包、平面扫描、最近点对">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-05T06:48:41.000Z">
+<meta property="article:modified_time" content="2021-02-05T16:06:12.033Z">
+<meta property="article:author" content="Zhujie">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://yoursite.com/2021/02/05/jisuanjihe/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>计算几何 | ZJ的后花园</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ZJ的后花园" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ZJ的后花园</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">技术博客/狗头</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="nav-text">宏定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97-%E8%AF%AF%E5%B7%AEeps"><span class="nav-text">浮点数运算(误差eps)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9-%E4%BB%A5%E4%B8%8B%E5%9D%87%E4%B8%BA%E4%BA%8C%E7%BB%B4%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-text">点(以下均为二维直角坐标系)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F"><span class="nav-text">向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E7%BA%BF"><span class="nav-text">直线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Zhujie</p>
+  <div class="site-description" itemprop="description">Stay hungry, stay foolish</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/05/jisuanjihe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhujie">
+      <meta itemprop="description" content="Stay hungry, stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZJ的后花园">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算几何
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-02-05 14:48:41" itemprop="dateCreated datePublished" datetime="2021-02-05T14:48:41+08:00">2021-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-06 00:06:12" itemprop="dateModified" datetime="2021-02-06T00:06:12+08:00">2021-02-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">模板</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>其中部分借鉴了一些大佬的板子<br>还需要填的坑：<br>类：线段、圆、三角形、极坐标<br>算法：极角排序、凸包、平面扫描、最近点对<br><a id="more"></a></p>
+<h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#define MAXN 10000 + 5</span><br><span class="line">#define INF 0x3f3f3f3f</span><br><span class="line">#define ll long long</span><br><span class="line">const int MAXint &#x3D; 2147483647;</span><br><span class="line">const double eps &#x3D; 1e-8;</span><br><span class="line">const double inf &#x3D; 1e20;</span><br><span class="line">const double pi &#x3D; acos(-1.0);</span><br><span class="line">typedef pair&lt;int, int&gt; P;</span><br></pre></td></tr></table></figure>
+<h2 id="浮点数运算-误差eps"><a href="#浮点数运算-误差eps" class="headerlink" title="浮点数运算(误差eps)"></a>浮点数运算(误差eps)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bool eq(double x, double y) &#123; return fabs(x - y) &lt; eps; &#125;</span><br><span class="line">bool gt(double x, double y) &#123; return x - y &gt; eps; &#125;</span><br><span class="line">bool ls(double x, double y) &#123; return y - x &gt; eps; &#125;</span><br><span class="line">bool ge(double x, double y) &#123; return x - y &gt; -eps; &#125;</span><br><span class="line">bool le(double x, double y) &#123; return y - x &gt; -eps; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="点-以下均为二维直角坐标系"><a href="#点-以下均为二维直角坐标系" class="headerlink" title="点(以下均为二维直角坐标系)"></a>点(以下均为二维直角坐标系)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">struct Point &#123;</span><br><span class="line">    double x, y;</span><br><span class="line">    Point(double x_ &#x3D; 0, double y_ &#x3D; 0) : x(x_), y(y_) &#123;&#125;</span><br><span class="line">    void input() &#123; cin &gt;&gt; x &gt;&gt; y; &#125;</span><br><span class="line">    void output(int n &#x3D; 2) &#123;</span><br><span class="line">        cout &lt;&lt; fixed &lt;&lt; setprecision(n) &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y &lt;&lt; &#39;\n&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    double distance(const Point &amp;p) &#123; return hypot(x - p.x, y - p.y); &#125;</span><br><span class="line">    bool operator&#x3D;&#x3D;(const Point &amp;p) &#123; return (eq(x, p.x) &amp;&amp; eq(y, p.y)); &#125;</span><br><span class="line">    bool operator!&#x3D;(const Point &amp;p) &#123; return !(*this &#x3D;&#x3D; p); &#125;</span><br><span class="line">    bool operator&lt;(const Point &amp;p) &#123;</span><br><span class="line">        if (eq(x, p.x)) &#123;</span><br><span class="line">            return ls(y, p.y);</span><br><span class="line">        &#125;</span><br><span class="line">        return ls(x, p.x);</span><br><span class="line">    &#125;</span><br><span class="line">    double area(Point a, Point b) &#123;</span><br><span class="line">        return 0.5 * (x * a.y + a.x * b.y + y * b.x - b.x * a.y - a.x * y - x * b.y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">struct Vec &#123;</span><br><span class="line">    double x, y;</span><br><span class="line">    Vec(double x_ &#x3D; 0, double y_ &#x3D; 0) : x(x_), y(y_) &#123;&#125;</span><br><span class="line">    Vec(Point p) : x(p.x), y(p.y) &#123;&#125;</span><br><span class="line">    Vec(Point a, Point b) : x(b.x - a.x), y(b.y - a.y) &#123;&#125;</span><br><span class="line">    void input() &#123; cin &gt;&gt; x &gt;&gt; y; &#125;</span><br><span class="line">    void output() &#123; cout &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y &lt;&lt; &#39;\n&#39;; &#125;</span><br><span class="line">    double dot(const Vec &amp;p) &#123; return x * p.x + y * p.y; &#125;</span><br><span class="line">    double det(const Vec &amp;p) &#123; return x * p.y - y * p.x; &#125;</span><br><span class="line">    double len() &#123; return hypot(x, y); &#125;</span><br><span class="line">    double len2() &#123; return x * x + y * y; &#125;</span><br><span class="line">    double k() const &#123;</span><br><span class="line">        if (eq(x, 0)) return inf;</span><br><span class="line">        return y &#x2F; x;</span><br><span class="line">    &#125;</span><br><span class="line">    Vec operator+(const Vec &amp;p) &#123; return Vec(x + p.x, y + p.y); &#125;</span><br><span class="line">    Vec operator-(const Vec &amp;p) &#123; return Vec(x - p.x, y - p.y); &#125;</span><br><span class="line">    Vec operator*(double k) &#123; return Vec(x * k, y * k); &#125;</span><br><span class="line">    Vec operator&#x2F;(double k) &#123; return Vec(x &#x2F; k, y &#x2F; k); &#125;</span><br><span class="line">    bool operator&#x3D;&#x3D;(const Vec &amp;p) &#123; return (eq(this-&gt;k(), p.k())); &#125;</span><br><span class="line">    bool operator!&#x3D;(const Vec &amp;p) &#123; return !(*this &#x3D;&#x3D; p); &#125;</span><br><span class="line">    Vec norm() &#123;</span><br><span class="line">        double l &#x3D; len();</span><br><span class="line">        x &#x2F;&#x3D; l, y &#x2F;&#x3D; l;</span><br><span class="line">        return *this;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">struct Line &#123;</span><br><span class="line">    Point p;</span><br><span class="line">    Vec v;</span><br><span class="line">    Line(Point p, Vec v) : p(p), v(v) &#123;&#125;            &#x2F;&#x2F; 点向式</span><br><span class="line">    Line(Point p, double k) : p(p), v(1, k) &#123;&#125;      &#x2F;&#x2F; 点斜式</span><br><span class="line">    Line(double k, double b) : p(0, b), v(1, k) &#123;&#125;  &#x2F;&#x2F; 斜截式</span><br><span class="line">    Line(Point p1, Point p2) : p(p1), v(p1, p2) &#123;&#125;  &#x2F;&#x2F; 两点式</span><br><span class="line">    Line(double x1, double y1, double x2, double y2)</span><br><span class="line">        : p(x1, y1), v(x2 - x1, y2 - y1) &#123;&#125;</span><br><span class="line">    double find_y(double x) const &#123;</span><br><span class="line">        return p.y + (x - p.x) * v.y &#x2F; v.x;</span><br><span class="line">    &#125;</span><br><span class="line">    double find_x(double y) const &#123;</span><br><span class="line">        return p.x - (y + p.y) * v.x &#x2F; v.y;</span><br><span class="line">    &#125;</span><br><span class="line">    double a() const &#123; return (*this).find_x(0); &#125;  &#x2F;&#x2F; 横截距</span><br><span class="line">    double b() const &#123; return (*this).find_y(0); &#125;  &#x2F;&#x2F; 纵截距</span><br><span class="line">    double k() const &#123;                              &#x2F;&#x2F; 斜率</span><br><span class="line">        if (eq(v.x, 0)) return inf;</span><br><span class="line">        return v.y &#x2F; v.x;</span><br><span class="line">    &#125;</span><br><span class="line">    Vec vec() const &#123; return v; &#125;  &#x2F;&#x2F; 方向向量</span><br><span class="line">    bool IsParallel(const Line &amp;x) const &#123;</span><br><span class="line">        if (!eq(k(), x.k()))</span><br><span class="line">            return false;</span><br><span class="line">        else if (eq(k(), x.k()) &amp;&amp; k() &#x3D;&#x3D; inf) &#123;</span><br><span class="line">            if (eq(p.x, x.p.x)) return false;</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            if (eq(b(), x.b())) return false;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    bool IsCoincidence(const Line &amp;x) const &#123;</span><br><span class="line">        if (!eq(k(), x.k()))</span><br><span class="line">            return false;</span><br><span class="line">        else if (eq(k(), x.k()) &amp;&amp; k() &#x3D;&#x3D; inf) &#123;</span><br><span class="line">            if (eq(p.x, x.p.x)) return true;</span><br><span class="line">            return false;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            if (eq(b(), x.b())) return true;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    bool IsIntersect(const Line &amp;x) const &#123;</span><br><span class="line">        if (!eq(k(), x.k())) return true;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    bool OnTheLine(const Point &amp;x) const &#123;</span><br><span class="line">        Vec temp(p, x);</span><br><span class="line">        if (temp &#x3D;&#x3D; v) return true;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    Point Intersection(const Line &amp;l) const &#123;</span><br><span class="line">        if (IsParallel(l) || IsCoincidence(l)) return Point(inf, inf);</span><br><span class="line">        if (fabs(l.k()) &#x3D;&#x3D; inf)</span><br><span class="line">            return Point(l.p.x, find_y(l.p.x));</span><br><span class="line">        else if (fabs(k() &#x3D;&#x3D; inf))</span><br><span class="line">            return Point(p.x, l.find_y(p.x));</span><br><span class="line">        double x &#x3D; (l.b() - b()) &#x2F; (k() - l.k());</span><br><span class="line">        return Point(x, find_y(x));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;求p中所有点围成的面积</span><br><span class="line">double area(const vector&lt;Point&gt; &amp;p) &#123;</span><br><span class="line">    double ans &#x3D; 0;</span><br><span class="line">    for (int i &#x3D; 1; i &lt; p.size() - 1; i++) &#123;</span><br><span class="line">        Vec a(p[0], p[i]), b(p[0], p[i + 1]);</span><br><span class="line">        ans +&#x3D; (a.det(b));</span><br><span class="line">    &#125;</span><br><span class="line">    return ans &#x2F; 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/03/tree/" rel="prev" title="树学">
+                  <i class="fa fa-chevron-left"></i> 树学
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhujie</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

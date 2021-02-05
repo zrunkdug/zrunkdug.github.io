@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-03T14:53:53.036Z</updated>
+  <updated>2021-02-05T16:06:12.033Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算几何</title>
+    <link href="http://yoursite.com/2021/02/05/jisuanjihe/"/>
+    <id>http://yoursite.com/2021/02/05/jisuanjihe/</id>
+    <published>2021-02-05T06:48:41.000Z</published>
+    <updated>2021-02-05T16:06:12.033Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其中部分借鉴了一些大佬的板子&lt;br&gt;还需要填的坑：&lt;br&gt;类：线段、圆、三角形、极坐标&lt;br&gt;算法：极角排序、凸包、平面扫描、最近点对&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="模板" scheme="http://yoursite.com/categories/%E6%A8%A1%E6%9D%BF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>树学</title>
@@ -373,25 +392,6 @@
     
     
       <category term="ML" scheme="http://yoursite.com/categories/ML/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;二分搜索</title>
-    <link href="http://yoursite.com/2020/10/17/erfensousuo/"/>
-    <id>http://yoursite.com/2020/10/17/erfensousuo/</id>
-    <published>2020-10-17T06:48:41.000Z</published>
-    <updated>2020-10-17T15:37:00.501Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我喜欢这种又快又暴力的算法&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
