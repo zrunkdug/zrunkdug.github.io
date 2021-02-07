@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-05T16:06:12.033Z</updated>
+  <updated>2021-02-07T16:13:42.300Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>补题</title>
+    <link href="http://yoursite.com/2021/02/07/buti/"/>
+    <id>http://yoursite.com/2021/02/07/buti/</id>
+    <published>2021-02-07T06:48:41.000Z</published>
+    <updated>2021-02-07T16:13:42.300Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;POJ is shit&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="acm" scheme="http://yoursite.com/categories/acm/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>计算几何</title>
@@ -368,25 +387,6 @@
     <summary type="html">
     
       &lt;p&gt;我这一周的心血全花在这上面了，之前就一直想用C++写决策树，虽然用python写确实很快，我当时把python的基本语法学完只花了一个下午，但是想了想，还是用C++写更有挑战性一点，而且相比python来说，我C++更加熟练一点&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="ML" scheme="http://yoursite.com/categories/ML/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;ML&gt;KNN算法的C++实现</title>
-    <link href="http://yoursite.com/2020/10/24/KNN/"/>
-    <id>http://yoursite.com/2020/10/24/KNN/</id>
-    <published>2020-10-24T06:48:41.000Z</published>
-    <updated>2020-10-24T08:28:10.603Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;虽然我用C++写不出决策树，但是我可以写出KNN&lt;br&gt;
     
     </summary>
     
