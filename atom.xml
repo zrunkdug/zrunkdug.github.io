@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-20T16:20:06.104Z</updated>
+  <updated>2021-02-21T14:35:52.203Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://yoursite.com/2021/02/21/yasuo/"/>
     <id>http://yoursite.com/2021/02/21/yasuo/</id>
     <published>2021-02-21T06:48:41.000Z</published>
-    <updated>2021-02-20T16:20:06.104Z</updated>
+    <updated>2021-02-21T14:35:52.203Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;基于哈夫曼树实现对任意文件进行压缩和解压的程序&lt;br&gt;
+      &lt;p&gt;基于哈夫曼树实现对任意文件进行压缩和解压的程序&lt;br&gt;哈夫曼树用的教材模板，但是教材模板实在是写的太垃圾，所以可能会导致代码不够优雅&lt;br&gt;
     
     </summary>
     
@@ -59,7 +59,7 @@
     <link href="http://yoursite.com/2021/02/07/buti/"/>
     <id>http://yoursite.com/2021/02/07/buti/</id>
     <published>2021-02-07T06:48:41.000Z</published>
-    <updated>2021-02-18T14:00:56.669Z</updated>
+    <updated>2021-02-21T14:26:50.202Z</updated>
     
     <summary type="html">
     
