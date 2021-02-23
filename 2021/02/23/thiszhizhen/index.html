@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="为什么是day8呢，因为day4-7忘记写了，这次写点线段树和ST表">
+  <meta name="description" content="教教我的菜逼同学什么是this指针和const">
 <meta property="og:type" content="article">
-<meta property="og:title" content="寒假集训day8题解+总结">
-<meta property="og:url" content="http://yoursite.com/2021/02/02/acmday8/index.html">
+<meta property="og:title" content="this指针和const">
+<meta property="og:url" content="http://yoursite.com/2021/02/23/thiszhizhen/index.html">
 <meta property="og:site_name" content="ZJ的后花园">
-<meta property="og:description" content="为什么是day8呢，因为day4-7忘记写了，这次写点线段树和ST表">
+<meta property="og:description" content="教教我的菜逼同学什么是this指针和const">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-02T06:48:41.000Z">
-<meta property="article:modified_time" content="2021-02-02T16:17:12.872Z">
+<meta property="article:published_time" content="2021-02-23T06:48:41.000Z">
+<meta property="article:modified_time" content="2021-02-23T14:09:51.890Z">
 <meta property="article:author" content="Zhujie">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2021/02/02/acmday8/">
+<link rel="canonical" href="http://yoursite.com/2021/02/23/thiszhizhen/">
 
 
 <script class="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>寒假集训day8题解+总结 | ZJ的后花园</title>
+  <title>this指针和const | ZJ的后花园</title>
   
 
 
@@ -166,7 +166,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -178,6 +178,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-text">this</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -235,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/02/acmday8/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/23/thiszhizhen/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -251,7 +252,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          寒假集训day8题解+总结
+          this指针和const
         </h1>
 
         <div class="post-meta">
@@ -260,23 +261,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-02-02 14:48:41" itemprop="dateCreated datePublished" datetime="2021-02-02T14:48:41+08:00">2021-02-02</time>
+              <time title="Created: 2021-02-23 14:48:41 / Modified: 22:09:51" itemprop="dateCreated datePublished" datetime="2021-02-23T14:48:41+08:00">2021-02-23</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-03 00:17:12" itemprop="dateModified" datetime="2021-02-03T00:17:12+08:00">2021-02-03</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/acm/" itemprop="url" rel="index"><span itemprop="name">acm</span></a>
+                  <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="index"><span itemprop="name">面向对象</span></a>
                 </span>
             </span>
 
@@ -289,8 +284,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>为什么是day8呢，因为day4-7忘记写了，这次写点线段树和ST表<br><a id="more"></a><br>今天rank6，历史最好成绩，因为全是线段树的模板题，还有一道是ST表的模板题，但是我当时不会，这次稍微总结一下<br>对于线段树来说，基本ST表和树状数组能做的线段树都能做，但是需要庞大的代码量和存储空间，对于区间查询$[l,r]$来说，通过线段树不断地找小区间直到某个小区间完全地被目标区间包围，例如我现在开了一个$[1,5]$的线段树，目标区间是$[1,4]$，那么下移的区间就应该是$[1,2],[3,3],[4,4]$，lazy_mark的传递也是如此，所以除了区间求和问题外，单点更新，区间更新(比如把某个区间的数全部刷成2)，区间求最值都可以用线段树解决，只需要适当地改变lazy_mark的传递方式和线段树的build方式，例如区间求和中lazy_mark是+=传递的，那么在区间求最值中就应该用max()函数传递<br>比如<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=1698">HDU-1698</a>就是要求把某一个区间全部刷成某一个数，然后求区间最值，这里就需要把原来的+=换成=<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void pushdown(long long i)&#123;</span><br><span class="line">    if(arr[i].mark!&#x3D;0)&#123;</span><br><span class="line">        arr[2*i].mark&#x3D;arr[i].mark;</span><br><span class="line">        arr[2*i+1].mark&#x3D;arr[i].mark;</span><br><span class="line">        long long mid&#x3D;(arr[i].l+arr[i].r)&#x2F;2;</span><br><span class="line">        arr[2*i].sum&#x3D;arr[i].mark*(mid-arr[i].l+1);</span><br><span class="line">        arr[2*i+1].sum&#x3D;arr[i].mark*(arr[i].r-mid);</span><br><span class="line">        arr[i].mark&#x3D;0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>ST表有着线段树所无法替代的优势，更小的空间需求和$O(1)$的区间最值查询，优于线段树的$O(logn)$，但是ST表是静态的，即只能进行离线操作，对于区间更新这样的问题是不能用ST表做的，所以如果说题目没有要求对区间进行更新操作，只是大量的区间查询的话，应该用ST表来做</p>
-<p>最后扔一个封装好的ST表模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">struct ST&#123;</span><br><span class="line">    int n;</span><br><span class="line">    int number[MAXN];</span><br><span class="line">    int dp[MAXN][25];</span><br><span class="line">    void init()&#123;</span><br><span class="line">        for(int i&#x3D;0;i&lt;n;i++)&#123;</span><br><span class="line">            dp[i][0]&#x3D;number[i];</span><br><span class="line">        &#125;</span><br><span class="line">        for(int j&#x3D;1;j&lt;&#x3D;log2(n);j++)&#123;</span><br><span class="line">            for(int i&#x3D;0;i+(1&lt;&lt;j)-1&lt;n;i++)&#123;</span><br><span class="line">                dp[i][j]&#x3D;max(dp[i][j-1],dp[i+(1&lt;&lt;j-1)][j-1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int query(int l,int r)&#123;</span><br><span class="line">        int j&#x3D;(int)log2(r-l+1);</span><br><span class="line">        return max(dp[l][j],dp[r-(1&lt;&lt;j)+1][j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;st;</span><br></pre></td></tr></table></figure></p>
+        <p>教教我的菜逼同学什么是this指针和const<br><a id="more"></a><br>首先我们先写一个类作为例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class student&#123;</span><br><span class="line">public:</span><br><span class="line">    &#x2F;&#x2F;构造函数略</span><br><span class="line">    &#x2F;&#x2F;返回学生的age</span><br><span class="line">    int get_age()&#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;返回学生的name</span><br><span class="line">    string get_name()&#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;add函数用来将两个学生的年龄加和</span><br><span class="line">    int add(student temp)&#123;</span><br><span class="line">        return age+temp.age;</span><br><span class="line">    &#125;</span><br><span class="line">    student func(student temp)&#123;</span><br><span class="line">        name&#x3D;temp.name;</span><br><span class="line">        age&#x3D;temp.age;</span><br><span class="line">        return *this;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    string name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>首先我们先来看看类中的add函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int add(student temp)&#123;</span><br><span class="line">    return age+temp.age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>我们发现如果要访问另外一个student类型的对象，需要用.来访问对象的数据成员(name、age)或者成员函数(get_age,add等)，那为什么对于我现在写的<strong>这个</strong>对象来说，为什么只需要写age就行了呢？为什么不是(xxx.age+temp.age)呢？你肯定会说，因为我写的这个函数就是针对<strong>这个</strong>对象啊，那计算机怎么知道呢？显然，你只需要写一个age而不是xxx.age并不是因为计算机可以这么识别，而是C++语言设计者省略了xxx.这些语句方便写代码，实际上对于每个对象编译器都<strong>偷偷</strong>定义一个指针叫this指向<strong>这个</strong>对象，注意这个this是指针类型，也就是说我们可以通过在前面加一个*来获取这个指针指向的值，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student a;&#x2F;&#x2F;现在我们创建了一个student对象叫做a</span><br><span class="line">          &#x2F;&#x2F;那么，对于a来说，a内置了一个this指针</span><br><span class="line">          &#x2F;&#x2F;这个this指针指向的内容就是a的地址</span><br><span class="line">student b;&#x2F;&#x2F;我们再创建一个b，b中也内置了一个this指针指向b</span><br><span class="line">        </span><br></pre></td></tr></table></figure><br>那么*this就是a的<strong>值</strong>，this是a的<strong>地址</strong>，所以对于add函数来说，其实是this-&gt;age+temp.age，为什么是-&gt;呢，因为this是指针，你也可以这么写(*this).age+temp.age，只是语法设计者允许你省略这个this，所以你平时直接写个age就行了，这里多提一句，假设a是指针，a-&gt;b就是(*a).b的一种写法，两者其实是一个东西，只是前者的写法更加简单</p>
+<p>再来看看get_age函数，其实它的本质就是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int get_age()&#123;</span><br><span class="line">    return this-&gt;age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>问题来了，this有什么用？比如你写了一个函数，返回值是这个对象本身，例如例子中的func函数(其实就是赋值运算符重载，但是鉴于某个sb没有学过运算符重载就随便写了个func函数)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;func函数用来把temp的值赋值给对象</span><br><span class="line"></span><br><span class="line">student func(student temp)&#123;</span><br><span class="line">    name&#x3D;temp.name;</span><br><span class="line">    age&#x3D;temp.age;</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">student a,b;</span><br><span class="line">a&#x3D;a.func(b);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;函数语句就是a被赋值为b，返回值为a</span><br><span class="line">&#x2F;&#x2F;函数执行完之后返回a(因为是a.func所以返回a，如果是b.func就返回b)</span><br><span class="line">&#x2F;&#x2F;然后就变成了a&#x3D;a</span><br><span class="line">&#x2F;&#x2F;例如运算符重载中的赋值运算符(&#x3D;)就是把赋值后的对象本身作为返回值</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -304,14 +300,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/29/aczidongji/" rel="prev" title="我终于弄懂了AC自动机">
-                  <i class="fa fa-chevron-left"></i> 我终于弄懂了AC自动机
+                <a href="/2021/02/21/hanjia/" rel="prev" title="这个寒假学了些啥">
+                  <i class="fa fa-chevron-left"></i> 这个寒假学了些啥
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/02/03/tree/" rel="next" title="树学">
-                  树学 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>

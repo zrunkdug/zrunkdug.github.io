@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-21T15:23:39.677Z</updated>
+  <updated>2021-02-23T14:09:51.890Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>this指针和const</title>
+    <link href="http://yoursite.com/2021/02/23/thiszhizhen/"/>
+    <id>http://yoursite.com/2021/02/23/thiszhizhen/</id>
+    <published>2021-02-23T06:48:41.000Z</published>
+    <updated>2021-02-23T14:09:51.890Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;教教我的菜逼同学什么是this指针和const&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>这个寒假学了些啥</title>
@@ -373,25 +392,6 @@
     
     
       <category term="notes" scheme="http://yoursite.com/categories/notes/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;算法&gt;动态规划(DP)</title>
-    <link href="http://yoursite.com/2020/12/12/dp/"/>
-    <id>http://yoursite.com/2020/12/12/dp/</id>
-    <published>2020-12-12T06:48:41.000Z</published>
-    <updated>2020-12-12T12:07:29.137Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;目前只会一些简单的DP，牛逼的DP看不懂&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
